@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!-- Lección 6.2 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+     José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
+     Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección 6.2 · Fuentes primarias y secundarias: introducción</title>
+<meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
+<meta name="license" content="CC BY-NC-SA 4.0">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
+<style>
+  :root{
+    --cp:#00796b;--cp-claro:#e0f2f1;--cp-oscuro:#004d44;
+    --acento:#ff8c42;--texto:#1a2332;--fondo:#fafbfc;
+    --gris:#555;--gris-claro:#eef1f4;
+    --dip:#1565c0;--dip-claro:#e3f2fd;
+    --hia:#ad1457;--hia-claro:#fce4ec;
+    --grp:#5c3900;--grp-claro:#fff3cd;
+    --exito:#2e7d32;--error:#c62828;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Poppins','Segoe UI',Arial,sans-serif;line-height:1.7;color:var(--texto);background:var(--fondo);max-width:960px;margin:0 auto;padding:24px 18px}
+  h1{color:var(--cp-oscuro);border-bottom:4px solid var(--cp);padding-bottom:14px;font-size:1.85rem;margin-bottom:8px}
+  .subtitulo{color:var(--gris);font-style:italic;margin-top:0;margin-bottom:24px;font-size:1.05rem}
+  h2{color:var(--cp-oscuro);border-left:6px solid var(--cp);padding-left:14px;margin-top:32px;font-size:1.4rem}
+  h3{color:var(--cp);margin-top:24px;font-size:1.15rem}
+  .caja-objetivos{background:var(--cp-claro);border-left:6px solid var(--cp);padding:18px 22px;border-radius:8px;margin:18px 0 28px 0}
+  .caja-objetivos h2{margin-top:0;color:var(--cp-oscuro);border-left:none;padding-left:0;font-size:1.2rem}
+  .caja-tiempo{display:inline-block;background:var(--acento);color:#1a2332;padding:4px 12px;border-radius:14px;font-size:0.85rem;font-weight:600;margin-left:10px;vertical-align:middle}
+  details{background:#fff;border:1px solid #d6dde4;border-radius:10px;margin:14px 0;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+  details[open]{border-color:var(--cp);box-shadow:0 3px 10px rgba(0,121,107,0.12)}
+  summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--cp-oscuro);background:var(--gris-claro);list-style:none;user-select:none;font-size:1.05rem}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:'▶';display:inline-block;margin-right:10px;color:var(--cp);transition:transform 0.25s;font-size:0.85rem}
+  details[open] summary::before{transform:rotate(90deg)}
+  details[open] summary{background:var(--cp-claro);border-bottom:2px solid var(--cp)}
+  .contenido-detalle{padding:18px 22px}
+  .tip{background:#fffbe6;border-left:5px solid #f4c430;padding:12px 18px;border-radius:6px;margin:14px 0}
+  .tip strong{color:#6b5400}
+  .botones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .btn{padding:10px 22px;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.95rem;transition:background 0.2s}
+  .btn-primario{background:var(--cp);color:#fff}
+  .btn-primario:hover{background:var(--cp-oscuro)}
+  .btn-secundario{background:var(--gris-claro);color:var(--texto)}
+  .btn-secundario:hover{background:#d6dde4}
+  .btn[aria-pressed="true"]{background:var(--cp-oscuro);color:#fff}
+  ul.lista-bonita{list-style:none;padding-left:0}
+  ul.lista-bonita li{padding:8px 0 8px 30px;position:relative}
+  ul.lista-bonita li::before{content:'➜';position:absolute;left:0;color:var(--cp);font-weight:700}
+  .palabra-clave{background:linear-gradient(transparent 60%,#ffeb3b 60%);padding:0 4px;font-weight:600}
+  .ejemplo{font-family:Georgia,serif;font-size:1.15rem}
+  .sil{font-family:Georgia,serif;letter-spacing:.5px;color:var(--cp-oscuro);font-weight:700}
+  table.tabla{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+  table.tabla th{background:var(--cp-oscuro);color:#fff;padding:10px 12px;text-align:left}
+  table.tabla td{padding:10px 12px;border-bottom:1px solid var(--gris-claro);vertical-align:top}
+  table.tabla tr:last-child td{border-bottom:none}
+  .actividad{background:#fff;border:2px solid var(--acento);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .actividad h4{color:#8a3d0c;margin-top:0}
+  .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+  .badge-lectura{background:#e3f2fd;color:#0d47a1}
+  .badge-actividad{background:#f3e5f5;color:#6a1b9a}
+  /* Clasificadores */
+  .clasificador{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:18px 0}
+  .item{border:2px solid var(--gris-claro);border-radius:8px;padding:10px 14px;margin:8px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .item-pal{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--cp-oscuro);display:flex;align-items:center;gap:10px}
+  .item-ops{display:flex;gap:8px;flex-wrap:wrap}
+  .item-fb{flex-basis:100%;font-size:.95rem;min-height:0}
+  .item-fb:empty{display:none}
+  .btn-op{padding:7px 14px;border:2px solid var(--cp);background:#fff;color:var(--cp-oscuro);border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit;font-size:.92rem}
+  .btn-op:hover:not(:disabled){background:var(--cp-claro)}
+  .btn-op.correcta{background:#d4edda;border-color:var(--exito);color:#155724}
+  .btn-op.incorrecta{background:#f8d7da;border-color:var(--error);color:#721c24}
+  .btn-op:disabled{cursor:default}
+  .oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:3px 10px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.9rem}
+  .puntaje{text-align:center;margin-top:12px;font-weight:600;color:var(--cp-oscuro)}
+  /* Lectura con marcas */
+  .texto-lectura{background:#fff;border:2px solid var(--gris-claro);border-radius:8px;padding:18px 22px;margin:14px 0;font-family:Georgia,serif;font-size:1.12rem;line-height:2.1}
+  .texto-lectura p{margin:0 0 10px}
+  .leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:.92rem;margin:8px 0}
+  .leyenda span{display:inline-flex;align-items:center;gap:6px}
+  .mk{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .ver-dip .dip{background:var(--dip-claro);color:var(--dip);font-weight:700;box-shadow:0 -3px 0 var(--dip) inset;border-radius:3px}
+  .ver-dip .hia{background:var(--hia-claro);color:var(--hia);font-weight:700;box-shadow:0 -3px 0 var(--hia) inset;border-radius:3px}
+  .ver-dip .muda{color:#555;text-decoration:underline dotted 2px}
+  .ver-grp .grp{background:var(--grp-claro);color:var(--grp);font-weight:700;box-shadow:0 -3px 0 var(--grp) inset;border-radius:3px}
+  /* Índice */
+  .indice{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:16px 20px;margin:22px 0}
+  .indice h2{font-size:1.1rem;margin:0 0 8px;border:none;padding:0}
+  .indice ol{margin:0;padding-left:1.4em}
+  .indice li{margin:4px 0}
+  .indice a{color:var(--cp-oscuro)}
+  .abrir-cerrar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+  .volver-indice{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--cp-oscuro);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+  .volver-indice:hover{background:var(--cp);color:#fff}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b35316;outline-offset:2px}
+  .sr-solo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .enlace-practica{display:block;background:#fff;border:2px solid var(--cp);border-radius:10px;padding:14px 18px;margin:16px 0;text-decoration:none;color:var(--cp-oscuro);font-weight:600}
+  .enlace-practica:hover{background:var(--cp-claro)}
+  .enlace-practica span{display:block;font-weight:400;color:var(--texto);font-size:.95rem}
+  .aviso-voz{font-size:.9rem;color:#5c3900;background:#fff3cd;border-radius:6px;padding:6px 10px;display:none}
+  .aviso-voz.visible{display:block}
+  /* Quiz */
+  .qz-intro{background:var(--cp-claro);border-radius:10px;padding:14px 18px;margin:0 0 14px}
+  .qz-intro h4{margin:0 0 6px;color:var(--cp-oscuro)}
+  .qz-preg{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .qz-enun{font-weight:600;margin:0 0 10px}
+  .qz-num{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:12px;padding:1px 10px;font-size:.8rem;margin-right:8px}
+  .qz-extra{display:block;text-align:center;margin:6px 0 10px;font-weight:400}
+  .qz-extra .qz-grande{font-family:Georgia,serif;font-size:1.3rem}
+  .qz-oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:6px 14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .qz-ops{display:flex;flex-direction:column;gap:8px}
+  .qz-op{text-align:left;background:#fff;border:2px solid #c9d2db;border-radius:8px;padding:10px 14px;font-family:inherit;font-size:1rem;cursor:pointer;color:var(--texto)}
+  .qz-op:hover:not(:disabled){border-color:var(--cp)}
+  .qz-op.elegida{background:var(--cp-claro);border-color:var(--cp-oscuro);color:var(--cp-oscuro);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--cp)}
+  .qz-op.correcta{background:#d4edda;border-color:#2e7d32;color:#155724}
+  .qz-op.correcta::before{content:'✓ '}
+  .qz-op.incorrecta{background:#f8d7da;border-color:#c62828;color:#721c24}
+  .qz-op.incorrecta::before{content:'✗ '}
+  .qz-op:disabled{cursor:default}
+  .qz-resultado{display:none;margin:16px 0;padding:16px;border-radius:10px;text-align:center;font-weight:600}
+  .qz-resultado.visible{display:block}
+  footer.pie{margin-top:40px;padding-top:18px;border-top:2px solid var(--gris-claro);text-align:center;color:#555;font-size:.9rem}
+  footer.pie p{margin:4px 0}
+  footer.pie a{color:var(--cp-oscuro)}
+  @media print{.indice,.volver-indice,.abrir-cerrar{display:none}}
+  @media (prefers-reduced-motion:reduce){summary::before{transition:none}}
+
+  .qz-repaso{margin:10px 0 0;padding:8px 12px;background:#fff3cd;border-radius:6px;color:#3d2600;font-size:.95rem}
+  .qz-repaso a{color:#004d44;font-weight:700}
+  /* ── Comunes desde el Tema 4 ── */
+  .item-ops{flex-wrap:wrap}
+  .apilado .item{flex-direction:column;align-items:stretch}
+  .apilado .item-ops{flex-direction:column}
+  .apilado .btn-op{text-align:left;font-weight:400}
+  .apilado .item-pal{font-family:'Segoe UI',Arial,sans-serif;font-size:1rem;color:#1a2332;font-weight:600}
+  .pasaje{display:block;background:#fff8ee;border-left:5px solid var(--acento);border-radius:6px;padding:10px 14px;margin:8px 0;font-family:Georgia,serif;font-weight:400;line-height:1.75}
+  .pasaje p{margin:0 0 6px}
+  .num-p{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:50%;width:1.6em;height:1.6em;text-align:center;line-height:1.6em;font-size:.8rem;font-family:'Segoe UI',Arial,sans-serif;margin-right:6px;vertical-align:middle}
+  .idea{background:#e3f2fd;color:#0d3c78;font-weight:700;box-shadow:0 -3px 0 #1565c0 inset;border-radius:3px}
+  .oculta-idea .idea{background:none;color:inherit;font-weight:inherit;box-shadow:none}
+
+  .discurso p{margin:0 0 10px}
+  .ficha{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+  @media(max-width:600px){.ficha{grid-template-columns:1fr}}
+  .ficha div{background:#fff;border:2px solid var(--cp);border-radius:10px;padding:10px 14px}
+  .ficha strong{color:var(--cp-oscuro);font-size:1.05rem}
+  .cita-modelo{background:#fff;border:2px dashed var(--cp);border-radius:10px;padding:10px 14px;margin:10px 0}
+</style>
+</head>
+<body>
+<h1>Lección 6.2 · Fuentes primarias y secundarias: introducción</h1>
+<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 6: Leer con imágenes y en las materias · Unas 2 horas, a tu ritmo</p>
+
+<div class="caja-objetivos">
+  <h2>🎯 Objetivos de la lección</h2>
+  <ul class="lista-bonita" style="margin:0">
+    <li>Distinguir una <strong>fuente primaria</strong> de una <strong>fuente secundaria</strong>.</li>
+    <li>Leer una fuente primaria real: el <strong>Discurso de Gettysburg</strong> de Abraham Lincoln.</li>
+    <li><strong>Citar evidencia</strong> del texto para apoyar una respuesta.</li>
+    <li>Reconocer el <strong>punto de vista</strong> y el <strong>propósito</strong> de quien escribe una fuente.</li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:.92rem">Estándares: RH.6-8.1 · RH.6-8.2 · RH.6-8.6 · RH.6-8.9</p>
+</div>
+
+<nav class="indice" id="indice" aria-labelledby="indice-titulo">
+  <h2 id="indice-titulo">Contenido de la lección</h2>
+  <ol>
+    <li><a href="#s-1-tipos">¿Primaria o secundaria?</a></li>
+    <li><a href="#s-2-gettysburg">Una fuente primaria: el Discurso de Gettysburg</a></li>
+    <li><a href="#s-3-secundaria">Una fuente secundaria sobre el mismo hecho</a></li>
+    <li><a href="#s-4-citar">Citar evidencia</a></li>
+    <li><a href="#s-5-punto">Punto de vista y propósito</a></li>
+    <li><a href="#s-6-archivo">El Archivo de fuentes</a></li>
+    <li><a href="#s-tarea">Tarea</a></li>
+    <li><a href="#s-quiz">Quiz de la lección</a></li>
+    <li><a href="#s-cierre">Cierre</a></li>
+  </ol>
+  <div class="abrir-cerrar">
+    <button type="button" class="btn btn-secundario" id="abrir-todo">Abrir todo</button>
+    <button type="button" class="btn btn-secundario" id="cerrar-todo">Cerrar todo</button>
+  </div>
+</nav>
+
+<h2>📚 Para empezar</h2>
+<p>Imagina que quieres saber cómo fue la boda de tus abuelos. Puedes mirar las fotos de ese día, leer la invitación o escuchar a tu abuela contarla. También puedes leer lo que escribió años después un primo que no estuvo allí. Las dos cosas te informan, pero no son iguales: unas <strong>vienen del momento</strong> y la otra <strong>lo cuenta después</strong>. Los historiadores llaman a las primeras <strong>fuentes primarias</strong> y a la segunda <strong>fuente secundaria</strong>. En el GED de Estudios Sociales vas a leer muchas de las dos, así que conviene reconocerlas a primera vista.</p>
+<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán.</p>
+
+<details open id="s-1-tipos">
+<summary>1. ¿Primaria o secundaria? <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>Una <span class="palabra-clave">fuente primaria</span> es un documento u objeto creado <strong>en el momento</strong> del hecho, o por alguien que lo <strong>vivió</strong>. Una <span class="palabra-clave">fuente secundaria</span> la crea <strong>después</strong> alguien que <strong>no estuvo allí</strong> y que estudió las fuentes primarias para explicar el hecho.</p>
+<table class="tabla">
+  <caption class="sr-solo">Comparación entre fuentes primarias y secundarias</caption>
+  <thead><tr><th scope="col"></th><th scope="col">Fuente primaria</th><th scope="col">Fuente secundaria</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">¿Quién la crea?</th><td>Alguien que vivió o presenció el hecho</td><td>Alguien que lo estudió después</td></tr>
+    <tr><th scope="row">¿Cuándo?</th><td>En el momento o poco después</td><td>Más tarde, a veces siglos después</td></tr>
+    <tr><th scope="row">Ejemplos</th><td>Cartas, diarios, discursos, fotos, leyes, entrevistas a testigos, objetos de la época</td><td>Libros de texto, enciclopedias, biografías, artículos que analizan el hecho, documentales</td></tr>
+    <tr><th scope="row">Lo que aporta</th><td>La voz directa de la época</td><td>Una explicación ordenada, con contexto</td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 La pregunta clave:</strong> «¿Quien lo hizo <strong>estuvo allí</strong>, en ese tiempo?». Si la respuesta es sí, es primaria. Ojo: una fuente no es primaria por ser antigua. Un libro de historia de 1900 sobre Cristóbal Colón es secundario, porque su autor no vivió en 1492.</div>
+<h3>¿Primaria o secundaria?</h3>
+<div class="clasificador" id="clasif-tipo"></div>
+<div class="puntaje" id="puntaje-tipo" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-2.html#clasifica" target="_blank" rel="noopener noreferrer">🗂️ Practica más: clasificar fuentes</a>
+</div>
+</details>
+
+<details id="s-2-gettysburg">
+<summary>2. Una fuente primaria: el Discurso de Gettysburg <span class="caja-tiempo">25 min</span></summary>
+<div class="contenido-detalle">
+<p><strong>El contexto.</strong> En julio de 1863, durante la Guerra Civil de los Estados Unidos, se libró en Gettysburg, Pensilvania, una de las batallas más sangrientas de la guerra: en tres días hubo decenas de miles de muertos, heridos y desaparecidos. Cuatro meses después, el 19 de noviembre de 1863, se inauguró allí un cementerio para los soldados de la Unión. El presidente Abraham Lincoln habló apenas unos dos minutos. Su discurso se convirtió en uno de los textos más famosos de la historia del país.</p>
+<p>Lee el discurso completo. Es una traducción hecha para esta lección; el original está en inglés. Los párrafos están numerados para poder citarlos.</p>
+<div class="botones" style="justify-content:flex-start"><button type="button" class="btn btn-secundario" id="leer-gett">🔊 Escuchar el discurso</button></div>
+<div class="texto-lectura discurso" id="texto-gett">
+<p><span class="num-p" aria-hidden="true">1</span>Hace ochenta y siete años, nuestros padres crearon en este continente una nueva nación, concebida en libertad y consagrada a la idea de que todos los hombres son creados iguales.</p>
+<p><span class="num-p" aria-hidden="true">2</span>Ahora estamos librando una gran guerra civil, que pone a prueba si esa nación, o cualquier nación así concebida y así consagrada, puede durar mucho tiempo. Estamos reunidos en un gran campo de batalla de esa guerra. Hemos venido a dedicar una parte de este campo como lugar de descanso final para quienes dieron aquí su vida para que esa nación pudiera vivir. Es del todo justo y apropiado que lo hagamos.</p>
+<p><span class="num-p" aria-hidden="true">3</span>Pero, en un sentido más amplio, no podemos dedicar, no podemos consagrar, no podemos santificar esta tierra. Los hombres valientes, vivos y muertos, que lucharon aquí, ya la han consagrado, muy por encima de nuestro pobre poder de añadir o quitar algo. El mundo apenas notará ni recordará por mucho tiempo lo que decimos aquí, pero nunca podrá olvidar lo que ellos hicieron aquí.</p>
+<p><span class="num-p" aria-hidden="true">4</span>Somos nosotros, los vivos, quienes debemos dedicarnos a la obra inconclusa que quienes lucharon aquí han hecho avanzar tan noblemente. Somos nosotros quienes debemos dedicarnos a la gran tarea que todavía tenemos por delante: que de estos muertos honrados tomemos mayor devoción por la causa por la que ellos dieron la última y completa medida de su devoción; que decidamos firmemente que estos muertos no habrán muerto en vano; que esta nación, bajo Dios, tenga un nuevo nacimiento de la libertad, y que el gobierno del pueblo, por el pueblo y para el pueblo no desaparezca de la tierra.</p>
+</div>
+<p style="font-size:.9rem;color:#555">Abraham Lincoln, 19 de noviembre de 1863. Traducción de la lección.</p>
+<div class="tip"><strong>💡 «Hace ochenta y siete años»:</strong> 1863 − 87 = 1776, el año de la Declaración de Independencia. Lincoln no dice la fecha: espera que su público haga la cuenta. Y la frase «todos los hombres son creados iguales» está tomada de esa Declaración.</div>
+<h3>Comprueba tu lectura</h3>
+<div class="clasificador apilado" id="clasif-gett"></div>
+<div class="puntaje" id="puntaje-gett" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-3-secundaria">
+<summary>3. Una fuente secundaria sobre el mismo hecho <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>Ahora lee un texto escrito <strong>hoy</strong> sobre el discurso, como el que encontrarías en una enciclopedia o un libro de texto.</p>
+<div class="botones" style="justify-content:flex-start"><button type="button" class="btn btn-secundario" id="leer-sec">🔊 Escuchar el texto</button></div>
+<div class="texto-lectura" id="texto-sec"><p>El Discurso de Gettysburg es breve: en inglés tiene unas 270 palabras. Antes de Lincoln, el orador principal del acto, Edward Everett, habló durante unas dos horas. Algunos periódicos de la época criticaron el discurso del presidente; otros lo elogiaron. Con el paso del tiempo, sin embargo, el texto de Lincoln se volvió un símbolo. Los historiadores señalan que Lincoln presentó la guerra no solo como una lucha para mantener unido el país, sino como una prueba de que un gobierno democrático, basado en la igualdad, podía sobrevivir. Hoy muchas escuelas piden a sus estudiantes que lo aprendan de memoria.</p></div>
+<p style="font-size:.9rem;color:#555">Texto escrito para esta lección.</p>
+<table class="tabla">
+  <caption class="sr-solo">Comparación de las dos fuentes sobre Gettysburg</caption>
+  <thead><tr><th scope="col"></th><th scope="col">El discurso (sección 2)</th><th scope="col">El texto explicativo (sección 3)</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">¿Quién?</th><td>Lincoln, que estaba allí</td><td>Un autor de hoy</td></tr>
+    <tr><th scope="row">¿Cuándo?</th><td>1863, el día del acto</td><td>Más de 150 años después</td></tr>
+    <tr><th scope="row">¿Para qué?</th><td>Honrar a los muertos y animar a seguir la lucha</td><td>Informar y explicar la importancia del discurso</td></tr>
+    <tr><th scope="row">Tipo</th><td><strong>Primaria</strong></td><td><strong>Secundaria</strong></td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 Se complementan:</strong> la fuente primaria te da la voz de Lincoln; la secundaria te da lo que él no podía saber, por ejemplo, que su discurso se volvería famoso. Por eso el GED a menudo pone una de cada tipo y pregunta qué tienen en común o en qué se diferencian.</div>
+</div>
+</details>
+
+<details id="s-4-citar">
+<summary>4. Citar evidencia <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p><span class="palabra-clave">Citar evidencia</span> es copiar las palabras exactas del texto que <strong>demuestran</strong> lo que dices. Las palabras copiadas van entre comillas, y conviene indicar de dónde salen.</p>
+<div class="cita-modelo">
+  <p style="margin:0 0 6px"><strong>Afirmación:</strong> Lincoln pensaba que lo que hicieron los soldados importaba más que los discursos.</p>
+  <p style="margin:0 0 6px"><strong>Evidencia:</strong> En el párrafo 3, Lincoln dice que el mundo «apenas notará ni recordará por mucho tiempo lo que decimos aquí, pero nunca podrá olvidar lo que ellos hicieron aquí».</p>
+  <p style="margin:0"><strong>Explicación:</strong> Lincoln compara las palabras del acto con las acciones de los soldados y dice que las acciones se recordarán más.</p>
+</div>
+<p>Frases útiles para presentar una cita: <em>Según el autor…</em> · <em>En el párrafo 2, Lincoln afirma que…</em> · <em>El texto dice…</em> · <em>Como señala el discurso…</em></p>
+<div class="tip"><strong>💡 La mejor cita</strong> no es la más larga ni la más bonita: es la que <strong>demuestra directamente</strong> la afirmación. Una cita que solo habla del mismo tema no basta.</div>
+<h3>¿Qué cita demuestra la afirmación?</h3>
+<div class="clasificador apilado" id="clasif-cita"></div>
+<div class="puntaje" id="puntaje-cita" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-2.html#cita" target="_blank" rel="noopener noreferrer">🔎 Practica más: elegir la cita</a>
+</div>
+</details>
+
+<details id="s-5-punto">
+<summary>5. Punto de vista y propósito <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>Toda fuente la escribe <strong>alguien</strong>, con su <span class="palabra-clave">punto de vista</span> (cómo ve el hecho) y con un <span class="palabra-clave">propósito</span> (para qué escribe). Una fuente primaria es valiosa, pero no es neutral: muestra lo que vio y pensó <strong>una</strong> persona. Por eso los historiadores comparan varias.</p>
+<p>Lee dos descripciones de un mismo hecho. Son ejemplos inventados para la lección.</p>
+<div class="dos-col" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px">
+  <div class="pasaje"><strong>Diario de una costurera, 1911:</strong> «Hoy salimos a la calle cientos de mujeres. Trabajamos doce horas por un sueldo que no alcanza para el pan. Pedimos poco: un día más corto y ventanas que se abran. Volveremos mañana.»</div>
+  <div class="pasaje"><strong>Aviso del dueño de la fábrica, 1911:</strong> «Unas pocas empleadas abandonaron hoy su puesto. La fábrica ofrece trabajo seguro y sueldos justos. Quien no regrese el lunes perderá su empleo.»</div>
+</div>
+<table class="tabla">
+  <caption class="sr-solo">Punto de vista y propósito de las dos fuentes</caption>
+  <thead><tr><th scope="col"></th><th scope="col">La costurera</th><th scope="col">El dueño</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">¿Cuántas eran?</th><td>«cientos de mujeres»</td><td>«unas pocas empleadas»</td></tr>
+    <tr><th scope="row">¿Cómo era el trabajo?</th><td>Mucho tiempo, poco sueldo</td><td>Seguro y con sueldo justo</td></tr>
+    <tr><th scope="row">Propósito</th><td>Registrar la protesta y su razón</td><td>Hacer que las trabajadoras regresen</td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 Las palabras delatan el punto de vista:</strong> «cientos» frente a «unas pocas», «salimos» frente a «abandonaron su puesto». Las dos son fuentes primarias del mismo día y cuentan cosas muy distintas. Para saber qué pasó, el historiador necesita más fuentes: una foto, un periódico, una lista de trabajadoras.</div>
+<h3>¿Quién lo diría?</h3>
+<div class="clasificador apilado" id="clasif-punto"></div>
+<div class="puntaje" id="puntaje-punto" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-2.html#punto-de-vista" target="_blank" rel="noopener noreferrer">👁️ Practica más: punto de vista y propósito</a>
+</div>
+</details>
+
+<details id="s-6-archivo">
+<summary>6. El Archivo de fuentes <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>En el curso de Estudios Sociales de GEDparaHispanos hay un <strong>Archivo de fuentes</strong> con documentos históricos reales. Antes de leer cualquiera, hazle estas <strong>cuatro preguntas</strong>:</p>
+<div class="ficha">
+  <div><strong>¿Quién?</strong><br>¿Quién lo escribió o lo creó? ¿Estuvo allí?</div>
+  <div><strong>¿Cuándo?</strong><br>¿En qué fecha? ¿Antes, durante o después del hecho?</div>
+  <div><strong>¿Para quién?</strong><br>¿A quién iba dirigido: al público, a una persona, al gobierno?</div>
+  <div><strong>¿Para qué?</strong><br>¿Quería informar, convencer, pedir algo, recordar?</div>
+</div>
+<p>Con esas cuatro respuestas ya sabes si es primaria o secundaria, y entiendes su punto de vista antes de leer la primera línea.</p>
+<a class="enlace-practica" href="https://zhemaria.github.io/sociales/fuentes/" target="_blank" rel="noopener noreferrer">🏛️ Abrir el Archivo de fuentes</a>
+<div class="tip"><strong>👨‍👩‍👧 Si tienes con quién practicar:</strong> busquen en casa una fuente primaria de su propia familia: una carta, una foto antigua, un acta de nacimiento. Respondan juntos las cuatro preguntas.</div>
+</div>
+</details>
+
+<details id="s-tarea">
+<summary>7. Tarea <span class="caja-tiempo">30 min</span></summary>
+<div class="contenido-detalle">
+<ul class="lista-bonita">
+  <li><strong>Del Archivo.</strong> Elige un documento del Archivo de fuentes. Responde por escrito las cuatro preguntas (¿quién?, ¿cuándo?, ¿para quién?, ¿para qué?) y di si es primario o secundario.</li>
+  <li><strong>Mi cita.</strong> Escribe una afirmación sobre el Discurso de Gettysburg y apóyala con una cita entre comillas, indicando el párrafo. Termina con una oración de explicación, como en el modelo de la sección 4.</li>
+  <li><strong>Dos puntos de vista.</strong> Piensa en algo que pasó en tu trabajo, tu escuela o tu barrio. Escribe dos oraciones que lo cuenten: una desde tu punto de vista y otra desde el de otra persona involucrada.</li>
+</ul>
+</div>
+</details>
+
+<details id="s-quiz">
+<summary>8. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<div class="qz-intro">
+  <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
+  <p style="margin:0">Al final pulsa <strong>Ver mi resultado</strong>. La meta es acertar al menos <strong>10 de 12</strong>.</p>
+</div>
+<div id="qz-cuerpo"></div>
+<div class="botones">
+  <button type="button" class="btn btn-primario" id="qz-calificar">Ver mi resultado</button>
+  <button type="button" class="btn btn-secundario" id="qz-reintentar" style="display:none">Intentar de nuevo</button>
+</div>
+<div class="qz-resultado" id="qz-resultado" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-cierre">
+<summary>9. Cierre <span class="caja-tiempo">5 min</span></summary>
+<div class="contenido-detalle">
+<h3>Lo que aprendiste en esta lección</h3>
+<ul class="lista-bonita">
+  <li><strong>Fuente primaria:</strong> creada en el momento o por alguien que vivió el hecho. <strong>Secundaria:</strong> creada después por alguien que lo estudió.</li>
+  <li>El Discurso de Gettysburg (1863) es una fuente primaria; un texto de hoy que lo explica es secundario.</li>
+  <li><strong>Citar evidencia:</strong> palabras exactas entre comillas que demuestran tu afirmación, con su ubicación.</li>
+  <li>Toda fuente tiene un <strong>punto de vista</strong> y un <strong>propósito</strong>: pregunta quién, cuándo, para quién y para qué.</li>
+</ul>
+<div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
+  <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
+  <ul class="lista-bonita">
+    <li>¿Por qué un libro de historia muy antiguo puede ser una fuente secundaria?</li>
+    <li>¿Qué buscaba Lincoln con su discurso?</li>
+    <li>¿Por qué la costurera y el dueño cuentan de forma tan distinta el mismo día?</li>
+  </ul>
+</div>
+<div class="tip"><strong>📅 En la próxima lección:</strong> <a href="https://zhemaria.github.io/clases_leng2/clase_6-3.html" style="color:var(--cp-oscuro);font-weight:700">Lección 6.3 · Vocabulario de dominio en ciencias e historia</a>. Aprenderás las palabras propias de cada materia y a descubrir su significado por el contexto.</div>
+</div>
+</details>
+
+<footer class="pie">
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 6 · Lección 6.2</strong></p>
+  <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
+  <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
+</footer>
+<a class="volver-indice" href="#indice" aria-label="Volver al contenido de la lección"><span aria-hidden="true">↑</span> Índice</a>
+
+<script>
+/* ===== Voz: todas las lecturas pasan por hablar(), para poder cambiarla después por audio grabado ===== */
+(function(){
+  var voz=null, hay=('speechSynthesis' in window);
+  function elegir(){
+    if(!hay)return;
+    var vs=speechSynthesis.getVoices().filter(function(v){return /^es/i.test(v.lang);});
+    var pref=['es-US','es-MX','es-419','es-CO','es-AR','es-CL','es-PE'];
+    voz=null;
+    for(var i=0;i<pref.length&&!voz;i++){voz=vs.find(function(v){return v.lang.replace('_','-').toLowerCase()===pref[i].toLowerCase();})||null;}
+    if(!voz)voz=vs.find(function(v){return !/es[-_]ES/i.test(v.lang);})||vs[0]||null;
+  }
+  function aviso(){var a=document.getElementById('aviso-voz');if(a)a.classList.add('visible');}
+  function frase(t,vel){var u=new SpeechSynthesisUtterance(t);u.lang=voz?voz.lang:'es-US';if(voz)u.voice=voz;u.rate=vel||0.9;return u;}
+  if(hay){elegir(); speechSynthesis.onvoiceschanged=elegir;}
+  /* hablar(texto, velocidad, alTerminar) */
+  window.hablar=function(texto,vel,fin){
+    if(!hay||!texto){aviso();return;}
+    speechSynthesis.cancel();
+    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+  };
+  /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
+  window.hablarPalabras=function(texto){
+    if(!hay){aviso();return;}
+    speechSynthesis.cancel();
+    texto.replace(/[.,;:¿?¡!—«»]/g,' ').split(/\s+/).filter(Boolean).forEach(function(p){speechSynthesis.speak(frase(p,0.7));});
+  };
+  window.callar=function(){if(hay)speechSynthesis.cancel();};
+  if(!hay)document.addEventListener('DOMContentLoaded',aviso);
+})();
+
+/* ===== Clasificador: cada elemento con sus botones; al acertar muestra una nota ===== */
+function clasificador(idCaja,idPuntaje,items,opciones,conAudio){
+  var caja=document.getElementById(idCaja), pun=document.getElementById(idPuntaje), bien=0, hechas={};
+  function marcador(){pun.textContent=bien===items.length?(items.length===1?'🎉 ¡Muy bien!':'🎉 ¡Muy bien! Acertaste las '+bien+'.'):(items.length===1?'':'Aciertos: '+bien+' / '+items.length);}
+  items.forEach(function(it,i){
+    var d=document.createElement('div'); d.className='item'; d.setAttribute('role','group'); d.setAttribute('aria-label',it.p.replace(/<[^>]+>/g,''));
+    var ops=it.ops||opciones;
+    d.innerHTML='<span class="item-pal">'+it.p+(conAudio?' <button type="button" class="oir" aria-label="Escuchar">🔊</button>':'')+'</span>'+
+      '<span class="item-ops">'+ops.map(function(o,j){return '<button type="button" class="btn-op" data-j="'+j+'">'+o+'</button>';}).join('')+'</span>'+
+      '<span class="item-fb" aria-live="polite"></span>';
+    caja.appendChild(d);
+    if(conAudio)d.querySelector('.oir').addEventListener('click',function(){hablar(it.a||it.p.replace(/<[^>]+>/g,''),0.85);});
+    var fb=d.querySelector('.item-fb');
+    d.querySelectorAll('.btn-op').forEach(function(b){
+      b.addEventListener('click',function(){
+        if(hechas[i])return;
+        if(+b.getAttribute('data-j')===it.c){
+          b.classList.add('correcta'); hechas[i]=true; bien++;
+          d.querySelectorAll('.btn-op').forEach(function(x){x.disabled=true;});
+          fb.innerHTML='✓ '+(it.n||'Correcto.'); marcador();
+        }else{
+          b.classList.add('incorrecta'); b.disabled=true;
+          fb.innerHTML='Todavía no. '+(it.pista||'Vuelve a mirar la regla e intenta otra vez.');
+        }
+      });
+    });
+  });
+  marcador();
+}
+
+/* ===== Quiz de la lección =====
+   P: [{t:enunciado, o:[opciones], c:índice correcto, x:texto grande opcional, a:audio opcional,
+        ae:audio entrecortado opcional, fijo:no barajar,
+        r:enlace de repaso que aparece si la respuesta es incorrecta}]
+   cfg: {meta, bien:mensaje si llega a la meta, repaso:mensaje si queda lejos} */
+function iniciarQuiz(P,cfg){
+  var META=cfg.meta, N=P.length, cuerpo=document.getElementById('qz-cuerpo'), elegidas={};
+  P.forEach(function(p,i){
+    var d=document.createElement('div');
+    d.className='qz-preg'; d.setAttribute('role','group'); d.setAttribute('aria-labelledby','qz-e'+i);
+    var h='<p class="qz-enun" id="qz-e'+i+'"><span class="qz-num">'+(i+1)+'</span>'+p.t+'</p>';
+    if(p.x||p.a||p.ae){
+      h+='<span class="qz-extra">'+(p.x?'<span class="qz-grande">'+p.x+'</span> ':'')+
+         ((p.a||p.ae)?'<button type="button" class="qz-oir" data-oir="'+i+'">🔊 Escuchar</button>':'')+'</span>';
+    }
+    h+='<div class="qz-ops">';
+    var orden=p.o.map(function(_,j){return j;});
+    if(!p.fijo){for(var k=orden.length-1;k>0;k--){var r=Math.floor(Math.random()*(k+1)),t=orden[k];orden[k]=orden[r];orden[r]=t;}}
+    orden.forEach(function(j){h+='<button type="button" class="qz-op" data-i="'+i+'" data-j="'+j+'" aria-pressed="false">'+p.o[j]+'</button>';});
+    d.innerHTML=h+'</div>'; cuerpo.appendChild(d);
+  });
+  cuerpo.addEventListener('click',function(ev){
+    var oir=ev.target.closest('.qz-oir');
+    if(oir){var q=P[+oir.getAttribute('data-oir')]; if(q.ae)hablarPalabras(q.ae); else hablar(q.a,q.v||0.85); return;}
+    var b=ev.target.closest('.qz-op'); if(!b||b.disabled)return;
+    var i=b.getAttribute('data-i');
+    cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){x.classList.remove('elegida');x.setAttribute('aria-pressed','false');});
+    b.classList.add('elegida'); b.setAttribute('aria-pressed','true'); elegidas[i]=+b.getAttribute('data-j');
+  });
+  var res=document.getElementById('qz-resultado');
+  document.getElementById('qz-calificar').addEventListener('click',function(){
+    var bien=0;
+    P.forEach(function(p,i){
+      cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){
+        var j=+x.getAttribute('data-j'); x.disabled=true; x.classList.remove('elegida');
+        if(j===p.c)x.classList.add('correcta'); else if(elegidas[i]===j)x.classList.add('incorrecta');
+      });
+      if(elegidas[i]===p.c)bien++;
+      else if(p.r){var nota=document.createElement('p');nota.className='qz-repaso';nota.innerHTML='📘 Para repasar: '+p.r;cuerpo.children[i].appendChild(nota);}
+    });
+    var msg,fondo,color;
+    if(bien>=META){msg='¡Excelente! '+bien+' de '+N+'. '+cfg.bien;fondo='#d4edda';color='#155724';}
+    else if(bien>=Math.ceil(N*0.6)){msg='Buen trabajo: '+bien+' de '+N+'. Repasa las preguntas en rojo y vuelve a intentarlo.';fondo='#fff3cd';color='#5c3900';}
+    else{msg='Llevas '+bien+' de '+N+'. '+cfg.repaso;fondo='#f8d7da';color='#721c24';}
+    res.textContent=msg; res.style.background=fondo; res.style.color=color; res.classList.add('visible');
+    this.style.display='none'; document.getElementById('qz-reintentar').style.display='inline-block';
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('qz-reintentar').addEventListener('click',function(){
+    cuerpo.querySelectorAll('.qz-op').forEach(function(x){x.disabled=false;x.classList.remove('correcta','incorrecta','elegida');x.setAttribute('aria-pressed','false');});
+    cuerpo.querySelectorAll('.qz-repaso').forEach(function(n){n.remove();});
+    elegidas={}; res.classList.remove('visible'); res.textContent='';
+    this.style.display='none'; document.getElementById('qz-calificar').style.display='inline-block';
+    cuerpo.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+
+/* ===== Navegación: el índice y la dirección (#ancla) abren su sección ===== */
+document.addEventListener('DOMContentLoaded',function(){
+  function abrir(id){
+    var el=id&&document.getElementById(id); if(!el)return;
+    var d=el.tagName==='DETAILS'?el:el.closest('details');
+    if(d){d.open=true; el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){abrir(a.getAttribute('href').slice(1));});});
+  var ab=document.getElementById('abrir-todo'), ce=document.getElementById('cerrar-todo');
+  if(ab)ab.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
+  if(ce)ce.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=false;});});
+  window.addEventListener('hashchange',function(){abrir(decodeURIComponent(location.hash.slice(1)));});
+  abrir(decodeURIComponent(location.hash.slice(1)));
+});
+
+document.getElementById('leer-gett').addEventListener('click',function(){hablar(document.getElementById('texto-gett').textContent.trim(),0.85);});
+document.getElementById('leer-sec').addEventListener('click',function(){hablar(document.getElementById('texto-sec').textContent.trim(),0.85);});
+
+clasificador('clasif-tipo','puntaje-tipo',[
+  {p:'Una carta que un soldado escribió a su madre desde el frente en 1863',c:0,n:'La escribió alguien que vivía el hecho.'},
+  {p:'El capítulo de un libro de texto sobre la Guerra Civil',c:1,n:'Su autor estudió la guerra después.'},
+  {p:'Una foto de la inauguración del cementerio de Gettysburg',c:0,n:'Se tomó en el momento.'},
+  {p:'Un artículo de enciclopedia sobre Abraham Lincoln',c:1,n:'Resume y explica lo que otros documentaron.'},
+  {p:'El diario de una enfermera durante la guerra',c:0,n:'Lo escribió una testigo, día a día.'},
+  {p:'Un documental de 2015 sobre la batalla de Gettysburg',c:1,n:'Se hizo mucho después, a partir de otras fuentes.'},
+  {p:'Una entrevista grabada a una persona que vivió el huracán Katrina',c:0,n:'Es la voz de una testigo.'},
+  {p:'Una biografía de Lincoln escrita en 1920',c:1,n:'Es antigua, pero su autor no vivió los hechos.'}
+],['Primaria','Secundaria'],false);
+
+clasificador('clasif-gett','puntaje-gett',[
+  {p:'¿Dónde y cuándo pronunció Lincoln el discurso?',ops:['En Gettysburg, el día de la batalla','En Gettysburg, cuatro meses después de la batalla','En Washington, al terminar la guerra'],c:1,n:'Julio fue la batalla; el discurso, el 19 de noviembre de 1863.'},
+  {p:'Según el párrafo 2, ¿qué pone a prueba la guerra?',ops:['Si la nación puede durar mucho tiempo','Si el ejército tiene buenos generales','Si el cementerio es lo bastante grande'],c:0,n:'«…pone a prueba si esa nación… puede durar mucho tiempo».'},
+  {p:'En el párrafo 3, ¿quiénes ya consagraron esa tierra?',ops:['El presidente y su gobierno','Los hombres valientes que lucharon allí','El público que escucha el discurso'],c:1,n:'«Los hombres valientes, vivos y muertos, que lucharon aquí, ya la han consagrado».'},
+  {p:'¿Qué pide Lincoln a los vivos en el párrafo 4?',ops:['Que vuelvan a sus casas en paz','Que construyan un monumento mayor','Que continúen la obra de los soldados'],c:2,n:'«…debemos dedicarnos a la obra inconclusa…».'},
+  {p:'¿Cuál es la idea central del discurso?',ops:['Honrar a los muertos dándole sentido a su sacrificio','Describir con detalle cómo se desarrolló la batalla','Explicar las causas por las que empezó la Guerra Civil'],c:0,n:'Los honra y pide que «no habrán muerto en vano».'}
+],null,false);
+
+clasificador('clasif-cita','puntaje-cita',[
+  {p:'<strong>Afirmación:</strong> Lincoln creía que la nación se fundó sobre la igualdad.',ops:['«…consagrada a la idea de que todos los hombres son creados iguales.»','«Estamos reunidos en un gran campo de batalla de esa guerra.»','«Es del todo justo y apropiado que lo hagamos.»'],c:0,n:'Es la única cita que habla de igualdad.'},
+  {p:'<strong>Afirmación:</strong> Lincoln pensaba que su discurso no se recordaría mucho.',ops:['«…no podemos santificar esta tierra.»','«El mundo apenas notará ni recordará por mucho tiempo lo que decimos aquí…»','«Hace ochenta y siete años, nuestros padres crearon…»'],c:1,n:'Habla justo de que lo dicho se olvidará.'},
+  {p:'<strong>Afirmación:</strong> Lincoln quería que la democracia sobreviviera.',ops:['«…quienes dieron aquí su vida…»','«Los hombres valientes, vivos y muertos…»','«…que el gobierno del pueblo… no desaparezca de la tierra.»'],c:2,n:'«Gobierno del pueblo» es la democracia; pide que no desaparezca.'},
+  {p:'<strong>Afirmación:</strong> el acto tenía como fin inaugurar un cementerio.',ops:['«Hemos venido a dedicar una parte de este campo como lugar de descanso final…»','«Ahora estamos librando una gran guerra civil, que pone a prueba si esa nación… puede durar…»','«…que esta nación, bajo Dios, tenga un nuevo nacimiento de la libertad…»'],c:0,n:'«Lugar de descanso final» es un cementerio.'}
+],null,false);
+
+clasificador('clasif-punto','puntaje-punto',[
+  {p:'«Las condiciones de la fábrica son buenas y nadie tiene motivos para quejarse.»',ops:['La costurera','El dueño'],c:1,n:'Defiende la fábrica: punto de vista del dueño.'},
+  {p:'«Nos duelen los ojos de coser con tan poca luz.»',ops:['La costurera','El dueño'],c:0,n:'Habla en primera persona de las condiciones del trabajo.'},
+  {p:'«Las que regresen el lunes conservarán su puesto.»',ops:['La costurera','El dueño'],c:1,n:'Su propósito es que vuelvan a trabajar.'},
+  {p:'«Mañana seremos más que hoy.»',ops:['La costurera','El dueño'],c:0,n:'Quiere que la protesta crezca.'},
+  {p:'¿Por qué ninguna de las dos fuentes basta para saber cuántas mujeres salieron?',ops:['Porque cada una exagera según su interés','Porque son demasiado cortas para saberlo','Porque las dos son fuentes secundarias'],c:0,n:'Cada una tiene un punto de vista: hay que buscar más fuentes.'}
+],null,false);
+
+var G='<span class="pasaje">«…que el gobierno del pueblo, por el pueblo y para el pueblo no desaparezca de la tierra.» (Lincoln, 1863)</span>';
+iniciarQuiz([
+  {t:'Una <strong>fuente primaria</strong> es…',o:['Una fuente creada por alguien que vivió el hecho','Una fuente que explica el hecho años después','Cualquier fuente que tenga más de cien años'],c:0,fijo:true,r:'<a href="#s-1-tipos">1. ¿Primaria o secundaria?</a>'},
+  {t:'¿Cuál de estas es una fuente <strong>secundaria</strong>?',o:['Un libro de texto sobre la Revolución mexicana','Una foto tomada durante la Revolución mexicana','Una carta de un soldado de la Revolución'],c:0,r:'<a href="#s-1-tipos">1. ¿Primaria o secundaria?</a>'},
+  {t:'¿Cuál de estas es una fuente <strong>primaria</strong>?',o:['El diario de una inmigrante que llegó en 1910','Un artículo de 2020 sobre la inmigración de 1910','Una enciclopedia sobre la historia de la inmigración'],c:0,r:'<a href="#s-1-tipos">1. ¿Primaria o secundaria?</a>'},
+  {t:'Una biografía de George Washington escrita en 1850 es una fuente…',o:['Secundaria, porque su autor no vivió los hechos','Primaria, porque es muy antigua','Primaria, porque habla de un presidente'],c:0,r:'<a href="#s-1-tipos">1. ¿Primaria o secundaria?</a>'},
+  {t:'¿Por qué el Discurso de Gettysburg es una fuente primaria?',o:['Lo pronunció Lincoln en el lugar y en la época','Lo estudian hoy en todas las escuelas del país','Es un texto muy breve y fácil de recordar'],c:0,r:'<a href="#s-2-gettysburg">2. El Discurso de Gettysburg</a>'},
+  {t:'«Hace ochenta y siete años» se refiere al año…',o:['1776','1863','1787'],c:0,r:'<a href="#s-2-gettysburg">2. El Discurso de Gettysburg</a>'},
+  {t:'¿Cuál era el propósito principal de Lincoln en su discurso?',o:['Honrar a los soldados y animar a seguir la lucha','Contar paso a paso cómo se desarrolló la batalla','Anunciar al país que la guerra había terminado'],c:0,r:'<a href="#s-2-gettysburg">2. El Discurso de Gettysburg</a>'},
+  {t:G+'¿Qué idea apoya esta cita?',o:['Lincoln quería que la democracia sobreviviera','Lincoln quería terminar pronto el acto','Lincoln quería más soldados para el ejército'],c:0,r:'<a href="#s-4-citar">4. Citar evidencia</a>'},
+  {t:'Al citar evidencia, las palabras exactas del texto van…',o:['Entre comillas','En letras mayúsculas','Al final del escrito, sin marcar'],c:0,r:'<a href="#s-4-citar">4. Citar evidencia</a>'},
+  {t:'La mejor cita para apoyar una afirmación es la que…',o:['La demuestra directamente','Es la más larga del texto','Habla del mismo tema en general'],c:0,r:'<a href="#s-4-citar">4. Citar evidencia</a>'},
+  {t:'La costurera dice «cientos de mujeres» y el dueño dice «unas pocas». Esto muestra que…',o:['Cada uno cuenta el hecho desde su punto de vista','Uno de los dos no estuvo allí ese día en la fábrica','Las dos fuentes son secundarias y poco confiables'],c:0,r:'<a href="#s-5-punto">5. Punto de vista y propósito</a>'},
+  {t:'¿Cuál de estas preguntas <strong>no</strong> forma parte de las cuatro preguntas para analizar una fuente?',o:['¿Me gusta lo que dice?','¿Para quién se escribió?','¿Para qué se escribió?'],c:0,r:'<a href="#s-6-archivo">6. El Archivo de fuentes</a>'}
+],{meta:10,
+   bien:'Ya distingues fuentes primarias y secundarias, citas evidencia y reconoces el punto de vista. Puedes continuar con la Lección 6.3.',
+   repaso:'Vuelve a las secciones que te indica cada pregunta y repite el quiz: con práctica sale.'});
+</script>
+</body>
+</html>

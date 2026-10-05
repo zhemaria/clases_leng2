@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!-- Lección 6.1 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+     José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
+     Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección 6.1 · Gráficas de barras, líneas y circulares; tablas de datos</title>
+<meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
+<meta name="license" content="CC BY-NC-SA 4.0">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
+<style>
+  :root{
+    --cp:#00796b;--cp-claro:#e0f2f1;--cp-oscuro:#004d44;
+    --acento:#ff8c42;--texto:#1a2332;--fondo:#fafbfc;
+    --gris:#555;--gris-claro:#eef1f4;
+    --dip:#1565c0;--dip-claro:#e3f2fd;
+    --hia:#ad1457;--hia-claro:#fce4ec;
+    --grp:#5c3900;--grp-claro:#fff3cd;
+    --exito:#2e7d32;--error:#c62828;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Poppins','Segoe UI',Arial,sans-serif;line-height:1.7;color:var(--texto);background:var(--fondo);max-width:960px;margin:0 auto;padding:24px 18px}
+  h1{color:var(--cp-oscuro);border-bottom:4px solid var(--cp);padding-bottom:14px;font-size:1.85rem;margin-bottom:8px}
+  .subtitulo{color:var(--gris);font-style:italic;margin-top:0;margin-bottom:24px;font-size:1.05rem}
+  h2{color:var(--cp-oscuro);border-left:6px solid var(--cp);padding-left:14px;margin-top:32px;font-size:1.4rem}
+  h3{color:var(--cp);margin-top:24px;font-size:1.15rem}
+  .caja-objetivos{background:var(--cp-claro);border-left:6px solid var(--cp);padding:18px 22px;border-radius:8px;margin:18px 0 28px 0}
+  .caja-objetivos h2{margin-top:0;color:var(--cp-oscuro);border-left:none;padding-left:0;font-size:1.2rem}
+  .caja-tiempo{display:inline-block;background:var(--acento);color:#1a2332;padding:4px 12px;border-radius:14px;font-size:0.85rem;font-weight:600;margin-left:10px;vertical-align:middle}
+  details{background:#fff;border:1px solid #d6dde4;border-radius:10px;margin:14px 0;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+  details[open]{border-color:var(--cp);box-shadow:0 3px 10px rgba(0,121,107,0.12)}
+  summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--cp-oscuro);background:var(--gris-claro);list-style:none;user-select:none;font-size:1.05rem}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:'▶';display:inline-block;margin-right:10px;color:var(--cp);transition:transform 0.25s;font-size:0.85rem}
+  details[open] summary::before{transform:rotate(90deg)}
+  details[open] summary{background:var(--cp-claro);border-bottom:2px solid var(--cp)}
+  .contenido-detalle{padding:18px 22px}
+  .tip{background:#fffbe6;border-left:5px solid #f4c430;padding:12px 18px;border-radius:6px;margin:14px 0}
+  .tip strong{color:#6b5400}
+  .botones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .btn{padding:10px 22px;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.95rem;transition:background 0.2s}
+  .btn-primario{background:var(--cp);color:#fff}
+  .btn-primario:hover{background:var(--cp-oscuro)}
+  .btn-secundario{background:var(--gris-claro);color:var(--texto)}
+  .btn-secundario:hover{background:#d6dde4}
+  .btn[aria-pressed="true"]{background:var(--cp-oscuro);color:#fff}
+  ul.lista-bonita{list-style:none;padding-left:0}
+  ul.lista-bonita li{padding:8px 0 8px 30px;position:relative}
+  ul.lista-bonita li::before{content:'➜';position:absolute;left:0;color:var(--cp);font-weight:700}
+  .palabra-clave{background:linear-gradient(transparent 60%,#ffeb3b 60%);padding:0 4px;font-weight:600}
+  .ejemplo{font-family:Georgia,serif;font-size:1.15rem}
+  .sil{font-family:Georgia,serif;letter-spacing:.5px;color:var(--cp-oscuro);font-weight:700}
+  table.tabla{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+  table.tabla th{background:var(--cp-oscuro);color:#fff;padding:10px 12px;text-align:left}
+  table.tabla td{padding:10px 12px;border-bottom:1px solid var(--gris-claro);vertical-align:top}
+  table.tabla tr:last-child td{border-bottom:none}
+  .actividad{background:#fff;border:2px solid var(--acento);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .actividad h4{color:#8a3d0c;margin-top:0}
+  .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+  .badge-lectura{background:#e3f2fd;color:#0d47a1}
+  .badge-actividad{background:#f3e5f5;color:#6a1b9a}
+  /* Clasificadores */
+  .clasificador{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:18px 0}
+  .item{border:2px solid var(--gris-claro);border-radius:8px;padding:10px 14px;margin:8px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .item-pal{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--cp-oscuro);display:flex;align-items:center;gap:10px}
+  .item-ops{display:flex;gap:8px;flex-wrap:wrap}
+  .item-fb{flex-basis:100%;font-size:.95rem;min-height:0}
+  .item-fb:empty{display:none}
+  .btn-op{padding:7px 14px;border:2px solid var(--cp);background:#fff;color:var(--cp-oscuro);border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit;font-size:.92rem}
+  .btn-op:hover:not(:disabled){background:var(--cp-claro)}
+  .btn-op.correcta{background:#d4edda;border-color:var(--exito);color:#155724}
+  .btn-op.incorrecta{background:#f8d7da;border-color:var(--error);color:#721c24}
+  .btn-op:disabled{cursor:default}
+  .oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:3px 10px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.9rem}
+  .puntaje{text-align:center;margin-top:12px;font-weight:600;color:var(--cp-oscuro)}
+  /* Lectura con marcas */
+  .texto-lectura{background:#fff;border:2px solid var(--gris-claro);border-radius:8px;padding:18px 22px;margin:14px 0;font-family:Georgia,serif;font-size:1.12rem;line-height:2.1}
+  .texto-lectura p{margin:0 0 10px}
+  .leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:.92rem;margin:8px 0}
+  .leyenda span{display:inline-flex;align-items:center;gap:6px}
+  .mk{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .ver-dip .dip{background:var(--dip-claro);color:var(--dip);font-weight:700;box-shadow:0 -3px 0 var(--dip) inset;border-radius:3px}
+  .ver-dip .hia{background:var(--hia-claro);color:var(--hia);font-weight:700;box-shadow:0 -3px 0 var(--hia) inset;border-radius:3px}
+  .ver-dip .muda{color:#555;text-decoration:underline dotted 2px}
+  .ver-grp .grp{background:var(--grp-claro);color:var(--grp);font-weight:700;box-shadow:0 -3px 0 var(--grp) inset;border-radius:3px}
+  /* Índice */
+  .indice{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:16px 20px;margin:22px 0}
+  .indice h2{font-size:1.1rem;margin:0 0 8px;border:none;padding:0}
+  .indice ol{margin:0;padding-left:1.4em}
+  .indice li{margin:4px 0}
+  .indice a{color:var(--cp-oscuro)}
+  .abrir-cerrar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+  .volver-indice{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--cp-oscuro);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+  .volver-indice:hover{background:var(--cp);color:#fff}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b35316;outline-offset:2px}
+  .sr-solo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .enlace-practica{display:block;background:#fff;border:2px solid var(--cp);border-radius:10px;padding:14px 18px;margin:16px 0;text-decoration:none;color:var(--cp-oscuro);font-weight:600}
+  .enlace-practica:hover{background:var(--cp-claro)}
+  .enlace-practica span{display:block;font-weight:400;color:var(--texto);font-size:.95rem}
+  .aviso-voz{font-size:.9rem;color:#5c3900;background:#fff3cd;border-radius:6px;padding:6px 10px;display:none}
+  .aviso-voz.visible{display:block}
+  /* Quiz */
+  .qz-intro{background:var(--cp-claro);border-radius:10px;padding:14px 18px;margin:0 0 14px}
+  .qz-intro h4{margin:0 0 6px;color:var(--cp-oscuro)}
+  .qz-preg{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .qz-enun{font-weight:600;margin:0 0 10px}
+  .qz-num{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:12px;padding:1px 10px;font-size:.8rem;margin-right:8px}
+  .qz-extra{display:block;text-align:center;margin:6px 0 10px;font-weight:400}
+  .qz-extra .qz-grande{font-family:Georgia,serif;font-size:1.3rem}
+  .qz-oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:6px 14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .qz-ops{display:flex;flex-direction:column;gap:8px}
+  .qz-op{text-align:left;background:#fff;border:2px solid #c9d2db;border-radius:8px;padding:10px 14px;font-family:inherit;font-size:1rem;cursor:pointer;color:var(--texto)}
+  .qz-op:hover:not(:disabled){border-color:var(--cp)}
+  .qz-op.elegida{background:var(--cp-claro);border-color:var(--cp-oscuro);color:var(--cp-oscuro);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--cp)}
+  .qz-op.correcta{background:#d4edda;border-color:#2e7d32;color:#155724}
+  .qz-op.correcta::before{content:'✓ '}
+  .qz-op.incorrecta{background:#f8d7da;border-color:#c62828;color:#721c24}
+  .qz-op.incorrecta::before{content:'✗ '}
+  .qz-op:disabled{cursor:default}
+  .qz-resultado{display:none;margin:16px 0;padding:16px;border-radius:10px;text-align:center;font-weight:600}
+  .qz-resultado.visible{display:block}
+  footer.pie{margin-top:40px;padding-top:18px;border-top:2px solid var(--gris-claro);text-align:center;color:#555;font-size:.9rem}
+  footer.pie p{margin:4px 0}
+  footer.pie a{color:var(--cp-oscuro)}
+  @media print{.indice,.volver-indice,.abrir-cerrar{display:none}}
+  @media (prefers-reduced-motion:reduce){summary::before{transition:none}}
+
+  .qz-repaso{margin:10px 0 0;padding:8px 12px;background:#fff3cd;border-radius:6px;color:#3d2600;font-size:.95rem}
+  .qz-repaso a{color:#004d44;font-weight:700}
+  /* ── Comunes desde el Tema 4 ── */
+  .item-ops{flex-wrap:wrap}
+  .apilado .item{flex-direction:column;align-items:stretch}
+  .apilado .item-ops{flex-direction:column}
+  .apilado .btn-op{text-align:left;font-weight:400}
+  .apilado .item-pal{font-family:'Segoe UI',Arial,sans-serif;font-size:1rem;color:#1a2332;font-weight:600}
+  .pasaje{display:block;background:#fff8ee;border-left:5px solid var(--acento);border-radius:6px;padding:10px 14px;margin:8px 0;font-family:Georgia,serif;font-weight:400;line-height:1.75}
+  .pasaje p{margin:0 0 6px}
+  .num-p{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:50%;width:1.6em;height:1.6em;text-align:center;line-height:1.6em;font-size:.8rem;font-family:'Segoe UI',Arial,sans-serif;margin-right:6px;vertical-align:middle}
+  .idea{background:#e3f2fd;color:#0d3c78;font-weight:700;box-shadow:0 -3px 0 #1565c0 inset;border-radius:3px}
+  .oculta-idea .idea{background:none;color:inherit;font-weight:inherit;box-shadow:none}
+
+  figure.graf{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:12px 14px;margin:14px 0;text-align:center}
+  figure.graf figcaption{font-weight:700;color:var(--cp-oscuro);margin-bottom:6px;text-align:left}
+  figure.graf .fuente{font-size:.85rem;color:#555;text-align:left;margin:4px 0 0}
+  .ver-datos{text-align:left;margin-top:6px}
+  .ver-datos summary{padding:8px 12px;font-size:.95rem}
+  .cinco{counter-reset:p;list-style:none;padding:0}
+  .cinco li{counter-increment:p;background:#fff;border:2px solid var(--cp);border-radius:10px;padding:10px 14px 10px 52px;margin:8px 0;position:relative}
+  .cinco li::before{content:counter(p);position:absolute;left:12px;top:10px;width:28px;height:28px;border-radius:50%;background:var(--cp-oscuro);color:#fff;text-align:center;line-height:28px;font-weight:700}
+  table.planes td,table.planes th{text-align:center}
+  .mini{border-collapse:collapse;margin:6px 0;font-size:.95rem;font-weight:400}
+  .mini th,.mini td{border:1px solid #9aa9b7;padding:4px 10px}
+  .mini th{background:#004d44;color:#fff}
+</style>
+</head>
+<body>
+<h1>Lección 6.1 · Gráficas de barras, líneas y circulares; tablas de datos</h1>
+<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 6: Leer con imágenes y en las materias · Unas 2 horas, a tu ritmo</p>
+
+<div class="caja-objetivos">
+  <h2>🎯 Objetivos de la lección</h2>
+  <ul class="lista-bonita" style="margin:0">
+    <li>Leer gráficas de <strong>barras</strong>, de <strong>líneas</strong> y <strong>circulares</strong>, y <strong>tablas</strong> de datos.</li>
+    <li>Identificar el título, los ejes, la escala, los valores y la <strong>tendencia</strong>.</li>
+    <li>Distinguir una <strong>conclusión válida</strong> de una que la gráfica no permite sacar.</li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:.92rem">Estándares: RH.6-8.7 · RST.6-8.7 · 2.R.CI.1</p>
+</div>
+
+<nav class="indice" id="indice" aria-labelledby="indice-titulo">
+  <h2 id="indice-titulo">Contenido de la lección</h2>
+  <ol>
+    <li><a href="#s-1-pasos">Leer una gráfica en cinco pasos</a></li>
+    <li><a href="#s-2-barras">Gráficas de barras: comparar</a></li>
+    <li><a href="#s-3-lineas">Gráficas de líneas: ver cambios en el tiempo</a></li>
+    <li><a href="#s-4-circular">Gráficas circulares: las partes de un todo</a></li>
+    <li><a href="#s-5-tablas">Tablas de datos</a></li>
+    <li><a href="#s-6-conclusiones">¿Qué se puede concluir?</a></li>
+    <li><a href="#s-tarea">Tarea</a></li>
+    <li><a href="#s-quiz">Quiz de la lección</a></li>
+    <li><a href="#s-cierre">Cierre</a></li>
+  </ol>
+  <div class="abrir-cerrar">
+    <button type="button" class="btn btn-secundario" id="abrir-todo">Abrir todo</button>
+    <button type="button" class="btn btn-secundario" id="cerrar-todo">Cerrar todo</button>
+  </div>
+</nav>
+
+<h2>📚 Para empezar</h2>
+<p>Las gráficas están en todas partes: en la factura de la luz, en las noticias, en el folleto del médico y, sobre todo, en el GED. En los exámenes de Ciencias y de Estudios Sociales, casi la mitad de las preguntas trae una gráfica, una tabla o un mapa. La buena noticia es que todas se leen con <strong>el mismo método</strong>. En esta lección no vas a hacer cálculos difíciles: vas a aprender a <strong>leer</strong> lo que la gráfica dice y, tan importante como eso, lo que <strong>no</strong> dice.</p>
+<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán.</p>
+
+<details open id="s-1-pasos">
+<summary>1. Leer una gráfica en cinco pasos <span class="caja-tiempo">10 min</span></summary>
+<div class="contenido-detalle">
+<ol class="cinco">
+  <li><strong>El título:</strong> ¿de qué trata? ¿De qué lugar y de qué tiempo son los datos?</li>
+  <li><strong>Los ejes o las categorías:</strong> ¿qué se mide? ¿Qué representa cada barra, línea o porción?</li>
+  <li><strong>La escala y las unidades:</strong> ¿de cuánto en cuánto van los números? ¿Son dólares, personas, grados, porcentajes?</li>
+  <li><strong>Los valores:</strong> lee los datos que necesitas. Sigue la línea desde la marca hasta el eje.</li>
+  <li><strong>La tendencia o la conclusión:</strong> ¿qué es lo más grande, lo más pequeño, qué sube, qué baja?</li>
+</ol>
+<div class="tip"><strong>💡 Lee la pregunta primero:</strong> en un examen, lee antes la pregunta para saber qué dato buscas. Después aplica los cinco pasos. Así no te pierdes entre tantos números.</div>
+</div>
+</details>
+
+<details id="s-2-barras">
+<summary>2. Gráficas de barras: comparar <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>La <span class="palabra-clave">gráfica de barras</span> sirve para <strong>comparar cantidades</strong> entre categorías. Cuanto más alta la barra, mayor la cantidad.</p>
+<figure class="graf" id="g-barras"><figcaption>Visitas a la biblioteca del barrio en una semana</figcaption><div class="lienzo"></div><p class="fuente">Datos de ejemplo para la lección.</p></figure>
+<div class="clasificador apilado" id="clasif-barras"></div>
+<div class="puntaje" id="puntaje-barras" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-1.html#barras" target="_blank" rel="noopener noreferrer">📊 Practica más: gráficas de barras
+  <span>Gráficas nuevas cada vez con preguntas de lectura. Se abre en una pestaña nueva.</span></a>
+</div>
+</details>
+
+<details id="s-3-lineas">
+<summary>3. Gráficas de líneas: ver cambios en el tiempo <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>La <span class="palabra-clave">gráfica de líneas</span> muestra cómo <strong>cambia algo con el tiempo</strong>. El tiempo va en el eje horizontal. Si la línea sube, la cantidad aumenta; si baja, disminuye; si queda plana, no cambia. Esa dirección se llama <span class="palabra-clave">tendencia</span>.</p>
+<figure class="graf" id="g-lineas"><figcaption>Temperatura promedio de cada mes en Chicago</figcaption><div class="lienzo"></div><p class="fuente">Valores aproximados, en grados Fahrenheit (°F).</p></figure>
+<div class="clasificador apilado" id="clasif-lineas"></div>
+<div class="puntaje" id="puntaje-lineas" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-1.html#lineas" target="_blank" rel="noopener noreferrer">📈 Practica más: gráficas de líneas
+  <span>Tendencias, máximos y mínimos en otras gráficas.</span></a>
+</div>
+</details>
+
+<details id="s-4-circular">
+<summary>4. Gráficas circulares: las partes de un todo <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>La <span class="palabra-clave">gráfica circular</span> (también llamada «de pastel») muestra cómo se reparte un <strong>total</strong>. El círculo completo es el 100 %, y cada porción es una parte. Las porciones siempre suman 100 %.</p>
+<figure class="graf" id="g-circular"><figcaption>¿En qué gasta la familia Ramírez su dinero cada mes?</figcaption><div class="lienzo"></div><p class="fuente">Datos de ejemplo para la lección.</p></figure>
+<div class="tip"><strong>💡 Porcentajes que ayudan:</strong> el 50 % es la mitad; el 25 %, un cuarto; el 10 %, una décima parte. Si una porción ocupa casi la mitad del círculo, está cerca del 50 %.</div>
+<div class="clasificador apilado" id="clasif-circular"></div>
+<div class="puntaje" id="puntaje-circular" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-1.html#circular" target="_blank" rel="noopener noreferrer">🥧 Practica más: gráficas circulares
+  <span>Otras gráficas para leer partes y porcentajes.</span></a>
+</div>
+</details>
+
+<details id="s-5-tablas">
+<summary>5. Tablas de datos <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>Una <span class="palabra-clave">tabla</span> organiza los datos en <strong>filas</strong> (horizontales) y <strong>columnas</strong> (verticales). Para encontrar un dato, busca la fila y la columna correctas y mira dónde se cruzan.</p>
+<table class="tabla planes">
+  <caption style="font-weight:700;color:var(--cp-oscuro);text-align:left;padding-bottom:6px">Tres planes de teléfono celular (precios de ejemplo)</caption>
+  <thead><tr><th scope="col">Plan</th><th scope="col">Precio al mes</th><th scope="col">Datos de internet</th><th scope="col">Llamadas internacionales</th></tr></thead>
+  <tbody>
+    <tr><td><strong>A</strong></td><td>$25</td><td>5 GB</td><td>No incluye</td></tr>
+    <tr><td><strong>B</strong></td><td>$35</td><td>15 GB</td><td>México y Canadá</td></tr>
+    <tr><td><strong>C</strong></td><td>$50</td><td>Ilimitados</td><td>20 países</td></tr>
+  </tbody>
+</table>
+<div class="clasificador apilado" id="clasif-tabla"></div>
+<div class="puntaje" id="puntaje-tabla" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l6-1.html#tablas" target="_blank" rel="noopener noreferrer">🗂️ Practica más: tablas de datos
+  <span>Horarios, precios y datos para localizar y comparar.</span></a>
+</div>
+</details>
+
+<details id="s-6-conclusiones">
+<summary>6. ¿Qué se puede concluir? <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>Las preguntas más difíciles de los exámenes no piden un número, sino una <strong>conclusión</strong>: «¿Qué afirmación apoya la gráfica?». Una conclusión es <strong>válida</strong> solo si los datos la demuestran. Hay tres trampas frecuentes:</p>
+<table class="tabla">
+  <caption class="sr-solo">Trampas en las conclusiones sobre gráficas</caption>
+  <thead><tr><th scope="col">Trampa</th><th scope="col">Ejemplo con la gráfica de la biblioteca</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Habla de algo que la gráfica no mide</strong></td><td>«La gente lee más los sábados.» La gráfica cuenta visitas, no libros leídos.</td></tr>
+    <tr><td><strong>Inventa una causa</strong></td><td>«Hay más visitas el sábado porque la gente no trabaja.» Puede ser cierto, pero la gráfica no lo dice.</td></tr>
+    <tr><td><strong>Es una opinión</strong></td><td>«La biblioteca debería cerrar los viernes.» Es una recomendación, no un dato.</td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 La prueba:</strong> pregúntate «¿puedo señalar en la gráfica el dato que lo demuestra?». Si puedes, la conclusión es válida. Si tienes que suponer algo, no lo es.</div>
+<h3>¿Válida o no?</h3>
+<p>Todas se refieren a la gráfica de la biblioteca de la sección 2.</p>
+<div class="clasificador apilado" id="clasif-conc"></div>
+<div class="puntaje" id="puntaje-conc" role="status" aria-live="polite"></div>
+<div class="tip"><strong>👨‍👩‍👧 Si tienes con quién practicar:</strong> busquen juntos una gráfica en una noticia o un folleto. Cada uno escribe una conclusión válida y otra que no lo sea; luego el otro tiene que adivinar cuál es cuál.</div>
+</div>
+</details>
+
+<details id="s-tarea">
+<summary>7. Tarea <span class="caja-tiempo">30 min</span></summary>
+<div class="contenido-detalle">
+<ul class="lista-bonita">
+  <li><strong>Una gráfica real.</strong> Busca una gráfica en un periódico, una factura o un sitio de noticias. Aplica los cinco pasos por escrito y escribe dos conclusiones válidas.</li>
+  <li><strong>Mi gráfica.</strong> Anota durante una semana cuántas horas estudias cada día. Dibuja una gráfica de barras con título, ejes y escala, y escribe una oración con la conclusión.</li>
+  <li><strong>Mi presupuesto.</strong> Dibuja una gráfica circular aproximada de cómo se reparte el dinero en tu casa (no hace falta poner cantidades reales; pueden ser porcentajes estimados).</li>
+</ul>
+</div>
+</details>
+
+<details id="s-quiz">
+<summary>8. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<div class="qz-intro">
+  <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
+  <p style="margin:0">Al final pulsa <strong>Ver mi resultado</strong>. La meta es acertar al menos <strong>10 de 12</strong>.</p>
+</div>
+<div id="qz-cuerpo"></div>
+<div class="botones">
+  <button type="button" class="btn btn-primario" id="qz-calificar">Ver mi resultado</button>
+  <button type="button" class="btn btn-secundario" id="qz-reintentar" style="display:none">Intentar de nuevo</button>
+</div>
+<div class="qz-resultado" id="qz-resultado" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-cierre">
+<summary>9. Cierre <span class="caja-tiempo">5 min</span></summary>
+<div class="contenido-detalle">
+<h3>Lo que aprendiste en esta lección</h3>
+<ul class="lista-bonita">
+  <li>Cinco pasos: título, ejes o categorías, escala y unidades, valores, tendencia o conclusión.</li>
+  <li><strong>Barras</strong> para comparar; <strong>líneas</strong> para ver cambios en el tiempo; <strong>circular</strong> para las partes de un todo.</li>
+  <li>En una <strong>tabla</strong>, el dato está donde se cruzan la fila y la columna.</li>
+  <li>Una conclusión es válida solo si un dato de la gráfica la demuestra.</li>
+</ul>
+<div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
+  <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
+  <ul class="lista-bonita">
+    <li>¿Qué tipo de gráfica usarías para mostrar cómo cambió el precio de la gasolina en un año?</li>
+    <li>¿Cuánto suman todas las porciones de una gráfica circular?</li>
+    <li>¿Por qué «la gente lee más los sábados» no es una conclusión válida de la gráfica de la biblioteca?</li>
+  </ul>
+</div>
+<div class="tip"><strong>📅 En la próxima lección:</strong> <a href="https://zhemaria.github.io/clases_leng2/clase_6-2.html" style="color:var(--cp-oscuro);font-weight:700">Lección 6.2 · Fuentes primarias y secundarias: introducción</a>. Leerás palabras de Abraham Lincoln y aprenderás a distinguir quién vivió un hecho y quién lo cuenta después.</div>
+</div>
+</details>
+
+<footer class="pie">
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 6 · Lección 6.1</strong></p>
+  <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
+  <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
+</footer>
+<a class="volver-indice" href="#indice" aria-label="Volver al contenido de la lección"><span aria-hidden="true">↑</span> Índice</a>
+
+<script>
+/* ===== Voz: todas las lecturas pasan por hablar(), para poder cambiarla después por audio grabado ===== */
+(function(){
+  var voz=null, hay=('speechSynthesis' in window);
+  function elegir(){
+    if(!hay)return;
+    var vs=speechSynthesis.getVoices().filter(function(v){return /^es/i.test(v.lang);});
+    var pref=['es-US','es-MX','es-419','es-CO','es-AR','es-CL','es-PE'];
+    voz=null;
+    for(var i=0;i<pref.length&&!voz;i++){voz=vs.find(function(v){return v.lang.replace('_','-').toLowerCase()===pref[i].toLowerCase();})||null;}
+    if(!voz)voz=vs.find(function(v){return !/es[-_]ES/i.test(v.lang);})||vs[0]||null;
+  }
+  function aviso(){var a=document.getElementById('aviso-voz');if(a)a.classList.add('visible');}
+  function frase(t,vel){var u=new SpeechSynthesisUtterance(t);u.lang=voz?voz.lang:'es-US';if(voz)u.voice=voz;u.rate=vel||0.9;return u;}
+  if(hay){elegir(); speechSynthesis.onvoiceschanged=elegir;}
+  /* hablar(texto, velocidad, alTerminar) */
+  window.hablar=function(texto,vel,fin){
+    if(!hay||!texto){aviso();return;}
+    speechSynthesis.cancel();
+    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+  };
+  /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
+  window.hablarPalabras=function(texto){
+    if(!hay){aviso();return;}
+    speechSynthesis.cancel();
+    texto.replace(/[.,;:¿?¡!—«»]/g,' ').split(/\s+/).filter(Boolean).forEach(function(p){speechSynthesis.speak(frase(p,0.7));});
+  };
+  window.callar=function(){if(hay)speechSynthesis.cancel();};
+  if(!hay)document.addEventListener('DOMContentLoaded',aviso);
+})();
+
+/* ===== Clasificador: cada elemento con sus botones; al acertar muestra una nota ===== */
+function clasificador(idCaja,idPuntaje,items,opciones,conAudio){
+  var caja=document.getElementById(idCaja), pun=document.getElementById(idPuntaje), bien=0, hechas={};
+  function marcador(){pun.textContent=bien===items.length?(items.length===1?'🎉 ¡Muy bien!':'🎉 ¡Muy bien! Acertaste las '+bien+'.'):(items.length===1?'':'Aciertos: '+bien+' / '+items.length);}
+  items.forEach(function(it,i){
+    var d=document.createElement('div'); d.className='item'; d.setAttribute('role','group'); d.setAttribute('aria-label',it.p.replace(/<[^>]+>/g,''));
+    var ops=it.ops||opciones;
+    d.innerHTML='<span class="item-pal">'+it.p+(conAudio?' <button type="button" class="oir" aria-label="Escuchar">🔊</button>':'')+'</span>'+
+      '<span class="item-ops">'+ops.map(function(o,j){return '<button type="button" class="btn-op" data-j="'+j+'">'+o+'</button>';}).join('')+'</span>'+
+      '<span class="item-fb" aria-live="polite"></span>';
+    caja.appendChild(d);
+    if(conAudio)d.querySelector('.oir').addEventListener('click',function(){hablar(it.a||it.p.replace(/<[^>]+>/g,''),0.85);});
+    var fb=d.querySelector('.item-fb');
+    d.querySelectorAll('.btn-op').forEach(function(b){
+      b.addEventListener('click',function(){
+        if(hechas[i])return;
+        if(+b.getAttribute('data-j')===it.c){
+          b.classList.add('correcta'); hechas[i]=true; bien++;
+          d.querySelectorAll('.btn-op').forEach(function(x){x.disabled=true;});
+          fb.innerHTML='✓ '+(it.n||'Correcto.'); marcador();
+        }else{
+          b.classList.add('incorrecta'); b.disabled=true;
+          fb.innerHTML='Todavía no. '+(it.pista||'Vuelve a mirar la regla e intenta otra vez.');
+        }
+      });
+    });
+  });
+  marcador();
+}
+
+/* ===== Quiz de la lección =====
+   P: [{t:enunciado, o:[opciones], c:índice correcto, x:texto grande opcional, a:audio opcional,
+        ae:audio entrecortado opcional, fijo:no barajar,
+        r:enlace de repaso que aparece si la respuesta es incorrecta}]
+   cfg: {meta, bien:mensaje si llega a la meta, repaso:mensaje si queda lejos} */
+function iniciarQuiz(P,cfg){
+  var META=cfg.meta, N=P.length, cuerpo=document.getElementById('qz-cuerpo'), elegidas={};
+  P.forEach(function(p,i){
+    var d=document.createElement('div');
+    d.className='qz-preg'; d.setAttribute('role','group'); d.setAttribute('aria-labelledby','qz-e'+i);
+    var h='<p class="qz-enun" id="qz-e'+i+'"><span class="qz-num">'+(i+1)+'</span>'+p.t+'</p>';
+    if(p.x||p.a||p.ae){
+      h+='<span class="qz-extra">'+(p.x?'<span class="qz-grande">'+p.x+'</span> ':'')+
+         ((p.a||p.ae)?'<button type="button" class="qz-oir" data-oir="'+i+'">🔊 Escuchar</button>':'')+'</span>';
+    }
+    h+='<div class="qz-ops">';
+    var orden=p.o.map(function(_,j){return j;});
+    if(!p.fijo){for(var k=orden.length-1;k>0;k--){var r=Math.floor(Math.random()*(k+1)),t=orden[k];orden[k]=orden[r];orden[r]=t;}}
+    orden.forEach(function(j){h+='<button type="button" class="qz-op" data-i="'+i+'" data-j="'+j+'" aria-pressed="false">'+p.o[j]+'</button>';});
+    d.innerHTML=h+'</div>'; cuerpo.appendChild(d);
+  });
+  cuerpo.addEventListener('click',function(ev){
+    var oir=ev.target.closest('.qz-oir');
+    if(oir){var q=P[+oir.getAttribute('data-oir')]; if(q.ae)hablarPalabras(q.ae); else hablar(q.a,q.v||0.85); return;}
+    var b=ev.target.closest('.qz-op'); if(!b||b.disabled)return;
+    var i=b.getAttribute('data-i');
+    cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){x.classList.remove('elegida');x.setAttribute('aria-pressed','false');});
+    b.classList.add('elegida'); b.setAttribute('aria-pressed','true'); elegidas[i]=+b.getAttribute('data-j');
+  });
+  var res=document.getElementById('qz-resultado');
+  document.getElementById('qz-calificar').addEventListener('click',function(){
+    var bien=0;
+    P.forEach(function(p,i){
+      cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){
+        var j=+x.getAttribute('data-j'); x.disabled=true; x.classList.remove('elegida');
+        if(j===p.c)x.classList.add('correcta'); else if(elegidas[i]===j)x.classList.add('incorrecta');
+      });
+      if(elegidas[i]===p.c)bien++;
+      else if(p.r){var nota=document.createElement('p');nota.className='qz-repaso';nota.innerHTML='📘 Para repasar: '+p.r;cuerpo.children[i].appendChild(nota);}
+    });
+    var msg,fondo,color;
+    if(bien>=META){msg='¡Excelente! '+bien+' de '+N+'. '+cfg.bien;fondo='#d4edda';color='#155724';}
+    else if(bien>=Math.ceil(N*0.6)){msg='Buen trabajo: '+bien+' de '+N+'. Repasa las preguntas en rojo y vuelve a intentarlo.';fondo='#fff3cd';color='#5c3900';}
+    else{msg='Llevas '+bien+' de '+N+'. '+cfg.repaso;fondo='#f8d7da';color='#721c24';}
+    res.textContent=msg; res.style.background=fondo; res.style.color=color; res.classList.add('visible');
+    this.style.display='none'; document.getElementById('qz-reintentar').style.display='inline-block';
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('qz-reintentar').addEventListener('click',function(){
+    cuerpo.querySelectorAll('.qz-op').forEach(function(x){x.disabled=false;x.classList.remove('correcta','incorrecta','elegida');x.setAttribute('aria-pressed','false');});
+    cuerpo.querySelectorAll('.qz-repaso').forEach(function(n){n.remove();});
+    elegidas={}; res.classList.remove('visible'); res.textContent='';
+    this.style.display='none'; document.getElementById('qz-calificar').style.display='inline-block';
+    cuerpo.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+
+/* ===== Navegación: el índice y la dirección (#ancla) abren su sección ===== */
+document.addEventListener('DOMContentLoaded',function(){
+  function abrir(id){
+    var el=id&&document.getElementById(id); if(!el)return;
+    var d=el.tagName==='DETAILS'?el:el.closest('details');
+    if(d){d.open=true; el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){abrir(a.getAttribute('href').slice(1));});});
+  var ab=document.getElementById('abrir-todo'), ce=document.getElementById('cerrar-todo');
+  if(ab)ab.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
+  if(ce)ce.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=false;});});
+  window.addEventListener('hashchange',function(){abrir(decodeURIComponent(location.hash.slice(1)));});
+  abrir(decodeURIComponent(location.hash.slice(1)));
+});
+
+/* ===== Gráficas sencillas en SVG (barras, líneas, circular) =====
+   Colores validados para daltonismo: #00897b, #d9692a, #5c6bc0, #c2185b. Cada gráfica lleva valores
+   escritos sobre las marcas y una tabla con los datos, para que nada dependa solo del color. */
+var GCOL=['#00897b','#d9692a','#5c6bc0','#c2185b'];
+function svgEl(t,a,txt){var e=document.createElementNS('http://www.w3.org/2000/svg',t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e;}
+function marcoSvg(caja,ancho,alto,desc){
+  var s=svgEl('svg',{viewBox:'0 0 '+ancho+' '+alto,width:ancho,height:alto,role:'img','aria-label':desc});
+  s.style.maxWidth='100%'; s.style.height='auto'; caja.innerHTML=''; caja.appendChild(s); return s;
+}
+/* barras(caja, {titulo, etiquetas, valores, unidad, ejeY}) */
+function graficaBarras(caja,o){
+  var W=520,H=300,L=56,R=16,T=20,B=48, max=o.max||Math.ceil(Math.max.apply(null,o.valores)*1.15/10)*10, n=o.valores.length;
+  var s=marcoSvg(caja,W,H,o.titulo+'. Gráfica de barras. '+o.etiquetas.map(function(e,i){return e+': '+o.valores[i]+(o.unidad||'');}).join('; '));
+  var paso=o.paso||max/5;
+  for(var v=0;v<=max+0.001;v+=paso){var y=T+(H-T-B)*(1-v/max);s.appendChild(svgEl('line',{x1:L,x2:W-R,y1:y,y2:y,stroke:'#dfe5ea','stroke-width':1}));s.appendChild(svgEl('text',{x:L-8,y:y+4,'text-anchor':'end','font-size':12,fill:'#555','font-family':'Arial'},Math.round(v)));}
+  if(o.ejeY)s.appendChild(svgEl('text',{x:14,y:(H-B+T)/2,transform:'rotate(-90 14 '+((H-B+T)/2)+')','text-anchor':'middle','font-size':12,fill:'#333','font-family':'Arial'},o.ejeY));
+  var ancho=(W-L-R)/n, bw=Math.min(52,ancho*0.62);
+  o.valores.forEach(function(v,i){
+    var x=L+ancho*i+(ancho-bw)/2, h=(H-T-B)*v/max, y=H-B-h;
+    var r=svgEl('path',{d:'M'+x+','+(H-B)+' V'+(y+4)+' Q'+x+','+y+' '+(x+4)+','+y+' H'+(x+bw-4)+' Q'+(x+bw)+','+y+' '+(x+bw)+','+(y+4)+' V'+(H-B)+' Z',fill:o.color||GCOL[0]});
+    r.appendChild(svgEl('title',{},o.etiquetas[i]+': '+v+(o.unidad||''))); s.appendChild(r);
+    s.appendChild(svgEl('text',{x:x+bw/2,y:y-6,'text-anchor':'middle','font-size':12,'font-weight':'bold',fill:'#1a2332','font-family':'Arial'},v));
+    s.appendChild(svgEl('text',{x:x+bw/2,y:H-B+18,'text-anchor':'middle','font-size':12,fill:'#333','font-family':'Arial'},o.etiquetas[i]));
+  });
+  s.appendChild(svgEl('line',{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:'#555','stroke-width':1.5}));
+  if(o.ejeX)s.appendChild(svgEl('text',{x:(W+L)/2,y:H-8,'text-anchor':'middle','font-size':12,fill:'#333','font-family':'Arial'},o.ejeX));
+}
+/* lineas(caja, {titulo, etiquetas, series:[{nombre, valores}], min, max, paso, ejeY, ejeX}) */
+function graficaLineas(caja,o){
+  var W=540,H=300,L=56,R=70,T=20,B=48, min=o.min||0, max=o.max, n=o.etiquetas.length;
+  var s=marcoSvg(caja,W,H,o.titulo+'. Gráfica de líneas. '+o.series.map(function(se){return se.nombre+': '+o.etiquetas.map(function(e,i){return e+' '+se.valores[i];}).join(', ');}).join('. '));
+  function Y(v){return T+(H-T-B)*(1-(v-min)/(max-min));} function X(i){return L+(W-L-R)*i/(n-1);}
+  for(var v=min;v<=max+0.001;v+=o.paso){s.appendChild(svgEl('line',{x1:L,x2:W-R,y1:Y(v),y2:Y(v),stroke:'#dfe5ea','stroke-width':1}));s.appendChild(svgEl('text',{x:L-8,y:Y(v)+4,'text-anchor':'end','font-size':12,fill:'#555','font-family':'Arial'},v));}
+  o.etiquetas.forEach(function(e,i){s.appendChild(svgEl('text',{x:X(i),y:H-B+18,'text-anchor':'middle','font-size':11,fill:'#333','font-family':'Arial'},e));});
+  if(o.ejeY)s.appendChild(svgEl('text',{x:14,y:(H-B+T)/2,transform:'rotate(-90 14 '+((H-B+T)/2)+')','text-anchor':'middle','font-size':12,fill:'#333','font-family':'Arial'},o.ejeY));
+  if(o.ejeX)s.appendChild(svgEl('text',{x:(W-R+L)/2,y:H-8,'text-anchor':'middle','font-size':12,fill:'#333','font-family':'Arial'},o.ejeX));
+  o.series.forEach(function(se,k){
+    var c=se.color||GCOL[k], d=se.valores.map(function(v,i){return (i?'L':'M')+X(i)+','+Y(v);}).join(' ');
+    s.appendChild(svgEl('path',{d:d,fill:'none',stroke:c,'stroke-width':2.5,'stroke-linejoin':'round'}));
+    se.valores.forEach(function(v,i){var p=svgEl('circle',{cx:X(i),cy:Y(v),r:4.5,fill:c,stroke:'#fff','stroke-width':2});p.appendChild(svgEl('title',{},se.nombre+', '+o.etiquetas[i]+': '+v+(o.unidad||'')));s.appendChild(p);
+      if(o.valoresVisibles)s.appendChild(svgEl('text',{x:X(i),y:Y(v)-10,'text-anchor':'middle','font-size':11,fill:'#1a2332','font-family':'Arial'},v));});
+    var ul=se.valores.length-1; if(o.series.length>1)s.appendChild(svgEl('text',{x:X(ul)+8,y:Y(se.valores[ul])+4,'font-size':12,'font-weight':'bold',fill:'#1a2332','font-family':'Arial'},se.nombre));
+  });
+  s.appendChild(svgEl('line',{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:'#555','stroke-width':1.5}));
+}
+/* circular(caja, {titulo, etiquetas, valores (porcentajes)}) */
+function graficaCircular(caja,o){
+  var W=460,H=280,cx=140,cy=140,r=110, tot=o.valores.reduce(function(a,b){return a+b;},0), ang=-Math.PI/2;
+  var s=marcoSvg(caja,W,H,o.titulo+'. Gráfica circular. '+o.etiquetas.map(function(e,i){return e+': '+o.valores[i]+'%';}).join('; '));
+  o.valores.forEach(function(v,i){
+    var a2=ang+2*Math.PI*v/tot, x1=cx+r*Math.cos(ang), y1=cy+r*Math.sin(ang), x2=cx+r*Math.cos(a2), y2=cy+r*Math.sin(a2), big=(a2-ang)>Math.PI?1:0;
+    var p=svgEl('path',{d:'M'+cx+','+cy+' L'+x1+','+y1+' A'+r+','+r+' 0 '+big+' 1 '+x2+','+y2+' Z',fill:GCOL[i%4],stroke:'#fff','stroke-width':2});
+    p.appendChild(svgEl('title',{},o.etiquetas[i]+': '+v+'%')); s.appendChild(p);
+    var m=(ang+a2)/2; s.appendChild(svgEl('text',{x:cx+r*0.62*Math.cos(m),y:cy+r*0.62*Math.sin(m)+5,'text-anchor':'middle','font-size':14,'font-weight':'bold',fill:'#fff','font-family':'Arial'},v+'%'));
+    ang=a2;
+    var ly=50+i*30; s.appendChild(svgEl('rect',{x:280,y:ly-12,width:16,height:16,rx:3,fill:GCOL[i%4]})); s.appendChild(svgEl('text',{x:304,y:ly+1,'font-size':14,fill:'#1a2332','font-family':'Arial'},o.etiquetas[i]+' · '+v+'%'));
+  });
+}
+/* Tabla de datos accesible debajo de la gráfica */
+function tablaDatos(caja,titulo,cabeceras,filas){
+  var h='<details class="ver-datos"><summary>Ver los datos en una tabla</summary><table class="tabla"><caption class="sr-solo">'+titulo+'</caption><thead><tr>'+cabeceras.map(function(c){return '<th scope="col">'+c+'</th>';}).join('')+'</tr></thead><tbody>'+
+    filas.map(function(f){return '<tr>'+f.map(function(c){return '<td>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></details>';
+  caja.insertAdjacentHTML('beforeend',h);
+}
+
+(function(){
+  var dias=['Lun','Mar','Mié','Jue','Vie','Sáb'], vis=[120,95,110,140,80,160];
+  var g=document.getElementById('g-barras');
+  graficaBarras(g.querySelector('.lienzo'),{titulo:'Visitas a la biblioteca del barrio en una semana',etiquetas:dias,valores:vis,max:180,paso:30,ejeY:'Número de visitas',ejeX:'Día de la semana'});
+  tablaDatos(g,'Visitas a la biblioteca',['Día','Visitas'],dias.map(function(d,i){return [d,vis[i]];}));
+
+  var meses=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'], t=[26,30,40,51,62,72,76,74,67,55,42,31];
+  var g2=document.getElementById('g-lineas');
+  graficaLineas(g2.querySelector('.lienzo'),{titulo:'Temperatura promedio de cada mes en Chicago',etiquetas:meses,series:[{nombre:'Temperatura',valores:t}],min:0,max:90,paso:15,ejeY:'Grados Fahrenheit',unidad:' °F',valoresVisibles:true});
+  tablaDatos(g2,'Temperatura promedio en Chicago',['Mes','°F'],meses.map(function(m,i){return [m,t[i]];}));
+
+  var cats=['Vivienda','Comida','Transporte','Otros'], pc=[40,25,15,20];
+  var g3=document.getElementById('g-circular');
+  graficaCircular(g3.querySelector('.lienzo'),{titulo:'Gastos mensuales de la familia Ramírez',etiquetas:cats,valores:pc});
+  tablaDatos(g3,'Gastos de la familia Ramírez',['Gasto','Porcentaje'],cats.map(function(c,i){return [c,pc[i]+' %'];}));
+})();
+
+clasificador('clasif-barras','puntaje-barras',[
+  {p:'¿Qué mide el eje vertical?',ops:['El número de visitas','Los días de la semana','Los libros prestados'],c:0,n:'El rótulo del eje lo dice: número de visitas.'},
+  {p:'¿Qué día tuvo más visitas?',ops:['Jueves','Sábado','Lunes'],c:1,n:'La barra más alta: 160.'},
+  {p:'¿Qué día tuvo menos visitas?',ops:['Viernes','Martes','Miércoles'],c:0,n:'La barra más baja: 80.'},
+  {p:'¿Cuántas visitas más hubo el jueves que el martes?',ops:['35','45','55'],c:1,n:'140 − 95 = 45.'}
+],null,false);
+
+clasificador('clasif-lineas','puntaje-lineas',[
+  {p:'¿Cuál es el mes más caluroso?',ops:['Agosto','Junio','Julio'],c:2,n:'El punto más alto: 76 °F.'},
+  {p:'¿Cuál es la tendencia de enero a julio?',ops:['La temperatura sube','La temperatura baja','No cambia'],c:0,n:'La línea sube.'},
+  {p:'¿Cuál es la tendencia de julio a diciembre?',ops:['Sube','Baja','No cambia'],c:1,n:'La línea baja.'},
+  {p:'¿Cuántos grados sube la temperatura promedio de enero a julio?',ops:['50 grados','26 grados','76 grados'],c:0,n:'76 − 26 = 50.'}
+],null,false);
+
+clasificador('clasif-circular','puntaje-circular',[
+  {p:'¿En qué gasta más la familia?',ops:['Comida','Vivienda','Transporte'],c:1,n:'La porción más grande: 40 %.'},
+  {p:'¿Cuánto suman todas las porciones?',ops:['100 %','40 %','80 %'],c:0,n:'Siempre 100 %: el total.'},
+  {p:'Comida y transporte juntos suman…',ops:['Lo mismo que vivienda','Más que vivienda','Menos que «Otros»'],c:0,n:'25 % + 15 % = 40 %, igual que vivienda.'},
+  {p:'¿Aproximadamente qué parte del dinero va a comida?',ops:['Un cuarto','La mitad','Casi todo'],c:0,n:'25 % es un cuarto.'}
+],null,false);
+
+clasificador('clasif-tabla','puntaje-tabla',[
+  {p:'¿Cuánto cuesta al mes el plan B?',ops:['$25','$35','$50'],c:1,n:'Fila B, columna «Precio al mes».'},
+  {p:'¿Qué plan tiene datos ilimitados?',ops:['A','B','C'],c:2,n:'Fila C, columna «Datos de internet».'},
+  {p:'Quieres llamar a México gastando lo menos posible. ¿Qué plan eliges?',ops:['A','B','C'],c:1,n:'El A no incluye llamadas; el B sí, y cuesta menos que el C.'},
+  {p:'¿Cuántos GB más tiene el plan B que el A?',ops:['5 GB','10 GB','15 GB'],c:1,n:'15 − 5 = 10.'}
+],null,false);
+
+clasificador('clasif-conc','puntaje-conc',[
+  {p:'«El sábado fue el día con más visitas.»',ops:['Válida','No válida'],c:0,n:'La barra del sábado es la más alta.'},
+  {p:'«El sábado hubo el doble de visitas que el viernes.»',ops:['Válida','No válida'],c:0,n:'160 es el doble de 80.'},
+  {p:'«La gente lee más libros los sábados.»',ops:['Válida','No válida'],c:1,n:'La gráfica cuenta visitas, no libros leídos.'},
+  {p:'«Los viernes viene poca gente porque llueve.»',ops:['Válida','No válida'],c:1,n:'Inventa una causa: la gráfica no habla del clima.'},
+  {p:'«La biblioteca debería cerrar los viernes.»',ops:['Válida','No válida'],c:1,n:'Es una opinión, no un dato.'}
+],null,false);
+
+var TB='<table class="mini"><caption class="sr-solo">Ventas de una panadería</caption><thead><tr><th scope="col">Producto</th><th scope="col">Lunes</th><th scope="col">Martes</th></tr></thead><tbody><tr><td>Pan dulce</td><td>40</td><td>55</td></tr><tr><td>Bolillos</td><td>90</td><td>70</td></tr></tbody></table>';
+iniciarQuiz([
+  {t:'¿Cuál es el primer paso para leer una gráfica?',o:['Leer el título','Leer el valor más alto','Sacar una conclusión'],c:0,fijo:true},
+  {t:'¿Qué gráfica conviene para mostrar cómo cambió el precio de la gasolina durante un año?',o:['De líneas','Circular','Ninguna: hace falta una tabla'],c:0},
+  {t:'¿Qué gráfica conviene para mostrar cómo se reparte un presupuesto?',o:['Circular','De líneas','De temperaturas'],c:0},
+  {t:'En una gráfica de barras, la barra más alta indica…',o:['La cantidad mayor','La cantidad menor','La primera categoría'],c:0},
+  {t:'Si la línea de una gráfica baja de izquierda a derecha, la cantidad…',o:['Disminuye con el tiempo','Aumenta con el tiempo','Se mantiene igual'],c:0},
+  {t:'Las porciones de una gráfica circular suman siempre…',o:['100 %','50 %','Lo que diga el título'],c:0},
+  {t:'Una porción del 25 % es…',o:['Un cuarto del total','La mitad del total','Casi todo el total'],c:0},
+  {t:TB+'¿Cuántos panes dulces se vendieron el martes?',o:['55','40','70'],c:0},
+  {t:TB+'¿Qué producto se vendió más el lunes?',o:['Bolillos','Pan dulce','Los dos por igual'],c:0},
+  {t:TB+'¿Qué conclusión apoya la tabla?',o:['El martes se vendió más pan dulce que el lunes.','El pan dulce es más sabroso que los bolillos.','El martes llovió y por eso bajaron los bolillos.'],c:0},
+  {t:'«La gráfica muestra que las ventas bajaron porque subieron los precios.» Si la gráfica solo muestra ventas, esta conclusión…',o:['No es válida: inventa una causa','Es válida','Es válida si los precios subieron'],c:0},
+  {t:'¿Cómo compruebas que una conclusión es válida?',o:['Señalas el dato de la gráfica que la demuestra','Ves si suena lógica cuando la lees en voz alta','Ves si coincide con lo que tú opinas del tema'],c:0}
+],{meta:10,
+   bien:'Ya lees gráficas y tablas y sacas conclusiones válidas. Puedes continuar con la Lección 6.2.',
+   repaso:'Vuelve a las secciones 1 y 6 y repite el quiz: con práctica sale.'});
+</script>
+</body>
+</html>
