@@ -129,6 +129,17 @@
 
   .qz-repaso{margin:10px 0 0;padding:8px 12px;background:#fff3cd;border-radius:6px;color:#3d2600;font-size:.95rem}
   .qz-repaso a{color:#004d44;font-weight:700}
+  /* ── Comunes desde el Tema 4 ── */
+  .item-ops{flex-wrap:wrap}
+  .apilado .item{flex-direction:column;align-items:stretch}
+  .apilado .item-ops{flex-direction:column}
+  .apilado .btn-op{text-align:left;font-weight:400}
+  .apilado .item-pal{font-family:'Segoe UI',Arial,sans-serif;font-size:1rem;color:#1a2332;font-weight:600}
+  .pasaje{display:block;background:#fff8ee;border-left:5px solid var(--acento);border-radius:6px;padding:10px 14px;margin:8px 0;font-family:Georgia,serif;font-weight:400;line-height:1.75}
+  .pasaje p{margin:0 0 6px}
+  .num-p{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:50%;width:1.6em;height:1.6em;text-align:center;line-height:1.6em;font-size:.8rem;font-family:'Segoe UI',Arial,sans-serif;margin-right:6px;vertical-align:middle}
+  .idea{background:#e3f2fd;color:#0d3c78;font-weight:700;box-shadow:0 -3px 0 #1565c0 inset;border-radius:3px}
+  .oculta-idea .idea{background:none;color:inherit;font-weight:inherit;box-shadow:none}
 
   .temas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:14px 0}
   .tema{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:12px 16px}
@@ -194,8 +205,14 @@
     <ul><li><a href="https://zhemaria.github.io/clases_leng2/clase_3-1.html">3.1 · Mayúsculas, comas, dos puntos y raya</a></li>
         <li><a href="https://zhemaria.github.io/clases_leng2/clase_3-2.html">3.2 · La tilde y la ortografía convencional</a></li>
         <li><a href="https://zhemaria.github.io/clases_leng2/clase_3-3.html">3.3 · Registro formal e informal</a></li></ul></div>
-  <div class="tema"><h4>Tema 4 · Idea principal y estructura del texto</h4><p>La idea de un texto de varios párrafos, las partes de una historia y el propósito del autor.</p></div>
-  <div class="tema"><h4>Tema 5 · Comparar textos, vocabulario y lenguaje figurado</h4><p>Semejanzas y diferencias entre dos textos, palabras nuevas por el contexto y modismos.</p></div>
+  <div class="tema"><h4>Tema 4 · Idea principal y estructura del texto</h4><p>La idea de un texto de varios párrafos, las partes de una historia y el propósito del autor.</p>
+    <ul><li><a href="https://zhemaria.github.io/clases_leng2/clase_4-1.html">4.1 · Idea principal y detalles de apoyo</a></li>
+        <li><a href="https://zhemaria.github.io/clases_leng2/clase_4-2.html">4.2 · Estructura de la historia y propósito del autor</a></li>
+        <li><a href="https://zhemaria.github.io/clases_leng2/clase_4-3.html">4.3 · Leer con ilustraciones y características del texto</a></li></ul></div>
+  <div class="tema"><h4>Tema 5 · Comparar textos, vocabulario y lenguaje figurado</h4><p>Semejanzas y diferencias entre dos textos, palabras nuevas por el contexto y modismos.</p>
+    <ul><li><a href="https://zhemaria.github.io/clases_leng2/clase_5-1.html">5.1 · Comparar y contrastar dos textos</a></li>
+        <li><a href="https://zhemaria.github.io/clases_leng2/clase_5-2.html">5.2 · Vocabulario por contexto</a></li>
+        <li><a href="https://zhemaria.github.io/clases_leng2/clase_5-3.html">5.3 · Literal frente a figurado; modismos</a></li></ul></div>
   <div class="tema"><h4>Tema 6 · Leer con imágenes y en las materias</h4><p>Gráficas y tablas, fuentes primarias y secundarias, y el vocabulario de ciencias e historia.</p></div>
   <div class="tema"><h4>Tema 7 · Escribir con estructura</h4><p>Textos de opinión, informativos y narrativos, y cómo revisar lo que escribes.</p></div>
   <div class="tema"><h4>Tema 8 · Hablar, escuchar y proyecto final</h4><p>Conversar con respeto, comprender lo que oyes, el proyecto final y la evaluación del nivel.</p></div>
@@ -297,7 +314,7 @@
 /* ===== Clasificador: cada elemento con sus botones; al acertar muestra una nota ===== */
 function clasificador(idCaja,idPuntaje,items,opciones,conAudio){
   var caja=document.getElementById(idCaja), pun=document.getElementById(idPuntaje), bien=0, hechas={};
-  function marcador(){pun.textContent=bien===items.length?'🎉 ¡Muy bien! Acertaste las '+bien+'.':'Aciertos: '+bien+' / '+items.length;}
+  function marcador(){pun.textContent=bien===items.length?(items.length===1?'🎉 ¡Muy bien!':'🎉 ¡Muy bien! Acertaste las '+bien+'.'):(items.length===1?'':'Aciertos: '+bien+' / '+items.length);}
   items.forEach(function(it,i){
     var d=document.createElement('div'); d.className='item'; d.setAttribute('role','group'); d.setAttribute('aria-label',it.p.replace(/<[^>]+>/g,''));
     var ops=it.ops||opciones;
