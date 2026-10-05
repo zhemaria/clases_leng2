@@ -402,8 +402,9 @@
   window.hablar=function(texto,vel){
     if(!hay||!texto){document.getElementById('aviso-voz').classList.add('visible');return;}
     speechSynthesis.cancel();
-    var u=new SpeechSynthesisUtterance(texto); u.lang=voz?voz.lang:'es-US'; if(voz)u.voice=voz; u.rate=vel||0.9;
-    speechSynthesis.speak(u);
+    /* Se lee por oraciones: algunos navegadores cortan las lecturas largas a los 15 segundos */
+    var partes=texto.replace(/\s+/g,' ').match(/[^.!?…]+[.!?…]+[»"”)]*\s*|[^.!?…]+$/g)||[texto];
+    partes.forEach(function(t){var u=new SpeechSynthesisUtterance(t.trim()); u.lang=voz?voz.lang:'es-US'; if(voz)u.voice=voz; u.rate=vel||0.9; speechSynthesis.speak(u);});
   };
   window.callar=function(){if(hay)speechSynthesis.cancel();};
   if(!hay)document.getElementById('aviso-voz').classList.add('visible');

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Lección 7.1 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+<!-- Lección 8.2 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
      José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
      Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lección 7.1 · Texto de opinión: postura clara y razones con conectores</title>
+<title>Lección 8.2 · Comprensión auditiva y presentación oral con audio</title>
 <meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
 <meta name="license" content="CC BY-NC-SA 4.0">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
@@ -174,37 +174,48 @@
     .rubrica td::before{content:attr(data-et);display:block;font-weight:700;color:var(--cp-oscuro)}
   }
 
-  .partes4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}
-  .partes4 div{background:#fff;border:2px solid var(--cp);border-radius:10px;padding:10px 14px}
-  .partes4 strong{color:var(--cp-oscuro);font-size:1.05rem}
+  .escucha{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:12px 14px;margin:12px 0}
+  .escucha h4{margin:0 0 8px;color:var(--cp-oscuro)}
+  .pasadas{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+  .velocidad{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0;font-size:.95rem}
+  .velocidad button[aria-pressed="true"]{background:var(--cp-oscuro);color:#fff}
+  .transcripcion summary{font-size:.95rem}
+  .guion p{margin:0 0 8px}
+  .guion .quien{font-family:'Segoe UI',Arial,sans-serif;font-weight:700;color:var(--cp-oscuro)}
+  .grabadora{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px;margin:12px 0;text-align:center}
+  .grabadora .reloj{font-size:2rem;font-weight:700;color:var(--cp-oscuro);font-variant-numeric:tabular-nums;margin:6px 0}
+  .grabadora .estado{font-weight:700;min-height:1.4em}
+  .grabadora audio{width:100%;margin-top:8px}
+  .grabando{color:#b3261e}
   .plantilla{background:#fff;border:2px dashed var(--cp);border-radius:10px;padding:10px 16px;margin:10px 0}
   .plantilla p{margin:6px 0}
 </style>
 </head>
 <body>
-<h1>Lección 7.1 · Texto de opinión: postura clara y razones con conectores</h1>
-<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 7: Escribir con estructura · Unas 2 horas, a tu ritmo</p>
+<h1>Lección 8.2 · Comprensión auditiva y presentación oral con audio</h1>
+<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 8: Hablar, colaborar y proyecto final · Unas 2 horas, a tu ritmo</p>
 
 <div class="caja-objetivos">
   <h2>🎯 Objetivos de la lección</h2>
   <ul class="lista-bonita" style="margin:0">
-    <li>Reconocer las cuatro partes de un texto de opinión: <strong>postura, razones, conectores y conclusión</strong>.</li>
-    <li>Distinguir una <strong>razón apoyada en hechos</strong> de una opinión sin apoyo.</li>
-    <li>Usar <strong>conectores</strong> para unir las ideas: <em>porque, además, por lo tanto</em>…</li>
-    <li><strong>Escribir</strong> tu propio texto de opinión de 6 a 8 oraciones.</li>
+    <li>Escuchar en <strong>dos pasadas</strong>: primero la idea general, después los detalles.</li>
+    <li>Distinguir <strong>hechos</strong> de <strong>opiniones</strong> en lo que escuchas.</li>
+    <li>Reconocer relaciones de <strong>causa y efecto</strong>.</li>
+    <li>Preparar y <strong>grabar</strong> una presentación oral breve sobre tu experiencia.</li>
   </ul>
-  <p style="margin:8px 0 0;font-size:.92rem">Estándares: 2.W.TT.1 · 2.W.PD.2 · WHST.6-8.4</p>
+  <p style="margin:8px 0 0;font-size:.92rem">Estándares: 2.S.CC.5 · 2.S.PK.1 · 2.S.PK.2 · 2.S.PK.3 · 2.W.PD.3</p>
 </div>
 
 <nav class="indice" id="indice" aria-labelledby="indice-titulo">
   <h2 id="indice-titulo">Contenido de la lección</h2>
   <ol>
-    <li><a href="#s-1-partes">Las cuatro partes de un texto de opinión</a></li>
-    <li><a href="#s-2-modelo">Texto modelo: el teléfono en la mesa</a></li>
-    <li><a href="#s-3-razones">Razones con apoyo</a></li>
-    <li><a href="#s-4-conectores">Conectores</a></li>
-    <li><a href="#s-5-reciclaje">Ahora tú: encuentra las partes</a></li>
-    <li><a href="#s-6-taller">Taller: escribe tu texto de opinión</a></li>
+    <li><a href="#s-1-pasadas">Escuchar en dos pasadas</a></li>
+    <li><a href="#s-2-noticia">Audio 1: una noticia</a></li>
+    <li><a href="#s-3-hecho">Hecho u opinión al escuchar</a></li>
+    <li><a href="#s-4-causa">Causa y efecto</a></li>
+    <li><a href="#s-5-entrevista">Audio 2: una entrevista</a></li>
+    <li><a href="#s-6-presentacion">Prepara tu presentación</a></li>
+    <li><a href="#s-7-grabar">Graba tu presentación</a></li>
     <li><a href="#s-tarea">Tarea</a></li>
     <li><a href="#s-quiz">Quiz de la lección</a></li>
     <li><a href="#s-cierre">Cierre</a></li>
@@ -216,151 +227,183 @@
 </nav>
 
 <h2>📚 Para empezar</h2>
-<p>Todos los días damos nuestra opinión: qué tienda tiene mejores precios, a qué hora conviene salir, qué candidato nos convence. Pero <strong>escribir</strong> una opinión que convenza a otros exige algo más: decir con claridad qué piensas, explicar <strong>por qué</strong> y apoyarlo con <strong>hechos</strong>. En el GED vas a escribir un texto argumentativo; esta lección es el primer escalón. Al final escribirás tu propio texto de opinión.</p>
-<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán.</p>
+<p>Pasamos más tiempo escuchando que leyendo: las noticias de la radio, los avisos del trabajo, las explicaciones del médico, los mensajes de voz. Escuchar bien es difícil porque las palabras pasan y no vuelven, como en un texto escrito. En esta lección aprenderás una estrategia para no perderte y usarás lo que ya sabes de la lectura (idea principal, detalles, hechos y opiniones) con los oídos. Al final grabarás tu propia presentación.</p>
+<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán. Puedes leer la transcripción de cada audio.</p>
 
-<details open id="s-1-partes">
-<summary>1. Las cuatro partes de un texto de opinión <span class="caja-tiempo">10 min</span></summary>
+<details open id="s-1-pasadas">
+<summary>1. Escuchar en dos pasadas <span class="caja-tiempo">10 min</span></summary>
 <div class="contenido-detalle">
-<div class="partes4">
-  <div><strong>1. Postura</strong><br>Lo que piensas, dicho en una oración clara. <em>«Creo que…», «En mi opinión…»</em></div>
-  <div><strong>2. Razones</strong><br>Dos o tres motivos, cada uno apoyado en un <strong>hecho</strong>, un dato o un ejemplo.</div>
-  <div><strong>3. Conectores</strong><br>Palabras que unen las ideas: <em>porque, además, por lo tanto</em>.</div>
-  <div><strong>4. Conclusión</strong><br>Repite la postura con otras palabras y cierra el texto.</div>
-</div>
-<div class="tip"><strong>💡 Postura clara:</strong> el lector debe saber lo que piensas desde la primera oración. «Hay cosas buenas y malas» no es una postura. «Las escuelas deberían empezar más tarde» sí lo es.</div>
+<ol class="lista-bonita">
+  <li><strong>Antes de escuchar:</strong> lee las preguntas. Así sabes qué buscar.</li>
+  <li><strong>Primera pasada, la idea general:</strong> escucha sin escribir. ¿De qué trata? ¿Quién habla?</li>
+  <li><strong>Segunda pasada, los detalles:</strong> escucha con papel y lápiz. Anota números, nombres, fechas y palabras clave, no oraciones completas.</li>
+  <li><strong>Después:</strong> responde y comprueba con la transcripción.</li>
+</ol>
+<div class="tip"><strong>💡 Las señales del que habla:</strong> «lo más importante es…», «en primer lugar…», «según…», «como resultado…». Cuando las oigas, presta más atención: viene algo importante.</div>
 </div>
 </details>
 
-<details id="s-2-modelo">
-<summary>2. Texto modelo: el teléfono en la mesa <span class="caja-tiempo">20 min</span></summary>
+<details id="s-2-noticia">
+<summary>2. Audio 1: una noticia <span class="caja-tiempo">20 min</span></summary>
 <div class="contenido-detalle">
-<p>Lee el texto. Después pulsa <strong>Mostrar las partes</strong> para ver cómo está construido.</p>
-<div class="botones" style="justify-content:flex-start">
-  <button type="button" class="btn btn-secundario" id="leer-tel">🔊 Escuchar el texto</button>
-  <button type="button" class="btn btn-secundario" id="ver-tel" aria-pressed="false">Mostrar las partes</button>
+<p>Lee primero las preguntas que están debajo del audio. Después escucha dos veces.</p>
+<div class="escucha">
+  <h4>🎧 Noticia: «Abre una clínica comunitaria»</h4>
+  <div class="velocidad" role="group" aria-label="Velocidad del audio">Velocidad:
+    <button type="button" class="btn btn-secundario vel" data-v="0.8" aria-pressed="false">🐢 Más lenta</button>
+    <button type="button" class="btn btn-secundario vel" data-v="0.95" aria-pressed="true">Normal</button>
+  </div>
+  <div class="pasadas">
+    <button type="button" class="btn btn-primario" data-audio="t-noticia" data-p="1">▶️ Primera pasada: idea general</button>
+    <button type="button" class="btn btn-primario" data-audio="t-noticia" data-p="2">▶️ Segunda pasada: detalles</button>
+    <button type="button" class="btn btn-secundario parar">⏹️ Parar</button>
+  </div>
+  <p class="estado-esc" role="status" aria-live="polite"></p>
+  <details class="transcripcion">
+    <summary>📄 Ver la transcripción (después de escuchar)</summary>
+    <div class="texto-lectura" id="t-noticia"><p>Buenos días. Les informamos que el lunes abrió sus puertas una nueva clínica comunitaria en el barrio Las Flores. La clínica atenderá de lunes a sábado, de ocho de la mañana a ocho de la noche. Ofrece consultas médicas, vacunas y atención dental, y su personal habla inglés y español. Según la directora, la doctora Inés Vargas, la clínica se construyó porque los vecinos tenían que viajar más de una hora para ver a un médico. Como resultado, muchas familias dejaban de ir a sus citas. El precio de las consultas depende de los ingresos de cada familia, y nadie se quedará sin atención por no poder pagar. El primer día, la clínica atendió a ciento veinte pacientes. Una vecina, la señora Carmen Ruiz, dijo: «Es lo mejor que le ha pasado a este barrio en muchos años». Para pedir una cita, llame a la clínica o visite su página en internet.</p></div>
+  </details>
 </div>
-<div class="texto-lectura oculta-marcas" id="texto-tel">
-<p><strong>Un rato sin pantallas</strong></p>
-<p><span class="marca m-postura" data-et="Postura">Creo que las familias deberían apagar el teléfono durante la cena.</span> <span class="marca m-razon" data-et="Razón 1">En primer lugar, la cena es muchas veces el único momento del día en que todos están juntos.</span> Los padres trabajan y los hijos estudian, <span class="marca m-conector" data-et="Conector">por lo tanto</span>, esos minutos son valiosos para conversar. <span class="marca m-conector" data-et="Conector">Además</span>, <span class="marca m-razon" data-et="Razón 2">el teléfono interrumpe la conversación</span>: cada mensaje que llega hace que alguien deje de escuchar. La Academia Estadounidense de Pediatría recomienda que las familias tengan momentos sin pantallas, como la hora de la comida. <span class="marca m-conector" data-et="Conector">Es cierto que</span> a veces hay que contestar una llamada urgente; <span class="marca m-conector" data-et="Conector">sin embargo</span>, se puede dejar el teléfono en otra habitación con el volumen alto. <span class="marca m-conclusion" data-et="Conclusión">En conclusión, apagar el teléfono durante la cena es un gesto pequeño que ayuda a mantener unida a la familia.</span></p>
-</div>
-<div class="leyenda-m" aria-hidden="true"><span class="marca m-postura">Postura</span><span class="marca m-razon">Razón</span><span class="marca m-conector">Conector</span><span class="marca m-conclusion">Conclusión</span></div>
-<div class="tip"><strong>💡 Fíjate:</strong> cada razón tiene su <strong>apoyo</strong>. La razón 1 se apoya en un hecho de la vida diaria (padres que trabajan, hijos que estudian) y la razón 2, en la recomendación de una organización de médicos. El autor también reconoce una objeción («es cierto que…») y la responde.</div>
-<h3>Comprueba</h3>
-<div class="clasificador apilado" id="clasif-tel"></div>
-<div class="puntaje" id="puntaje-tel" role="status" aria-live="polite"></div>
+<p style="font-size:.9rem;color:#555">Noticia inventada para la lección.</p>
+<div class="clasificador apilado" id="clasif-noticia"></div>
+<div class="puntaje" id="puntaje-noticia" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l8-2.html#escucha" target="_blank" rel="noopener noreferrer">🎧 Practica más: audios cortos</a>
 </div>
 </details>
 
-<details id="s-3-razones">
-<summary>3. Razones con apoyo <span class="caja-tiempo">20 min</span></summary>
+<details id="s-3-hecho">
+<summary>3. Hecho u opinión al escuchar <span class="caja-tiempo">15 min</span></summary>
 <div class="contenido-detalle">
-<p>Una opinión sin apoyo solo repite lo que piensas con más fuerza. Una <span class="palabra-clave">razón apoyada</span> le da al lector algo que puede comprobar: un hecho, un dato, un ejemplo o lo que dice un experto.</p>
+<p>Lo viste en la Lección 7.2 con textos escritos: un <strong>hecho</strong> se puede comprobar; una <strong>opinión</strong> dice lo que alguien piensa o siente. Al escuchar, las opiniones suelen llegar con estas señales:</p>
+<ul class="lista-bonita">
+  <li><strong>Verbos y frases de opinión:</strong> creo que, pienso que, me parece, en mi opinión, debería.</li>
+  <li><strong>Palabras que valoran:</strong> lo mejor, lo peor, maravilloso, terrible, increíble.</li>
+  <li><strong>El tono de voz:</strong> más emoción, más fuerza en ciertas palabras.</li>
+</ul>
+<div class="tip"><strong>💡 Cuidado:</strong> una noticia puede citar una opinión. «La señora Ruiz dijo que es lo mejor del barrio» es un hecho (es verdad que lo dijo), pero lo que ella dice es una opinión.</div>
+<h3>Escucha y decide</h3>
+<div class="clasificador apilado" id="clasif-hecho"></div>
+<div class="puntaje" id="puntaje-hecho" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l8-2.html#hecho-opinion" target="_blank" rel="noopener noreferrer">⚖️ Practica más: hecho u opinión</a>
+</div>
+</details>
+
+<details id="s-4-causa">
+<summary>4. Causa y efecto <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>La <span class="palabra-clave">causa</span> es <strong>por qué</strong> pasa algo; el <span class="palabra-clave">efecto</span> es <strong>lo que pasa</strong> como resultado.</p>
 <table class="tabla">
-  <caption class="sr-solo">Opiniones sin apoyo frente a razones apoyadas</caption>
-  <thead><tr><th scope="col">Sin apoyo</th><th scope="col">Con apoyo</th></tr></thead>
+  <caption class="sr-solo">Señales de causa y de efecto</caption>
+  <thead><tr><th scope="col">Señales de causa</th><th scope="col">Señales de efecto</th></tr></thead>
   <tbody>
-    <tr><td>El transporte público es lo mejor y punto.</td><td>El transporte público ahorra dinero: un pase mensual cuesta menos que la gasolina y el estacionamiento de un mes.</td></tr>
-    <tr><td>Todo el mundo sabe que leer es bueno.</td><td>Leer con los niños amplía su vocabulario, porque oyen palabras que no se usan en la conversación diaria.</td></tr>
-    <tr><td>Caminar es muy, muy saludable.</td><td>Caminar es saludable: los médicos recomiendan unos 30 minutos de actividad al día para cuidar el corazón.</td></tr>
+    <tr><td>porque, ya que, debido a, a causa de, como…</td><td>por eso, por lo tanto, como resultado, así que, en consecuencia</td></tr>
   </tbody>
 </table>
-<div class="tip"><strong>💡 Cuidado con las señales vacías:</strong> «todo el mundo sabe», «es obvio», «y punto», «sin duda» no prueban nada. Pregúntate siempre: <strong>«¿Y cómo lo sé?»</strong>. La respuesta a esa pregunta es el apoyo.</div>
-<h3>¿Con apoyo o sin apoyo?</h3>
-<div class="clasificador apilado" id="clasif-razones"></div>
-<div class="puntaje" id="puntaje-razones" role="status" aria-live="polite"></div>
-<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l7-1.html#razones" target="_blank" rel="noopener noreferrer">⚖️ Practica más: razones con apoyo</a>
+<p>En la noticia: «La clínica se construyó <strong>porque</strong> los vecinos tenían que viajar más de una hora». <strong>Causa:</strong> el viaje largo. <strong>Efecto:</strong> se construyó la clínica. Y otra: «<strong>Como resultado</strong>, muchas familias dejaban de ir a sus citas».</p>
+<div class="tip"><strong>💡 Prueba rápida:</strong> une las dos partes con «por eso». «Los vecinos tenían que viajar mucho, <em>por eso</em> se construyó la clínica.» Lo que va antes de «por eso» es la causa.</div>
+<div class="clasificador apilado" id="clasif-causa"></div>
+<div class="puntaje" id="puntaje-causa" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l8-2.html#causa-efecto" target="_blank" rel="noopener noreferrer">🔁 Practica más: causa y efecto</a>
 </div>
 </details>
 
-<details id="s-4-conectores">
-<summary>4. Conectores <span class="caja-tiempo">20 min</span></summary>
+<details id="s-5-entrevista">
+<summary>5. Audio 2: una entrevista <span class="caja-tiempo">15 min</span></summary>
 <div class="contenido-detalle">
-<table class="tabla">
-  <caption class="sr-solo">Conectores para el texto de opinión</caption>
-  <thead><tr><th scope="col">Para…</th><th scope="col">Conectores</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Dar la postura</strong></td><td>creo que, en mi opinión, considero que, pienso que</td></tr>
-    <tr><td><strong>Explicar la causa</strong></td><td>porque, ya que, puesto que</td></tr>
-    <tr><td><strong>Ordenar y añadir razones</strong></td><td>en primer lugar, en segundo lugar, además, también, por otra parte</td></tr>
-    <tr><td><strong>Mostrar la consecuencia</strong></td><td>por lo tanto, por eso, así que</td></tr>
-    <tr><td><strong>Reconocer una objeción</strong></td><td>es cierto que…; sin embargo, aunque</td></tr>
-    <tr><td><strong>Concluir</strong></td><td>en conclusión, en resumen, por todo esto</td></tr>
-  </tbody>
-</table>
-<div class="tip"><strong>💡 Puntuación:</strong> los conectores como <em>además, sin embargo, por lo tanto, en conclusión</em> llevan coma detrás cuando empiezan la oración: «Además, …». Lo viste en la Lección 3.1.</div>
-<h3>Elige el conector</h3>
-<div class="clasificador apilado" id="clasif-conect"></div>
-<div class="puntaje" id="puntaje-conect" role="status" aria-live="polite"></div>
-<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l7-1.html#conectores" target="_blank" rel="noopener noreferrer">🔗 Practica más: conectores</a>
+<div class="escucha">
+  <h4>🎧 Entrevista: «El huerto de la calle Quince»</h4>
+  <div class="velocidad" role="group" aria-label="Velocidad del audio">Velocidad:
+    <button type="button" class="btn btn-secundario vel" data-v="0.8" aria-pressed="false">🐢 Más lenta</button>
+    <button type="button" class="btn btn-secundario vel" data-v="0.95" aria-pressed="true">Normal</button>
+  </div>
+  <div class="pasadas">
+    <button type="button" class="btn btn-primario" data-audio="t-entrevista" data-p="1">▶️ Primera pasada: idea general</button>
+    <button type="button" class="btn btn-primario" data-audio="t-entrevista" data-p="2">▶️ Segunda pasada: detalles</button>
+    <button type="button" class="btn btn-secundario parar">⏹️ Parar</button>
+  </div>
+  <p class="estado-esc" role="status" aria-live="polite"></p>
+  <details class="transcripcion">
+    <summary>📄 Ver la transcripción (después de escuchar)</summary>
+    <div class="texto-lectura guion" id="t-entrevista">
+      <p><span class="quien">Periodista:</span> Tomás, ¿cómo empezó el huerto?</p>
+      <p><span class="quien">Tomás:</span> Hace tres años, este terreno estaba lleno de basura. Un grupo de vecinos pidió permiso a la ciudad para limpiarlo y sembrar.</p>
+      <p><span class="quien">Periodista:</span> ¿Y qué cultivan?</p>
+      <p><span class="quien">Tomás:</span> Tomates, chiles, calabazas y cilantro. Cada familia cuida su propia parcela.</p>
+      <p><span class="quien">Periodista:</span> ¿Qué ha cambiado en el barrio?</p>
+      <p><span class="quien">Tomás:</span> Mucho. Como ahora pasamos más tiempo afuera, los vecinos nos conocemos mejor. Además, los niños aprenden de dónde viene la comida. Yo creo que todos los barrios deberían tener un huerto.</p>
+      <p><span class="quien">Periodista:</span> ¿Qué necesitan ahora?</p>
+      <p><span class="quien">Tomás:</span> Más voluntarios para regar en verano, porque con el calor la tierra se seca muy rápido.</p>
+    </div>
+  </details>
+</div>
+<p style="font-size:.9rem;color:#555">Entrevista inventada para la lección.</p>
+<div class="clasificador apilado" id="clasif-entrevista"></div>
+<div class="puntaje" id="puntaje-entrevista" role="status" aria-live="polite"></div>
 </div>
 </details>
 
-<details id="s-5-reciclaje">
-<summary>5. Ahora tú: encuentra las partes <span class="caja-tiempo">15 min</span></summary>
+<details id="s-6-presentacion">
+<summary>6. Prepara tu presentación: «Cuento mi experiencia» <span class="caja-tiempo">25 min</span></summary>
 <div class="contenido-detalle">
-<p>Este segundo texto no tiene marcas. Léelo y responde.</p>
-<div class="botones" style="justify-content:flex-start"><button type="button" class="btn btn-secundario" id="leer-rec">🔊 Escuchar el texto</button></div>
-<div class="texto-lectura" id="texto-rec">
-<p><strong>Reciclar empieza en casa</strong></p>
-<p><span class="num-p" aria-hidden="true">1</span>Nuestro edificio necesita contenedores para reciclar. Cada semana sacamos bolsas llenas de latas, botellas y cartón que terminan en el vertedero, aunque podrían tener una segunda vida.</p>
-<p><span class="num-p" aria-hidden="true">2</span>En primer lugar, reciclar ahorra energía. Fabricar una lata con aluminio reciclado gasta mucha menos energía que fabricarla desde cero. Además, reciclar reduce la basura: el papel y el cartón ocupan una gran parte de lo que tiramos, y casi todo se puede reciclar.</p>
-<p><span class="num-p" aria-hidden="true">3</span>Algunos vecinos dicen que separar la basura es complicado. Sin embargo, bastan dos contenedores con un cartel claro: uno para papel y cartón y otro para latas, botellas y plásticos.</p>
-<p><span class="num-p" aria-hidden="true">4</span>Por todo esto, pido a la administración que instale los contenedores este mes. Es un cambio pequeño que nos beneficia a todos.</p>
-</div>
-<p style="font-size:.9rem;color:#555">Textos escritos para esta lección.</p>
-<div class="clasificador apilado" id="clasif-rec"></div>
-<div class="puntaje" id="puntaje-rec" role="status" aria-live="polite"></div>
-<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l7-1.html#postura" target="_blank" rel="noopener noreferrer">🎯 Practica más: encontrar la postura</a>
-</div>
-</details>
-
-<details id="s-6-taller">
-<summary>6. Taller: escribe tu texto de opinión <span class="caja-tiempo">35 min</span></summary>
-<div class="contenido-detalle">
-<p><strong>Elige un tema</strong> (o propón uno tuyo): ¿Deberían los adolescentes trabajar mientras estudian? · ¿Es mejor vivir en la ciudad o en un pueblo? · ¿Deberían las escuelas ofrecer clases en dos idiomas? · ¿Conviene comprar en línea o en la tienda?</p>
-<p><strong>Planifica con esta plantilla</strong> antes de escribir:</p>
+<p>Vas a contar en unos <strong>tres minutos</strong> una experiencia tuya: tu primer trabajo en este país, un viaje, un logro, un día difícil que terminó bien. Usa lo que aprendiste de la narración (Lección 7.3): escenario, hechos en orden y detalles.</p>
 <div class="plantilla">
-  <p><strong>Postura:</strong> Creo que ______.</p>
-  <p><strong>Razón 1:</strong> En primer lugar, ______ porque ______ (hecho o ejemplo).</p>
-  <p><strong>Razón 2:</strong> Además, ______. Por ejemplo, ______.</p>
-  <p><strong>Objeción (opcional):</strong> Es cierto que ______; sin embargo, ______.</p>
-  <p><strong>Conclusión:</strong> En conclusión, ______.</p>
+  <p><strong>Inicio (30 segundos):</strong> Hoy les voy a contar… Pasó en… (cuándo y dónde).</p>
+  <p><strong>Desarrollo (2 minutos):</strong> Primero… Luego… De repente… Recuerdo que… (detalles: qué veías, oías, sentías).</p>
+  <p><strong>Cierre (30 segundos):</strong> Al final… De esa experiencia aprendí que…</p>
 </div>
-<div class="taller" id="taller-71"></div>
-<h3>Rúbrica: así se evaluará tu texto</h3>
+<p>Escribe tu guion. No lo vas a leer palabra por palabra: te servirá para ordenar las ideas.</p>
+<div class="taller" id="taller-82"></div>
+<div class="tip"><strong>💡 Al hablar:</strong> habla un poco más despacio que en una conversación, haz pausas entre las partes, mira a la cámara o a tu público y varía el tono. Antes de grabar, ensaya dos o tres veces en voz alta.</div>
+</div>
+</details>
+
+<details id="s-7-grabar">
+<summary>7. Graba tu presentación <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>Puedes grabarla aquí mismo, desde la computadora o el celular. El navegador te pedirá permiso para usar el micrófono. La grabación <strong>no se envía a ningún lugar</strong>: se queda en tu equipo hasta que la descargues.</p>
+<div class="grabadora">
+  <div class="reloj" id="gr-reloj" aria-hidden="true">0:00</div>
+  <p class="estado" id="gr-estado" role="status" aria-live="polite">Listo para grabar.</p>
+  <div class="botones">
+    <button type="button" class="btn btn-primario" id="gr-grabar">🎙️ Grabar</button>
+    <button type="button" class="btn btn-secundario" id="gr-parar" disabled>⏹️ Detener</button>
+  </div>
+  <audio id="gr-audio" controls hidden></audio>
+  <p><a class="btn btn-secundario" id="gr-bajar" hidden download="mi-presentacion">⬇️ Descargar mi grabación</a></p>
+</div>
+<p>Si prefieres, usa la grabadora de voz de tu celular. Después, sube el archivo a la tarea de Brightspace.</p>
+<h3>Rúbrica de la presentación</h3>
 <table class="tabla rubrica">
-  <caption class="sr-solo">Rúbrica del texto de opinión: cuatro criterios en cuatro niveles</caption>
+  <caption class="sr-solo">Rúbrica de comprensión auditiva y presentación: cuatro criterios en cuatro niveles</caption>
   <thead><tr><th scope="col">Criterio</th><th scope="col">4 · Excelente</th><th scope="col">3 · Bien</th><th scope="col">2 · En camino</th><th scope="col">1 · Inicial</th></tr></thead>
   <tbody>
-    <tr><th scope="row">Postura clara</th><td>Clara desde la primera oración y se mantiene</td><td>Clara, pero aparece tarde</td><td>Se adivina, pero no se dice</td><td>No hay postura</td></tr>
-    <tr><th scope="row">Razones con apoyo</th><td>Dos o tres razones, todas con hechos o ejemplos</td><td>Dos razones; una sin apoyo</td><td>Una razón con apoyo</td><td>Solo opiniones sin apoyo</td></tr>
-    <tr><th scope="row">Conectores</th><td>Variados y bien usados</td><td>Algunos, bien usados</td><td>Pocos o repetidos</td><td>Ninguno</td></tr>
-    <tr><th scope="row">Conclusión</th><td>Retoma la postura con otras palabras</td><td>Repite la postura igual</td><td>Cierra sin relación con la postura</td><td>No hay conclusión</td></tr>
+    <tr><th scope="row">Ideas y detalles del audio</th><td>Identifica la idea principal y todos los detalles pedidos</td><td>Idea principal y casi todos los detalles</td><td>Solo la idea principal</td><td>No identifica la idea principal</td></tr>
+    <tr><th scope="row">Hechos y opiniones</th><td>Los distingue siempre y explica la señal</td><td>Los distingue casi siempre</td><td>Los confunde a menudo</td><td>No los distingue</td></tr>
+    <tr><th scope="row">Causa y efecto</th><td>Reconoce causa y efecto y sus señales</td><td>Reconoce la mayoría</td><td>Reconoce alguna con ayuda</td><td>No las reconoce</td></tr>
+    <tr><th scope="row">Presentación con audio</th><td>Clara, ordenada, con detalles y buen ritmo</td><td>Clara y ordenada, con pocos detalles</td><td>Se entiende, pero desordenada</td><td>Difícil de seguir</td></tr>
   </tbody>
 </table>
 <p style="font-size:.92rem">Total: 16 puntos.</p>
-<div class="tip"><strong>👨‍👩‍👧 «Yo opino que…»:</strong> si tienes con quién practicar, cada uno dice en voz alta su postura sobre un tema y una razón. El otro tiene que añadir un conector y una segunda razón.</div>
 </div>
 </details>
 
 <details id="s-tarea">
-<summary>7. Tarea <span class="caja-tiempo">30 min</span></summary>
+<summary>8. Tarea <span class="caja-tiempo">30 min</span></summary>
 <div class="contenido-detalle">
 <ul class="lista-bonita">
-  <li><strong>Para el foro.</strong> Termina tu texto de opinión del taller (6 a 8 oraciones, con postura, dos razones apoyadas y conclusión). Pulsa <strong>Copiar mi texto</strong> y pégalo en el foro del curso.</li>
-  <li><strong>Comenta a un compañero.</strong> Lee el texto de otra persona en el foro y responde: ¿cuál es su postura?, ¿qué razón te convenció más y por qué?</li>
-  <li><strong>Caza de conectores.</strong> Busca una carta al editor o una columna de opinión en un periódico. Copia cinco conectores que encuentres y di para qué sirve cada uno.</li>
+  <li><strong>Mi grabación.</strong> Graba tu presentación «Cuento mi experiencia» (unos tres minutos) y súbela a Brightspace.</li>
+  <li><strong>Escucha a un compañero.</strong> Escucha la grabación de otra persona y coméntala: la idea principal, un detalle que recuerdes y un «Me gustó cuando…».</li>
+  <li><strong>Radio en dos pasadas.</strong> Escucha una noticia breve en la radio o en un pódcast en español. En la primera pasada anota el tema; en la segunda, tres detalles, un hecho y una opinión.</li>
 </ul>
 </div>
 </details>
 
 <details id="s-quiz">
-<summary>8. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
+<summary>9. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
 <div class="contenido-detalle">
 <div class="qz-intro">
   <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
-  <p style="margin:0">Al final pulsa <strong>Ver mi resultado</strong>. La meta es acertar al menos <strong>10 de 12</strong>.</p>
+  <p style="margin:0">Las preguntas son sobre los dos audios de la lección. Puedes volver a escucharlos. Al final pulsa <strong>Ver mi resultado</strong>. La meta es acertar al menos <strong>10 de 12</strong>.</p>
 </div>
 <div id="qz-cuerpo"></div>
 <div class="botones">
@@ -372,29 +415,29 @@
 </details>
 
 <details id="s-cierre">
-<summary>9. Cierre <span class="caja-tiempo">5 min</span></summary>
+<summary>10. Cierre <span class="caja-tiempo">5 min</span></summary>
 <div class="contenido-detalle">
 <h3>Lo que aprendiste en esta lección</h3>
 <ul class="lista-bonita">
-  <li>Un texto de opinión tiene <strong>postura, razones, conectores y conclusión</strong>.</li>
-  <li>Una razón convence cuando tiene <strong>apoyo</strong>: un hecho, un dato, un ejemplo o un experto. Pregunta: «¿Y cómo lo sé?».</li>
-  <li>Los conectores ordenan (<em>en primer lugar</em>), añaden (<em>además</em>), explican (<em>porque</em>), muestran consecuencias (<em>por lo tanto</em>) y concluyen (<em>en conclusión</em>).</li>
-  <li>Reconocer una objeción y responderla con <em>sin embargo</em> hace más fuerte tu texto.</li>
+  <li>Escuchar en <strong>dos pasadas</strong>: la idea general primero, los detalles después.</li>
+  <li>Las opiniones se oyen en <em>creo que, me parece, lo mejor</em>; los hechos se pueden comprobar.</li>
+  <li><strong>Causa:</strong> por qué pasa (porque, debido a). <strong>Efecto:</strong> lo que pasa (por eso, como resultado).</li>
+  <li>Una buena presentación tiene inicio, desarrollo con detalles y cierre, y se ensaya antes de grabarla.</li>
 </ul>
 <div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
   <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
   <ul class="lista-bonita">
-    <li>¿Tu texto dice la postura en la primera oración?</li>
-    <li>¿Cada razón responde a la pregunta «¿y cómo lo sé?»?</li>
-    <li>¿Qué conector usarías para presentar tu conclusión?</li>
+    <li>¿Qué haces en la primera pasada? ¿Y en la segunda?</li>
+    <li>«Debido a la nieve, cerraron las escuelas.» ¿Cuál es la causa?</li>
+    <li>¿Ya grabaste tu presentación?</li>
   </ul>
 </div>
-<div class="tip"><strong>📅 En la próxima lección:</strong> <a href="https://zhemaria.github.io/clases_leng2/clase_7-2.html" style="color:var(--cp-oscuro);font-weight:700">Lección 7.2 · Texto informativo: categorías, datos y conclusión</a>. Ya no vas a convencer, sino a explicar: organizarás la información en categorías.</div>
+<div class="tip"><strong>📅 En la próxima lección:</strong> <a href="https://zhemaria.github.io/clases_leng2/clase_8-3.html" style="color:var(--cp-oscuro);font-weight:700">Lección 8.3 · Proyecto final y evaluación del nivel</a>. Unirás todo lo aprendido en tu proyecto «Mi tema, mis fuentes» y harás la evaluación final.</div>
 </div>
 </details>
 
 <footer class="pie">
-  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 7 · Lección 7.1</strong></p>
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 8 · Lección 8.2</strong></p>
   <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
   <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
 </footer>
@@ -600,67 +643,108 @@ document.querySelectorAll('table.rubrica').forEach(function(t){
   t.querySelectorAll('tbody tr').forEach(function(tr){Array.prototype.forEach.call(tr.children,function(c,i){if(c.tagName==='TD')c.setAttribute('data-et',cab[i]);});});
 });
 
-function lector(boton,texto){document.getElementById(boton).addEventListener('click',function(){hablar(document.getElementById(texto).textContent.trim(),0.85);});}
-lector('leer-tel','texto-tel'); lector('leer-rec','texto-rec');
-document.getElementById('ver-tel').addEventListener('click',function(){
-  var t=document.getElementById('texto-tel'), on=t.classList.toggle('oculta-marcas');
-  this.setAttribute('aria-pressed',on?'false':'true'); this.textContent=on?'Mostrar las partes':'Ocultar las partes';
+/* Reproductores de escucha: velocidad, dos pasadas y parar */
+document.querySelectorAll('.escucha').forEach(function(c){
+  var vel=0.95, est=c.querySelector('.estado-esc');
+  c.querySelectorAll('.vel').forEach(function(b){b.addEventListener('click',function(){
+    vel=parseFloat(b.dataset.v); c.querySelectorAll('.vel').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+  });});
+  c.querySelectorAll('[data-audio]').forEach(function(b){b.addEventListener('click',function(){
+    var t=document.getElementById(b.dataset.audio).textContent.replace(/\s+/g,' ').trim();
+    est.textContent=b.dataset.p==='1'?'🎧 Primera pasada: escucha sin escribir. ¿De qué trata?':'✏️ Segunda pasada: anota números, nombres y palabras clave.';
+    hablar(t,vel,function(){est.textContent=b.dataset.p==='1'?'Terminó la primera pasada. ¿Cuál es la idea general? Ahora escucha otra vez para los detalles.':'Terminó la segunda pasada. Responde las preguntas y comprueba con la transcripción.';});
+  });});
+  c.querySelector('.parar').addEventListener('click',function(){callar(); est.textContent='Audio detenido.';});
 });
 
-clasificador('clasif-tel','puntaje-tel',[
-  {p:'¿Cuál es la postura del autor?',ops:['Las familias deberían apagar el teléfono en la cena','Los teléfonos son malos para la salud de los niños','Las familias deberían cenar siempre a la misma hora'],c:0,n:'Lo dice en la primera oración: «Creo que…».'},
-  {p:'¿Qué hecho apoya la razón 2?',ops:['Los padres trabajan y los hijos estudian','La recomendación de la Academia de Pediatría','Que a veces hay llamadas urgentes'],c:1,n:'Una organización de médicos recomienda momentos sin pantallas.'},
-  {p:'¿Qué objeción reconoce el autor?',ops:['Que la cena dura muy poco tiempo','Que a veces hay que contestar una llamada urgente','Que los niños no quieren conversar'],c:1,n:'«Es cierto que a veces hay que contestar una llamada urgente».'},
-  {p:'¿Con qué conector empieza la conclusión?',ops:['Además','Sin embargo','En conclusión'],c:2,n:'«En conclusión» anuncia el cierre.'}
+/* Grabadora: todo queda en el equipo del estudiante */
+(function(){
+  var bG=document.getElementById('gr-grabar'), bP=document.getElementById('gr-parar'), est=document.getElementById('gr-estado'),
+      reloj=document.getElementById('gr-reloj'), au=document.getElementById('gr-audio'), bajar=document.getElementById('gr-bajar');
+  var rec=null, trozos=[], t0=0, tic=null, flujo=null;
+  if(!(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia&&window.MediaRecorder)){
+    bG.disabled=true; est.textContent='Este navegador no permite grabar aquí. Usa la grabadora de voz de tu celular.'; return;
+  }
+  function mmss(s){return Math.floor(s/60)+':'+('0'+(s%60)).slice(-2);}
+  bG.addEventListener('click',function(){
+    callar();
+    navigator.mediaDevices.getUserMedia({audio:true}).then(function(f){
+      flujo=f; trozos=[]; rec=new MediaRecorder(f);
+      rec.ondataavailable=function(e){if(e.data&&e.data.size)trozos.push(e.data);};
+      rec.onstop=function(){
+        var tipo=rec.mimeType||'audio/webm', blob=new Blob(trozos,{type:tipo}), url=URL.createObjectURL(blob);
+        au.src=url; au.hidden=false; bajar.href=url; bajar.hidden=false;
+        bajar.download='mi-presentacion.'+(tipo.indexOf('mp4')>=0?'m4a':tipo.indexOf('ogg')>=0?'ogg':'webm');
+        flujo.getTracks().forEach(function(t){t.stop();});
+        est.textContent='✓ Grabación lista ('+reloj.textContent+'). Escúchala y, si te gusta, descárgala.'; est.classList.remove('grabando');
+      };
+      rec.start(); t0=Date.now(); reloj.textContent='0:00';
+      tic=setInterval(function(){var s=Math.round((Date.now()-t0)/1000);reloj.textContent=mmss(s);if(s===180)est.textContent='🔴 Grabando… Ya llevas tres minutos: ve cerrando tu presentación.';},500);
+      bG.disabled=true; bP.disabled=false; au.hidden=true; bajar.hidden=true;
+      est.textContent='🔴 Grabando… Habla con calma. Pulsa «Detener» al terminar.'; est.classList.add('grabando');
+    }).catch(function(){
+      est.textContent='No se pudo usar el micrófono. Revisa que el navegador tenga permiso o usa la grabadora de tu celular.';
+    });
+  });
+  bP.addEventListener('click',function(){
+    if(rec&&rec.state!=='inactive')rec.stop(); clearInterval(tic); bG.disabled=false; bP.disabled=true; bG.textContent='🎙️ Grabar otra vez';
+  });
+})();
+
+clasificador('clasif-noticia','puntaje-noticia',[
+  {p:'<strong>Primera pasada.</strong> ¿Cuál es la idea principal?',ops:['Abrió una clínica comunitaria en el barrio Las Flores','Una vecina habla de los problemas del barrio','Las consultas médicas son cada vez más caras'],c:0,n:'Es de lo que trata toda la noticia.'},
+  {p:'<strong>Segunda pasada.</strong> ¿Qué días atiende la clínica?',ops:['Todos los días de la semana','De lunes a sábado','Solo de lunes a viernes'],c:1,n:'«De lunes a sábado, de ocho a ocho».'},
+  {p:'¿Cuántos pacientes atendió el primer día?',ops:['Ochenta','Doce','Ciento veinte'],c:2,n:'«…atendió a ciento veinte pacientes».'},
+  {p:'¿Qué servicios ofrece?',ops:['Consultas, vacunas y atención dental','Consultas, farmacia y laboratorio','Vacunas, cirugías y ambulancias'],c:0,n:'Lo enumera la noticia.'},
+  {p:'¿Quién es Inés Vargas?',ops:['Una vecina del barrio','La directora de la clínica','La periodista que da la noticia'],c:1,n:'«Según la directora, la doctora Inés Vargas…».'}
 ],null,false);
 
-clasificador('clasif-razones','puntaje-razones',[
-  {p:'«Los parques son lo mejor que tiene una ciudad, sin duda.»',c:1,n:'«Sin duda» no prueba nada.'},
-  {p:'«Los parques mejoran la salud: dan un lugar gratuito para caminar y hacer ejercicio.»',c:0,n:'Da un hecho que se puede comprobar.'},
-  {p:'«Cocinar en casa ahorra dinero: una comida casera para cuatro cuesta menos que cuatro platos en un restaurante.»',c:0,n:'Compara precios: es un apoyo concreto.'},
-  {p:'«Todo el mundo sabe que la comida rápida es mala.»',c:1,n:'«Todo el mundo sabe» es una señal vacía.'},
-  {p:'«Las bibliotecas son útiles, porque prestan libros, computadoras e internet sin costo.»',c:0,n:'Explica con hechos qué ofrecen.'},
-  {p:'«Aprender inglés es importantísimo y punto.»',c:1,n:'«Y punto» no explica por qué.'}
-],['Con apoyo','Sin apoyo'],false);
+clasificador('clasif-hecho','puntaje-hecho',[
+  {p:'«La clínica abrió el lunes.»',c:0,n:'Se puede comprobar.'},
+  {p:'«Es lo mejor que le ha pasado a este barrio en muchos años.»',c:1,n:'«Lo mejor» es una valoración de la señora Ruiz.'},
+  {p:'«El personal habla inglés y español.»',c:0,n:'Se puede comprobar en la clínica.'},
+  {p:'«Yo creo que todos los barrios deberían tener un huerto.»',c:1,n:'«Creo que» y «deberían» señalan opinión.'},
+  {p:'«Cada familia cuida su propia parcela.»',c:0,n:'Es un dato sobre cómo funciona el huerto.'}
+],['Hecho','Opinión'],true);
 
-clasificador('clasif-conect','puntaje-conect',[
-  {p:'«Me gusta vivir en la ciudad ___ hay transporte a todas horas.»',ops:['porque','sin embargo','en conclusión'],c:0,n:'Explica la causa.'},
-  {p:'«El tren es rápido. ___, es más barato que el taxi.»',ops:['Por lo tanto','Además','Aunque'],c:1,n:'Añade otra razón.'},
-  {p:'«El alquiler sube cada año. ___, muchas familias se mudan a las afueras.»',ops:['Por lo tanto','Además','En primer lugar'],c:0,n:'Muestra una consecuencia.'},
-  {p:'«Es cierto que la ciudad es ruidosa; ___, ofrece más trabajo.»',ops:['por eso','sin embargo','también'],c:1,n:'Contrasta con la objeción.'},
-  {p:'«___, la ciudad tiene más ventajas que desventajas.»',ops:['En conclusión','Porque','Por ejemplo'],c:0,n:'Cierra el texto.'}
+clasificador('clasif-causa','puntaje-causa',[
+  {p:'«Los vecinos tenían que viajar más de una hora para ver a un médico.» En la noticia, esto es…',ops:['La causa de que se construyera la clínica','El efecto de que se construyera la clínica'],c:0,n:'Señal: «porque».'},
+  {p:'«Muchas familias dejaban de ir a sus citas.» Esto es…',ops:['La causa del viaje largo','El efecto del viaje largo'],c:1,n:'Señal: «como resultado».'},
+  {p:'«Debido a la lluvia, se suspendió el partido.» ¿Cuál es la causa?',ops:['La lluvia','La suspensión del partido','El partido'],c:0,n:'«Debido a» marca la causa.'},
+  {p:'«Con el calor, la tierra se seca rápido; por eso necesitan voluntarios.» ¿Cuál es el efecto final?',ops:['El calor del verano','La tierra seca','Necesitan voluntarios'],c:2,n:'«Por eso» introduce el efecto.'}
 ],null,false);
 
-clasificador('clasif-rec','puntaje-rec',[
-  {p:'¿Cuál es la postura del texto?',ops:['El edificio necesita contenedores para reciclar','La basura del edificio huele mal en verano','Los vecinos deberían comprar menos cosas'],c:0,n:'Primera oración del párrafo 1.'},
-  {p:'¿Cuántas razones da en el párrafo 2?',ops:['Una','Dos','Cuatro'],c:1,n:'Ahorra energía y reduce la basura.'},
-  {p:'¿Qué hace el párrafo 3?',ops:['Da una tercera razón a favor','Responde a una objeción','Presenta la conclusión del texto'],c:1,n:'«Algunos vecinos dicen…; sin embargo…».'},
-  {p:'¿Qué conector introduce la conclusión?',ops:['Sin embargo','En primer lugar','Por todo esto'],c:2,n:'Párrafo 4: «Por todo esto…».'},
-  {p:'¿Qué pide el autor al final?',ops:['Que la administración instale los contenedores','Que los vecinos limpien mejor el edificio','Que la ciudad suba las multas por la basura'],c:0,n:'Una conclusión puede terminar con una petición.'}
+clasificador('clasif-entrevista','puntaje-entrevista',[
+  {p:'¿De qué trata la entrevista?',ops:['De un huerto comunitario y lo que cambió en el barrio','De cómo cocinar con tomates, chiles y cilantro','De un problema con la basura en la ciudad'],c:0,n:'Es la idea general.'},
+  {p:'¿Cómo estaba el terreno hace tres años?',ops:['Ya tenía un huerto pequeño','Lleno de basura','Era un parque con juegos'],c:1,n:'«Estaba lleno de basura».'},
+  {p:'Según Tomás, ¿por qué los vecinos se conocen mejor?',ops:['Porque hacen fiestas cada mes','Porque pasan más tiempo afuera','Porque tienen un grupo de mensajes'],c:1,n:'Causa: pasan más tiempo afuera.'},
+  {p:'¿Qué necesitan ahora?',ops:['Más semillas y herramientas','Dinero para comprar el terreno','Más voluntarios para regar en verano'],c:2,n:'Último detalle de la entrevista.'}
 ],null,false);
 
-tallerEscritura('taller-71',{clave:'7-1',etiqueta:'Tu texto de opinión (6 a 8 oraciones)',
-  guia:'Creo que…  En primer lugar, …  Además, …  En conclusión, …',
-  meta:{oraciones:6,palabras:70},
-  conectores:['creo que','en mi opinión','porque','ya que','puesto que','en primer lugar','en segundo lugar','además','también','por otra parte','por lo tanto','por eso','así que','es cierto que','sin embargo','aunque','en conclusión','en resumen','por todo esto','por ejemplo'],
-  lista:['Mi postura está en la primera oración.','Doy al menos dos razones.','Cada razón tiene un hecho, un dato o un ejemplo.','Uso al menos tres conectores distintos.','Mi conclusión repite la postura con otras palabras.','Escuché mi texto en voz alta y revisé la ortografía y la puntuación.']});
+tallerEscritura('taller-82',{clave:'8-2',etiqueta:'Mi guion para «Cuento mi experiencia»',
+  guia:'Hoy les voy a contar…  Pasó en…  Primero…  Luego…  Al final…  De esa experiencia aprendí que…',
+  meta:{oraciones:8,palabras:150},
+  conectores:['primero','luego','después','más tarde','entonces','de repente','al final','por fin','recuerdo que','aprendí que','por eso','porque'],
+  lista:['Digo cuándo y dónde pasó.','Cuento los hechos en orden.','Incluyo detalles de lo que veía, oía o sentía.','Tengo un cierre: lo que aprendí.','Ensayé en voz alta y dura unos tres minutos.']});
 
+var N='<span class="pasaje" style="font-size:.95rem">Preguntas sobre el <strong>audio 1</strong> (la clínica). Puedes volver a escucharlo en la <a href="#s-2-noticia">sección 2</a>.</span>';
+var E2='<span class="pasaje" style="font-size:.95rem">Preguntas sobre el <strong>audio 2</strong> (el huerto). Puedes volver a escucharlo en la <a href="#s-5-entrevista">sección 5</a>.</span>';
 iniciarQuiz([
-  {t:'En un texto de opinión, la <strong>postura</strong> es…',o:['Lo que el autor piensa sobre el tema','El dato más importante del texto','La última oración del texto'],c:0,fijo:true,r:'<a href="#s-1-partes">1. Las cuatro partes</a>'},
-  {t:'¿Cuál de estas oraciones es una <strong>postura clara</strong>?',o:['La ciudad debería abrir las piscinas públicas todo el verano.','Las piscinas públicas tienen cosas buenas y también cosas malas.','En el verano hace mucho calor en Chicago y en otras ciudades.'],c:0,r:'<a href="#s-1-partes">1. Las cuatro partes</a>'},
-  {t:'¿Dónde conviene poner la postura?',o:['Al principio del texto','En medio de las razones','Solo en la conclusión'],c:0,r:'<a href="#s-1-partes">1. Las cuatro partes</a>'},
-  {t:'¿Cuál es una <strong>razón con apoyo</strong>?',o:['Las vacunas protegen: gracias a ellas desapareció la viruela.','Las vacunas son buenas, eso lo sabe todo el mundo.','Las vacunas son lo mejor, sin ninguna duda.'],c:0,r:'<a href="#s-3-razones">3. Razones con apoyo</a>'},
-  {t:'«Es obvio que el fútbol es el mejor deporte.» Esta oración…',o:['No tiene apoyo: «es obvio» no prueba nada','Tiene apoyo porque es una opinión común','Es una conclusión bien escrita'],c:0,r:'<a href="#s-3-razones">3. Razones con apoyo</a>'},
-  {t:'La pregunta que te ayuda a encontrar el apoyo de una razón es…',o:['¿Y cómo lo sé?','¿Me gusta esta idea?','¿Es corta la oración?'],c:0,r:'<a href="#s-3-razones">3. Razones con apoyo</a>'},
-  {t:'«Llovió toda la semana; ___, el partido se suspendió.»',o:['por lo tanto','además','en primer lugar'],c:0,r:'<a href="#s-4-conectores">4. Conectores</a>'},
-  {t:'«El curso es gratuito. ___, se puede tomar en línea.»',o:['Además','Sin embargo','En conclusión'],c:0,r:'<a href="#s-4-conectores">4. Conectores</a>'},
-  {t:'¿Qué conector sirve para responder a una objeción?',o:['Sin embargo','Además','Por ejemplo'],c:0,r:'<a href="#s-4-conectores">4. Conectores</a>'},
-  {t:'¿Cuál es la mejor <strong>conclusión</strong> para un texto que defiende los huertos comunitarios?',o:['En resumen, un huerto comunitario da comida fresca y une a los vecinos.','Las zanahorias del huerto tardan unos dos meses y medio en crecer.','Mi vecina, que vive en el tercer piso, tiene un perro que ladra mucho.'],c:0,r:'<a href="#s-1-partes">1. Las cuatro partes</a>'},
-  {t:'En el texto «Reciclar empieza en casa», el párrafo 3…',o:['Responde a una objeción de los vecinos','Presenta por primera vez la postura del autor','Da los datos sobre el aluminio y el papel'],c:0,r:'<a href="#s-5-reciclaje">5. Encuentra las partes</a>'},
-  {t:'Antes de entregar un texto de opinión, conviene…',o:['Leerlo en voz alta y revisar la lista','Hacerlo más largo con frases repetidas','Quitar todos los conectores'],c:0,r:'<a href="#s-6-taller">6. Taller</a>'}
+  {t:'En la <strong>primera pasada</strong> de un audio conviene…',o:['Buscar la idea general sin escribir','Anotar todos los números','Copiar las oraciones completas'],c:0,fijo:true,r:'<a href="#s-1-pasadas">1. Dos pasadas</a>'},
+  {t:'En la <strong>segunda pasada</strong> conviene anotar…',o:['Números, nombres y palabras clave','Oraciones completas, palabra por palabra','Solo la primera y la última frase'],c:0,r:'<a href="#s-1-pasadas">1. Dos pasadas</a>'},
+  {t:N+'¿Cuál es la idea principal de la noticia?',o:['Abrió una clínica comunitaria en el barrio','Los vecinos protestan por los médicos','La señora Ruiz consiguió un empleo'],c:0,r:'<a href="#s-2-noticia">2. Audio 1</a>'},
+  {t:N+'¿Hasta qué hora atiende la clínica?',o:['Hasta las ocho de la noche','Hasta las seis de la tarde','Hasta la medianoche'],c:0,r:'<a href="#s-2-noticia">2. Audio 1</a>'},
+  {t:N+'¿Cómo se decide el precio de las consultas?',o:['Según los ingresos de cada familia','Es el mismo precio para todos','Es gratis solo los sábados'],c:0,r:'<a href="#s-2-noticia">2. Audio 1</a>'},
+  {t:N+'¿Por qué se construyó la clínica?',o:['Porque los vecinos viajaban más de una hora para ver a un médico','Porque la ciudad tenía dinero que le había sobrado ese año','Porque la directora vive en el barrio Las Flores desde niña'],c:0,r:'<a href="#s-4-causa">4. Causa y efecto</a>'},
+  {t:N+'«Es lo mejor que le ha pasado a este barrio.» Esto es…',o:['Una opinión de la señora Ruiz','Un hecho comprobado por la clínica','Un dato de la directora'],c:0,r:'<a href="#s-3-hecho">3. Hecho u opinión</a>'},
+  {t:E2+'¿Qué cultivan en el huerto?',o:['Tomates, chiles, calabazas y cilantro','Maíz, frijoles, papas y lechuga','Flores, árboles frutales y hierbas'],c:0,r:'<a href="#s-5-entrevista">5. Audio 2</a>'},
+  {t:E2+'¿Cuál de estas frases de Tomás es una <strong>opinión</strong>?',o:['«Todos los barrios deberían tener un huerto.»','«Cada familia cuida su propia parcela.»','«Hace tres años el terreno tenía basura.»'],c:0,r:'<a href="#s-3-hecho">3. Hecho u opinión</a>'},
+  {t:E2+'«Con el calor la tierra se seca muy rápido.» Esto es la causa de que…',o:['Necesiten más voluntarios en verano','Los vecinos se conozcan mejor','Los niños aprendan sobre la comida'],c:0,r:'<a href="#s-4-causa">4. Causa y efecto</a>'},
+  {t:'«A causa del accidente, el tráfico se detuvo.» ¿Cuál es el <strong>efecto</strong>?',o:['El tráfico se detuvo','El accidente','La causa del accidente'],c:0,r:'<a href="#s-4-causa">4. Causa y efecto</a>'},
+  {t:'Antes de grabar una presentación, lo mejor es…',o:['Ensayarla en voz alta dos o tres veces','Leer el guion lo más rápido posible','Grabarla sin prepararla, para que sea natural'],c:0,r:'<a href="#s-6-presentacion">6. Prepara tu presentación</a>'}
 ],{meta:10,
-   bien:'Ya sabes construir un texto de opinión con postura, razones apoyadas, conectores y conclusión. Puedes continuar con la Lección 7.2.',
-   repaso:'Vuelve a las secciones que te indica cada pregunta y repite el quiz: con práctica sale.'});
+   bien:'Ya escuchas en dos pasadas, distingues hechos y opiniones y reconoces causas y efectos. Puedes continuar con la Lección 8.3.',
+   repaso:'Vuelve a escuchar los audios y a las secciones que te indica cada pregunta, y repite el quiz.'});
 </script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Lección 2.3 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+<!-- Índice del Nivel 2 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
      José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
      Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lección 2.3 · Oraciones simples, compuestas y complejas</title>
+<title>Artes del Lenguaje · Nivel 2 · Índice del nivel</title>
 <meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
 <meta name="license" content="CC BY-NC-SA 4.0">
 <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
@@ -174,225 +174,78 @@
     .rubrica td::before{content:attr(data-et);display:block;font-weight:700;color:var(--cp-oscuro)}
   }
 
-  .vb{color:#1565c0;font-weight:700;border-bottom:3px solid #1565c0}
-  .cx{background:#fff3cd;color:#5c3900;font-weight:700;padding:0 4px;border-radius:4px}
-  .dos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media(max-width:700px){.dos{grid-template-columns:1fr}}
-  .dos .texto-lectura{margin:6px 0}
-  .ver-cx .cxm{background:#fff3cd;color:#5c3900;font-weight:700;box-shadow:0 -3px 0 #8a5a00 inset;border-radius:3px}
+  .accesos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 22px}
+  .acceso{display:block;background:var(--cp-oscuro);color:#fff;text-decoration:none;border-radius:12px;padding:14px 16px;font-weight:700}
+  .acceso span{display:block;font-weight:400;font-size:.92rem;margin-top:4px;color:#e0f2f1}
+  .acceso:hover,.acceso:focus{background:var(--cp)}
+  .temas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .tema{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:12px 16px}
+  .tema h3{margin:0 0 6px;color:var(--cp-oscuro);font-size:1.1rem}
+  .ntema{display:inline-block;background:var(--cp-claro);color:var(--cp-oscuro);border-radius:10px;padding:0 8px;font-size:.85rem;margin-right:4px}
+  .tema ol{margin:0;padding-left:0;list-style:none}
+  .tema li{margin:8px 0;font-size:.97rem}
+  .tema a{color:var(--cp-oscuro);font-weight:600}
+  .tema a.prac{font-weight:400;font-size:.9rem}
 </style>
 </head>
 <body>
-<h1>Lección 2.3 · Oraciones simples, compuestas y complejas</h1>
-<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 2: Gramática de la oración · Unas 2 horas, a tu ritmo</p>
-
-<div class="caja-objetivos">
-  <h2>🎯 Objetivos de la lección</h2>
-  <ul class="lista-bonita" style="margin:0">
-    <li>Distinguir una oración <strong>simple</strong>, una <strong>compuesta</strong> y una <strong>compleja</strong>.</li>
-    <li>Elegir el <strong>conector</strong> adecuado según lo que quieres decir: sumar, contrastar, dar una causa o una condición.</li>
-    <li>Unir oraciones cortas para que tu escritura sea más fluida, con las comas en su lugar.</li>
-  </ul>
-  <p style="margin:8px 0 0;font-size:.92rem">Estándares: 2.W.CS.1 · 2.W.TT.1</p>
+<h1>Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos</h1>
+<p class="subtitulo">GEDparaHispanos · Índice del nivel · 8 temas · 24 lecciones</p>
+<p>Aquí están todas las lecciones del nivel, en orden. Cada lección tiene su <strong>práctica interactiva</strong>, que se abre en una pestaña nueva. Si es tu primera vez, empieza por la Bienvenida.</p>
+<div class="accesos">
+  <a class="acceso" href="https://zhemaria.github.io/clases_leng2/bienvenida.html">👋 Bienvenida<span>Cómo funciona el curso y repaso del Nivel 1</span></a>
+  <a class="acceso" href="https://zhemaria.github.io/clases_leng2/clase_1-1.html">▶️ Empezar<span>Lección 1.1 · Vocales, diptongos y sílabas</span></a>
+  <a class="acceso" href="https://zhemaria.github.io/gramatica/n2-repaso.html" target="_blank" rel="noopener noreferrer">🔁 Todas las prácticas<span>Índice de repaso de los interactivos</span></a>
+  <a class="acceso" href="https://zhemaria.github.io/clases_leng2/clase_8-3.html#s-6-evaluacion">📝 Evaluación final<span>25 preguntas y resumen para imprimir</span></a>
 </div>
-
-<nav class="indice" id="indice" aria-labelledby="indice-titulo">
-  <h2 id="indice-titulo">Contenido de la lección</h2>
-  <ol>
-    <li><a href="#s-1-simple">La oración simple</a></li>
-    <li><a href="#s-2-compuesta">La oración compuesta: ideas del mismo peso</a></li>
-    <li><a href="#s-3-compleja">La oración compleja: una idea que depende de otra</a></li>
-    <li><a href="#s-4-clasifica">Práctica: clasifica y elige el conector</a></li>
-    <li><a href="#s-5-lectura">Lectura comparada: «Una mañana difícil»</a></li>
-    <li><a href="#s-6-une">Práctica: une las ideas</a></li>
-    <li><a href="#s-tarea">Tarea</a></li>
-    <li><a href="#s-quiz">Quiz de la lección</a></li>
-    <li><a href="#s-cierre">Cierre</a></li>
-  </ol>
-  <div class="abrir-cerrar">
-    <button type="button" class="btn btn-secundario" id="abrir-todo">Abrir todo</button>
-    <button type="button" class="btn btn-secundario" id="cerrar-todo">Cerrar todo</button>
-  </div>
-</nav>
-
-<h2>📚 Para empezar</h2>
-<p>Lee esto: <em>«Me levanté tarde. Perdí el autobús. Llegué tarde al trabajo. Mi jefe no se enojó.»</em> Se entiende, pero suena entrecortado, como un telegrama. Ahora lee esto: <em>«Como me levanté tarde, perdí el autobús y llegué tarde al trabajo, pero mi jefe no se enojó.»</em> Es la misma información, unida con <strong>conectores</strong>. Esta lección te enseña a hacerlo, y es una destreza clave para la escritura del GED.</p>
-<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán.</p>
-
-<details open id="s-1-simple">
-<summary>1. La oración simple <span class="caja-tiempo">10 min</span></summary>
-<div class="contenido-detalle">
-<p>Una <span class="palabra-clave">oración simple</span> tiene <strong>un solo verbo conjugado</strong>. Puede ser corta o larga, pero expresa una sola acción o un solo estado:</p>
-<ul class="lista-bonita">
-  <li><em>Mi hermano <span class="vb">trabaja</span>.</em></li>
-  <li><em>Mi hermano <span class="vb">trabaja</span> todas las noches en un taller de la calle 26.</em></li>
-  <li><em>Mañana <span class="vb">voy</span> a estudiar en la biblioteca.</em> (<em>Voy a estudiar</em> funciona como un solo verbo: solo <em>voy</em> está conjugado).</li>
-</ul>
-<div class="tip"><strong>💡 Cuenta los verbos:</strong> para saber qué tipo de oración tienes, busca los verbos conjugados (los que dicen quién hace la acción y cuándo). Uno: simple. Dos o más: compuesta o compleja.</div>
+<h2>Las lecciones</h2>
+<div class="temas">
+<section class="tema" aria-labelledby="t1"><h3 id="t1"><span class="ntema">Tema 1</span> Fonética avanzada y fluidez lectora</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_1-1.html">1.1 · Vocales, diptongos y sílabas complejas</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l1-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_1-2.html">1.2 · Prefijos y sufijos comunes para leer palabras nuevas</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l1-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_1-3.html">1.3 · Fluidez lectora: precisión, ritmo y expresión</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l1-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t2"><h3 id="t2"><span class="ntema">Tema 2</span> Gramática de la oración</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_2-1.html">2.1 · Sustantivos y adverbios</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l2-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_2-2.html">2.2 · Pronombres reflexivos y concordancia</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l2-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_2-3.html">2.3 · Oraciones simples, compuestas y complejas</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l2-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t3"><h3 id="t3"><span class="ntema">Tema 3</span> Puntuación, ortografía y registro</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_3-1.html">3.1 · Mayúsculas, comas, dos puntos y raya</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l3-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_3-2.html">3.2 · La tilde y la ortografía convencional</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l3-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_3-3.html">3.3 · Registro formal e informal: habla frente a escritura</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l3-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t4"><h3 id="t4"><span class="ntema">Tema 4</span> Idea principal y estructura del texto</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_4-1.html">4.1 · Idea principal en varios párrafos y detalles de apoyo</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l4-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_4-2.html">4.2 · Estructura de la historia y propósito del autor</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l4-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_4-3.html">4.3 · Leer con ilustraciones y características del texto</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l4-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t5"><h3 id="t5"><span class="ntema">Tema 5</span> Comparar textos, vocabulario y lenguaje figurado</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_5-1.html">5.1 · Comparar y contrastar dos textos</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l5-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_5-2.html">5.2 · Vocabulario por contexto: pistas, afijos y raíces</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l5-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_5-3.html">5.3 · Significado literal frente a figurado; modismos</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l5-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t6"><h3 id="t6"><span class="ntema">Tema 6</span> Leer con imágenes y en las materias</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_6-1.html">6.1 · Gráficas de barras, líneas y circulares; tablas de datos</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l6-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_6-2.html">6.2 · Fuentes primarias y secundarias: introducción</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l6-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_6-3.html">6.3 · Vocabulario de dominio en ciencias e historia</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l6-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t7"><h3 id="t7"><span class="ntema">Tema 7</span> Escribir con estructura</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_7-1.html">7.1 · Texto de opinión: postura clara y razones con conectores</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l7-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_7-2.html">7.2 · Texto informativo: categorías, datos y conclusión</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l7-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_7-3.html">7.3 · Narración con escenario y diálogo; proceso de revisión</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l7-3.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+</ol></section>
+<section class="tema" aria-labelledby="t8"><h3 id="t8"><span class="ntema">Tema 8</span> Hablar, escuchar y proyecto final</h3><ol>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_8-1.html">8.1 · Conversar con respeto: turnos, enlazar y aclarar</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l8-1.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_8-2.html">8.2 · Comprensión auditiva y presentación oral con audio</a> · <a class="prac" href="https://zhemaria.github.io/gramatica/n2-l8-2.html" target="_blank" rel="noopener noreferrer">práctica</a></li>
+<li><a href="https://zhemaria.github.io/clases_leng2/clase_8-3.html">8.3 · Proyecto final y evaluación del nivel</a> · <a class="prac" href="https://zhemaria.github.io/clases_leng2/clase_8-3.html#s-6-evaluacion">evaluación final</a></li>
+</ol></section>
 </div>
-</details>
-
-<details id="s-2-compuesta">
-<summary>2. La oración compuesta: ideas del mismo peso <span class="caja-tiempo">20 min</span></summary>
-<div class="contenido-detalle">
-<p>Una <span class="palabra-clave">oración compuesta</span> une <strong>dos oraciones que podrían ir solas</strong>, con un conector en medio. Las dos ideas tienen el mismo peso.</p>
-<table class="tabla">
-  <caption class="sr-solo">Conectores de la oración compuesta</caption>
-  <thead><tr><th scope="col">Conector</th><th scope="col">Sirve para…</th><th scope="col">Ejemplo</th></tr></thead>
-  <tbody>
-    <tr><td><span class="cx">y</span> (<span class="cx">e</span>)</td><td>Sumar ideas.</td><td>Mi esposo <span class="vb">cocina</span> <span class="cx">y</span> yo <span class="vb">lavo</span> los platos.</td></tr>
-    <tr><td><span class="cx">o</span> (<span class="cx">u</span>)</td><td>Dar a elegir.</td><td><span class="vb">Llamas</span> tú <span class="cx">o</span> <span class="vb">llamo</span> yo.</td></tr>
-    <tr><td><span class="cx">ni</span></td><td>Sumar dos ideas negativas.</td><td>No <span class="vb">llamó</span> <span class="cx">ni</span> <span class="vb">escribió</span>.</td></tr>
-    <tr><td><span class="cx">pero</span></td><td>Contrastar: la segunda idea va en otra dirección.</td><td><span class="vb">Quería</span> ir, <span class="cx">pero</span> <span class="vb">llovía</span>.</td></tr>
-    <tr><td><span class="cx">sino</span></td><td>Corregir algo negado antes.</td><td>No <span class="vb">vino</span> el lunes, <span class="cx">sino</span> que <span class="vb">llegó</span> el martes.</td></tr>
-  </tbody>
-</table>
-<div class="tip"><strong>💡 <em>y</em> se vuelve <em>e</em>, y <em>o</em> se vuelve <em>u</em>:</strong> delante de una palabra que empieza con el sonido <em>i</em> se escribe <em>e</em> (<em>padres <strong>e</strong> hijos</em>, <em>español <strong>e</strong> inglés</em>), y delante del sonido <em>o</em> se escribe <em>u</em> (<em>siete <strong>u</strong> ocho</em>, <em>mujer <strong>u</strong> hombre</em>). Excepción: si después de la <em>hi</em> viene otra vocal, se queda la <em>y</em>: <em>agua <strong>y</strong> hielo</em>.</div>
-<div class="tip"><strong>💡 La coma:</strong> antes de <em>pero</em> y de <em>sino</em> va coma: <em>Quería ir<strong>,</strong> pero llovía</em>. Antes de <em>y</em>, <em>o</em> y <em>ni</em>, normalmente no.</div>
-<div class="tip"><strong>⚠️ <em>sino</em> o <em>si no</em>:</strong> <em>sino</em>, junto, corrige: <em>No quiero té, sino café</em>. <em>Si no</em>, separado, es una condición: <em><strong>Si no</strong> llueve, iremos al parque</em>.</div>
-</div>
-</details>
-
-<details id="s-3-compleja">
-<summary>3. La oración compleja: una idea que depende de otra <span class="caja-tiempo">20 min</span></summary>
-<div class="contenido-detalle">
-<p>Una <span class="palabra-clave">oración compleja</span> tiene una idea <strong>principal</strong> y otra que <strong>depende</strong> de ella. La parte que depende empieza con un conector y no tiene sentido completo por sí sola.</p>
-<table class="tabla">
-  <caption class="sr-solo">Conectores de la oración compleja</caption>
-  <thead><tr><th scope="col">Conector</th><th scope="col">Indica…</th><th scope="col">Ejemplo</th></tr></thead>
-  <tbody>
-    <tr><td><span class="cx">porque</span>, <span class="cx">como</span></td><td>Causa: por qué.</td><td>No <span class="vb">salí</span> <span class="cx">porque</span> <span class="vb">estaba</span> enferma.</td></tr>
-    <tr><td><span class="cx">aunque</span></td><td>Un obstáculo que no impide la acción.</td><td><span class="cx">Aunque</span> <span class="vb">estaba</span> cansado, <span class="vb">terminé</span> la tarea.</td></tr>
-    <tr><td><span class="cx">cuando</span>, <span class="cx">mientras</span></td><td>Tiempo: cuándo.</td><td><span class="cx">Cuando</span> <span class="vb">llegué</span>, todos <span class="vb">dormían</span>.</td></tr>
-    <tr><td><span class="cx">si</span></td><td>Condición.</td><td><span class="cx">Si</span> <span class="vb">estudias</span> cada día, <span class="vb">aprobarás</span>.</td></tr>
-    <tr><td><span class="cx">que</span></td><td>Une una idea con otra palabra.</td><td>El libro <span class="cx">que</span> me <span class="vb">prestaste</span> <span class="vb">es</span> muy bueno.</td></tr>
-  </tbody>
-</table>
-<div class="tip"><strong>💡 La prueba del fragmento:</strong> tapa la idea principal. Lo que queda, «<em>porque estaba enferma</em>», no se sostiene solo: es un fragmento, como aprendiste en el Nivel 1. Por eso esa parte depende de la otra.</div>
-<div class="tip"><strong>💡 La coma:</strong> si la parte que depende va <strong>primero</strong>, se separa con coma: <em>Cuando llegué<strong>,</strong> todos dormían</em>. Si va después, normalmente no: <em>Todos dormían cuando llegué</em>.</div>
-<div class="tip"><strong>📘 Un dato de gramática:</strong> en los libros de gramática española a estas dos clases se las llama también <em>oraciones compuestas coordinadas</em> (las de la sección 2) y <em>subordinadas</em> (las de esta sección). En el curso usamos <em>compuesta</em> y <em>compleja</em>, que son los nombres que verás en los materiales del GED.</div>
-</div>
-</details>
-
-<details id="s-4-clasifica">
-<summary>4. Práctica: clasifica y elige el conector <span class="caja-tiempo">20 min</span></summary>
-<div class="contenido-detalle">
-<h3>¿Simple, compuesta o compleja?</h3>
-<div class="clasificador" id="clasif-tipo"></div>
-<div class="puntaje" id="puntaje-tipo" role="status" aria-live="polite"></div>
-<h3>¿Qué conector va?</h3>
-<div class="clasificador" id="clasif-cx"></div>
-<div class="puntaje" id="puntaje-cx" role="status" aria-live="polite"></div>
-<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l2-3.html#clasifica" target="_blank" rel="noopener noreferrer">🧩 Practica más: clasifica oraciones
-  <span>Rondas con oraciones nuevas. Se abre en una pestaña nueva.</span></a>
-<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l2-3.html#conectores" target="_blank" rel="noopener noreferrer">🔗 Practica más: elige el conector
-  <span>Completas oraciones con el conector que da el sentido correcto.</span></a>
-</div>
-</details>
-
-<details id="s-5-lectura">
-<summary>5. Lectura comparada: «Una mañana difícil» <span class="caja-tiempo">15 min</span></summary>
-<div class="contenido-detalle">
-<div class="actividad">
-  <h4><span class="badge badge-lectura">Lectura</span> Individual · en voz alta</h4>
-  <p style="margin:0">Lee en voz alta las dos versiones. Tienen exactamente la misma información. ¿Cuál suena mejor? ¿Por qué? Escribe tu respuesta en el cuaderno y luego marca los conectores de la versión B.</p>
-</div>
-<div class="dos">
-  <div><h3>Versión A · solo oraciones simples</h3>
-  <div class="texto-lectura" id="version-a"><p>El lunes me desperté tarde. La alarma no sonó. Me vestí muy rápido. No desayuné. Salí corriendo. El autobús ya se había ido. Esperé el siguiente. Llegué al trabajo a las nueve y media. Estaba muy nerviosa. Mi supervisora no se enojó. Ella también llegó tarde ese día.</p></div>
-  <div class="botones" style="justify-content:flex-start"><button type="button" class="btn btn-secundario" id="leer-a">🔊 Escuchar A</button></div></div>
-  <div><h3>Versión B · con conectores</h3>
-  <div class="texto-lectura" id="version-b"><p>El lunes me desperté tarde <span class="cxm">porque</span> la alarma no sonó. Me vestí muy rápido <span class="cxm">y</span> salí corriendo sin desayunar, <span class="cxm">pero</span> el autobús ya se había ido. <span class="cxm">Mientras</span> esperaba el siguiente, pensaba en mi supervisora. Llegué al trabajo a las nueve y media, muy nerviosa. <span class="cxm">Aunque</span> llegué tarde, ella no se enojó, <span class="cxm">porque</span> ese día también se le hizo tarde.</p></div>
-  <div class="botones" style="justify-content:flex-start"><button type="button" class="btn btn-secundario" id="leer-b">🔊 Escuchar B</button>
-  <button type="button" class="btn btn-secundario" id="ver-cx" aria-pressed="false">Mostrar conectores</button></div></div>
-</div>
-<details><summary>Ver una respuesta posible</summary><div class="contenido-detalle">
-La versión B se lee con más fluidez y muestra cómo se relacionan las ideas: <em>porque</em> explica la causa, <em>pero</em> marca un problema, <em>mientras</em> une dos momentos y <em>aunque</em> presenta algo que no impidió el resultado. En la versión A el lector tiene que adivinar esas relaciones. Ojo: no todo debe unirse. Una oración simple, bien colocada, también es valiosa; lo que se evita es una cadena de oraciones cortas iguales.
-</div></details>
-</div>
-</details>
-
-<details id="s-6-une">
-<summary>6. Práctica: une las ideas <span class="caja-tiempo">15 min</span></summary>
-<div class="contenido-detalle">
-<div class="actividad">
-  <h4><span class="badge badge-actividad">Actividad</span> Individual · en tu cuaderno</h4>
-  <p>Une cada par de oraciones en una sola. Usa el conector que pide la relación indicada y pon la coma donde haga falta.</p>
-  <ul class="lista-bonita" style="margin-bottom:0">
-    <li><em>Estudio de noche. Trabajo de día.</em> → causa (<em>porque</em>)</li>
-    <li><em>Quería comprar el carro. No tenía el dinero.</em> → contraste (<em>pero</em>)</li>
-    <li><em>Llueve. Llevo paraguas.</em> → condición (<em>si</em>, al principio)</li>
-    <li><em>Estaba enfermo. Fue a trabajar.</em> → obstáculo (<em>aunque</em>, al principio)</li>
-    <li><em>Mi hija canta. Mi hijo toca la guitarra.</em> → suma (<em>y</em>)</li>
-  </ul>
-</div>
-<details style="margin-top:10px"><summary>Ver las respuestas</summary><div class="contenido-detalle">
-Estudio de noche porque trabajo de día. · Quería comprar el carro, pero no tenía el dinero. · Si llueve, llevo paraguas. · Aunque estaba enfermo, fue a trabajar. · Mi hija canta y mi hijo toca la guitarra.
-</div></details>
-<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l2-3.html#une" target="_blank" rel="noopener noreferrer">🧵 Practica más: ¿cuál es la mejor unión?
-  <span>Dos oraciones cortas y tres maneras de unirlas: eliges la que conserva el sentido.</span></a>
-<div class="tip"><strong>👨‍👩‍👧 Si tienes con quién practicar:</strong> uno dice una oración corta («Hoy hace frío») y el otro la continúa con un conector («…pero voy a salir igual»). Cambien el conector cada vez.</div>
-</div>
-</details>
-
-<details id="s-tarea">
-<summary>7. Tarea <span class="caja-tiempo">30 min</span></summary>
-<div class="contenido-detalle">
-<ul class="lista-bonita">
-  <li><strong>Reescribe tu rutina.</strong> Toma el párrafo de tu rutina que escribiste en la Lección 2.2 y reescríbelo uniendo oraciones con al menos <strong>cuatro conectores distintos</strong>.</li>
-  <li><strong>Mis conectores.</strong> Escribe una oración con cada uno: <em>y, o, pero, sino, porque, aunque, cuando, si</em>. Marca con un color los verbos.</li>
-  <li><strong>Las comas.</strong> Pon la coma donde falte: «Si tienes tiempo llámame» · «Quería ir pero no pude» · «Cuando terminé la tarea me acosté».</li>
-</ul>
-<details style="margin-top:6px"><summary>Ver las respuestas de las comas</summary><div class="contenido-detalle">
-«Si tienes tiempo<strong>,</strong> llámame.» · «Quería ir<strong>,</strong> pero no pude.» · «Cuando terminé la tarea<strong>,</strong> me acosté.»
-</div></details>
-</div>
-</details>
-
-<details id="s-quiz">
-<summary>8. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
-<div class="contenido-detalle">
-<div class="qz-intro">
-  <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
-  <p style="margin:0">Elige una respuesta en cada pregunta y, al final, pulsa <strong>Ver mi resultado</strong>. La meta es acertar al menos <strong>10 de 12</strong>.</p>
-</div>
-<div id="qz-cuerpo"></div>
-<div class="botones">
-  <button type="button" class="btn btn-primario" id="qz-calificar">Ver mi resultado</button>
-  <button type="button" class="btn btn-secundario" id="qz-reintentar" style="display:none">Intentar de nuevo</button>
-</div>
-<div class="qz-resultado" id="qz-resultado" role="status" aria-live="polite"></div>
-</div>
-</details>
-
-<details id="s-cierre">
-<summary>9. Cierre <span class="caja-tiempo">5 min</span></summary>
-<div class="contenido-detalle">
-<h3>Lo que aprendiste en esta lección</h3>
-<ul class="lista-bonita">
-  <li>La oración <strong>simple</strong> tiene un solo verbo conjugado.</li>
-  <li>La <strong>compuesta</strong> une dos ideas del mismo peso con <em>y, o, ni, pero, sino</em>.</li>
-  <li>La <strong>compleja</strong> une una idea principal y otra que depende de ella con <em>porque, aunque, cuando, si, que</em>.</li>
-  <li>Va coma antes de <em>pero</em> y <em>sino</em>, y después de la parte que depende cuando va primero.</li>
-</ul>
-<div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
-  <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
-  <ul class="lista-bonita">
-    <li>¿Puedes decir una oración de cada tipo sobre tu trabajo?</li>
-    <li>¿Sabes cuándo escribir <em>sino</em> y cuándo <em>si no</em>?</li>
-    <li>¿Puedes explicar por qué «Porque no tenía dinero.» no es una oración completa?</li>
-  </ul>
-</div>
-<div class="tip"><strong>🏁 Terminaste el Tema 2.</strong> En el próximo tema trabajarás la puntuación, la ortografía y el registro: <a href="https://zhemaria.github.io/clases_leng2/clase_3-1.html" style="color:var(--cp-oscuro);font-weight:700">Lección 3.1, primera del Tema 3</a>.</div>
-</div>
-</details>
-
 <footer class="pie">
-  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 2 · Lección 2.3</strong></p>
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos</strong></p>
   <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
   <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
 </footer>
-<a class="volver-indice" href="#indice" aria-label="Volver al contenido de la lección"><span aria-hidden="true">↑</span> Índice</a>
 
 <script>
 /* ===== Voz: todas las lecturas pasan por hablar(), para poder cambiarla después por audio grabado ===== */
@@ -529,47 +382,7 @@ document.addEventListener('DOMContentLoaded',function(){
   abrir(decodeURIComponent(location.hash.slice(1)));
 });
 
-clasificador('clasif-tipo','puntaje-tipo',[
-  {p:'Mi vecina vende tamales los domingos.',c:0,n:'Un solo verbo: <em>vende</em>.'},
-  {p:'Mi vecina vende tamales y su hijo reparte los pedidos.',c:1,n:'Dos ideas del mismo peso unidas por <em>y</em>.'},
-  {p:'Mi vecina vende tamales porque necesita dinero extra.',c:2,n:'<em>porque necesita dinero extra</em> depende de la idea principal.'},
-  {p:'Quería llamarte, pero no tenía saldo.',c:1,n:'Dos ideas unidas por <em>pero</em>.'},
-  {p:'Cuando termine el curso, buscaré un trabajo mejor.',c:2,n:'<em>Cuando termine el curso</em> no tiene sentido sola.'},
-  {p:'El próximo lunes voy a empezar mi clase de computación.',c:0,n:'Solo <em>voy</em> está conjugado: <em>voy a empezar</em> es un solo verbo.'}
-],['Simple','Compuesta','Compleja'],false);
 
-clasificador('clasif-cx','puntaje-cx',[
-  {p:'Estudio mucho ___ quiero aprobar el GED.',ops:['porque','pero','ni'],c:0,n:'Causa: <em>porque</em>.'},
-  {p:'Me invitaron a la fiesta, ___ no pude ir.',ops:['porque','pero','si'],c:1,n:'Contraste: <em>pero</em>.'},
-  {p:'___ hace buen tiempo, iremos a la playa.',ops:['Si','Sino','Aunque'],c:0,n:'Condición: <em>si</em>.'},
-  {p:'No compré manzanas, ___ peras.',ops:['si no','sino','pero'],c:1,n:'Corrige lo negado: <em>sino</em>.'},
-  {p:'___ estaba cansada, terminó su turno.',ops:['Porque','Cuando','Aunque'],c:2,n:'Un obstáculo que no impidió la acción: <em>aunque</em>.'},
-  {p:'Estudio español ___ inglés.',ops:['y','e','u'],c:1,n:'Antes del sonido <em>i</em>: <em>e</em>.'}
-],null,false);
-
-(function(){
-  var a=document.getElementById('version-a'), b=document.getElementById('version-b'), v=document.getElementById('ver-cx');
-  document.getElementById('leer-a').addEventListener('click',function(){hablar(a.textContent.trim(),0.85);});
-  document.getElementById('leer-b').addEventListener('click',function(){hablar(b.textContent.trim(),0.85);});
-  v.addEventListener('click',function(){var on=b.classList.toggle('ver-cx');v.setAttribute('aria-pressed',on?'true':'false');});
-})();
-
-iniciarQuiz([
-  {t:'Una oración <strong>simple</strong> tiene…',o:['Un solo verbo conjugado','Dos verbos unidos por y','Siempre menos de cinco palabras'],c:0},
-  {t:'¿Cuál es una oración simple?',o:['Mi hermano trabaja en un taller.','Mi hermano trabaja y mi cuñada estudia.','Mi hermano trabaja porque necesita dinero.'],c:0},
-  {t:'¿Cuál es una oración <strong>compuesta</strong>?',o:['Quería salir, pero llovía.','Quería salir porque hacía sol.','Quería salir temprano.'],c:0},
-  {t:'¿Cuál es una oración <strong>compleja</strong>?',o:['No salí porque estaba enferma.','No salí y me quedé en casa.','No salí el domingo.'],c:0},
-  {t:'¿Qué conector expresa <strong>contraste</strong>?',o:['pero','y','o'],c:0},
-  {t:'Completa: «Estudio mucho ___ quiero pasar el GED.»',o:['porque','pero','ni'],c:0},
-  {t:'Completa: «No quiero té, ___ café.»',o:['sino','si no','pero'],c:0},
-  {t:'Completa: «___ llueve, no iremos al parque.»',o:['Si','Sino','Pero'],c:0},
-  {t:'¿Cómo se escribe correctamente?',o:['padres e hijos','padres y hijos','padres u hijos'],c:0},
-  {t:'¿Dónde va bien la coma?',o:['Cuando llegué a casa, todos dormían.','Cuando llegué a casa todos, dormían.','Cuando, llegué a casa todos dormían.'],c:0},
-  {t:'«Porque no tenía dinero.» es…',o:['Un fragmento: depende de otra idea','Una oración compuesta completa','Una oración simple completa'],c:0},
-  {t:'¿Cuál es la mejor manera de unir «Hacía frío. Salí sin abrigo.»?',o:['Aunque hacía frío, salí sin abrigo.','Hacía frío porque salí sin abrigo.','Hacía frío o salí sin abrigo.'],c:0}
-],{meta:10,
-   bien:'Ya unes ideas con los conectores adecuados. Terminaste el Tema 2: puedes continuar con el Tema 3.',
-   repaso:'Vuelve a las secciones 2 y 3 y repite el quiz: con práctica sale.'});
 </script>
 </body>
 </html>

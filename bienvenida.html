@@ -254,7 +254,10 @@
     <ul><li><a href="https://zhemaria.github.io/clases_leng2/clase_7-1.html">7.1 · Texto de opinión</a></li>
         <li><a href="https://zhemaria.github.io/clases_leng2/clase_7-2.html">7.2 · Texto informativo</a></li>
         <li><a href="https://zhemaria.github.io/clases_leng2/clase_7-3.html">7.3 · Narración y revisión</a></li></ul></div>
-  <div class="tema"><h4>Tema 8 · Hablar, escuchar y proyecto final</h4><p>Conversar con respeto, comprender lo que oyes, el proyecto final y la evaluación del nivel.</p></div>
+  <div class="tema"><h4>Tema 8 · Hablar, escuchar y proyecto final</h4><p>Conversar con respeto, comprender lo que oyes, el proyecto final y la evaluación del nivel.</p>
+    <ul><li><a href="https://zhemaria.github.io/clases_leng2/clase_8-1.html">8.1 · Conversar con respeto</a></li>
+        <li><a href="https://zhemaria.github.io/clases_leng2/clase_8-2.html">8.2 · Escuchar y presentar</a></li>
+        <li><a href="https://zhemaria.github.io/clases_leng2/clase_8-3.html">8.3 · Proyecto final y evaluación</a></li></ul></div>
 </div>
 </div>
 </details>
@@ -338,7 +341,9 @@
   window.hablar=function(texto,vel,fin){
     if(!hay||!texto){aviso();return;}
     speechSynthesis.cancel();
-    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+    /* Se lee por oraciones: algunos navegadores cortan las lecturas largas a los 15 segundos */
+    var partes=texto.replace(/\s+/g,' ').match(/[^.!?…]+[.!?…]+[»"”)]*\s*|[^.!?…]+$/g)||[texto];
+    partes.forEach(function(t,i){var u=frase(t.trim(),vel); if(fin&&i===partes.length-1)u.onend=fin; speechSynthesis.speak(u);});
   };
   /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
   window.hablarPalabras=function(texto){

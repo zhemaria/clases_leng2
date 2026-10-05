@@ -445,7 +445,9 @@
   window.hablar=function(texto,vel,fin){
     if(!hay||!texto){aviso();return;}
     speechSynthesis.cancel();
-    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+    /* Se lee por oraciones: algunos navegadores cortan las lecturas largas a los 15 segundos */
+    var partes=texto.replace(/\s+/g,' ').match(/[^.!?…]+[.!?…]+[»"”)]*\s*|[^.!?…]+$/g)||[texto];
+    partes.forEach(function(t,i){var u=frase(t.trim(),vel); if(fin&&i===partes.length-1)u.onend=fin; speechSynthesis.speak(u);});
   };
   /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
   window.hablarPalabras=function(texto){
