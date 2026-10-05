@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<!-- Lección 4.1 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+     José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
+     Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección 4.1 · Idea principal en varios párrafos y detalles de apoyo</title>
+<meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
+<meta name="license" content="CC BY-NC-SA 4.0">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
+<style>
+  :root{
+    --cp:#00796b;--cp-claro:#e0f2f1;--cp-oscuro:#004d44;
+    --acento:#ff8c42;--texto:#1a2332;--fondo:#fafbfc;
+    --gris:#555;--gris-claro:#eef1f4;
+    --dip:#1565c0;--dip-claro:#e3f2fd;
+    --hia:#ad1457;--hia-claro:#fce4ec;
+    --grp:#5c3900;--grp-claro:#fff3cd;
+    --exito:#2e7d32;--error:#c62828;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Poppins','Segoe UI',Arial,sans-serif;line-height:1.7;color:var(--texto);background:var(--fondo);max-width:960px;margin:0 auto;padding:24px 18px}
+  h1{color:var(--cp-oscuro);border-bottom:4px solid var(--cp);padding-bottom:14px;font-size:1.85rem;margin-bottom:8px}
+  .subtitulo{color:var(--gris);font-style:italic;margin-top:0;margin-bottom:24px;font-size:1.05rem}
+  h2{color:var(--cp-oscuro);border-left:6px solid var(--cp);padding-left:14px;margin-top:32px;font-size:1.4rem}
+  h3{color:var(--cp);margin-top:24px;font-size:1.15rem}
+  .caja-objetivos{background:var(--cp-claro);border-left:6px solid var(--cp);padding:18px 22px;border-radius:8px;margin:18px 0 28px 0}
+  .caja-objetivos h2{margin-top:0;color:var(--cp-oscuro);border-left:none;padding-left:0;font-size:1.2rem}
+  .caja-tiempo{display:inline-block;background:var(--acento);color:#1a2332;padding:4px 12px;border-radius:14px;font-size:0.85rem;font-weight:600;margin-left:10px;vertical-align:middle}
+  details{background:#fff;border:1px solid #d6dde4;border-radius:10px;margin:14px 0;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+  details[open]{border-color:var(--cp);box-shadow:0 3px 10px rgba(0,121,107,0.12)}
+  summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--cp-oscuro);background:var(--gris-claro);list-style:none;user-select:none;font-size:1.05rem}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:'▶';display:inline-block;margin-right:10px;color:var(--cp);transition:transform 0.25s;font-size:0.85rem}
+  details[open] summary::before{transform:rotate(90deg)}
+  details[open] summary{background:var(--cp-claro);border-bottom:2px solid var(--cp)}
+  .contenido-detalle{padding:18px 22px}
+  .tip{background:#fffbe6;border-left:5px solid #f4c430;padding:12px 18px;border-radius:6px;margin:14px 0}
+  .tip strong{color:#6b5400}
+  .botones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .btn{padding:10px 22px;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.95rem;transition:background 0.2s}
+  .btn-primario{background:var(--cp);color:#fff}
+  .btn-primario:hover{background:var(--cp-oscuro)}
+  .btn-secundario{background:var(--gris-claro);color:var(--texto)}
+  .btn-secundario:hover{background:#d6dde4}
+  .btn[aria-pressed="true"]{background:var(--cp-oscuro);color:#fff}
+  ul.lista-bonita{list-style:none;padding-left:0}
+  ul.lista-bonita li{padding:8px 0 8px 30px;position:relative}
+  ul.lista-bonita li::before{content:'➜';position:absolute;left:0;color:var(--cp);font-weight:700}
+  .palabra-clave{background:linear-gradient(transparent 60%,#ffeb3b 60%);padding:0 4px;font-weight:600}
+  .ejemplo{font-family:Georgia,serif;font-size:1.15rem}
+  .sil{font-family:Georgia,serif;letter-spacing:.5px;color:var(--cp-oscuro);font-weight:700}
+  table.tabla{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+  table.tabla th{background:var(--cp-oscuro);color:#fff;padding:10px 12px;text-align:left}
+  table.tabla td{padding:10px 12px;border-bottom:1px solid var(--gris-claro);vertical-align:top}
+  table.tabla tr:last-child td{border-bottom:none}
+  .actividad{background:#fff;border:2px solid var(--acento);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .actividad h4{color:#8a3d0c;margin-top:0}
+  .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+  .badge-lectura{background:#e3f2fd;color:#0d47a1}
+  .badge-actividad{background:#f3e5f5;color:#6a1b9a}
+  /* Clasificadores */
+  .clasificador{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:18px 0}
+  .item{border:2px solid var(--gris-claro);border-radius:8px;padding:10px 14px;margin:8px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .item-pal{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--cp-oscuro);display:flex;align-items:center;gap:10px}
+  .item-ops{display:flex;gap:8px;flex-wrap:wrap}
+  .item-fb{flex-basis:100%;font-size:.95rem;min-height:0}
+  .item-fb:empty{display:none}
+  .btn-op{padding:7px 14px;border:2px solid var(--cp);background:#fff;color:var(--cp-oscuro);border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit;font-size:.92rem}
+  .btn-op:hover:not(:disabled){background:var(--cp-claro)}
+  .btn-op.correcta{background:#d4edda;border-color:var(--exito);color:#155724}
+  .btn-op.incorrecta{background:#f8d7da;border-color:var(--error);color:#721c24}
+  .btn-op:disabled{cursor:default}
+  .oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:3px 10px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.9rem}
+  .puntaje{text-align:center;margin-top:12px;font-weight:600;color:var(--cp-oscuro)}
+  /* Lectura con marcas */
+  .texto-lectura{background:#fff;border:2px solid var(--gris-claro);border-radius:8px;padding:18px 22px;margin:14px 0;font-family:Georgia,serif;font-size:1.12rem;line-height:2.1}
+  .texto-lectura p{margin:0 0 10px}
+  .leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:.92rem;margin:8px 0}
+  .leyenda span{display:inline-flex;align-items:center;gap:6px}
+  .mk{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .ver-dip .dip{background:var(--dip-claro);color:var(--dip);font-weight:700;box-shadow:0 -3px 0 var(--dip) inset;border-radius:3px}
+  .ver-dip .hia{background:var(--hia-claro);color:var(--hia);font-weight:700;box-shadow:0 -3px 0 var(--hia) inset;border-radius:3px}
+  .ver-dip .muda{color:#555;text-decoration:underline dotted 2px}
+  .ver-grp .grp{background:var(--grp-claro);color:var(--grp);font-weight:700;box-shadow:0 -3px 0 var(--grp) inset;border-radius:3px}
+  /* Índice */
+  .indice{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:16px 20px;margin:22px 0}
+  .indice h2{font-size:1.1rem;margin:0 0 8px;border:none;padding:0}
+  .indice ol{margin:0;padding-left:1.4em}
+  .indice li{margin:4px 0}
+  .indice a{color:var(--cp-oscuro)}
+  .abrir-cerrar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+  .volver-indice{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--cp-oscuro);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+  .volver-indice:hover{background:var(--cp);color:#fff}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b35316;outline-offset:2px}
+  .sr-solo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .enlace-practica{display:block;background:#fff;border:2px solid var(--cp);border-radius:10px;padding:14px 18px;margin:16px 0;text-decoration:none;color:var(--cp-oscuro);font-weight:600}
+  .enlace-practica:hover{background:var(--cp-claro)}
+  .enlace-practica span{display:block;font-weight:400;color:var(--texto);font-size:.95rem}
+  .aviso-voz{font-size:.9rem;color:#5c3900;background:#fff3cd;border-radius:6px;padding:6px 10px;display:none}
+  .aviso-voz.visible{display:block}
+  /* Quiz */
+  .qz-intro{background:var(--cp-claro);border-radius:10px;padding:14px 18px;margin:0 0 14px}
+  .qz-intro h4{margin:0 0 6px;color:var(--cp-oscuro)}
+  .qz-preg{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .qz-enun{font-weight:600;margin:0 0 10px}
+  .qz-num{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:12px;padding:1px 10px;font-size:.8rem;margin-right:8px}
+  .qz-extra{display:block;text-align:center;margin:6px 0 10px;font-weight:400}
+  .qz-extra .qz-grande{font-family:Georgia,serif;font-size:1.3rem}
+  .qz-oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:6px 14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .qz-ops{display:flex;flex-direction:column;gap:8px}
+  .qz-op{text-align:left;background:#fff;border:2px solid #c9d2db;border-radius:8px;padding:10px 14px;font-family:inherit;font-size:1rem;cursor:pointer;color:var(--texto)}
+  .qz-op:hover:not(:disabled){border-color:var(--cp)}
+  .qz-op.elegida{background:var(--cp-claro);border-color:var(--cp-oscuro);color:var(--cp-oscuro);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--cp)}
+  .qz-op.correcta{background:#d4edda;border-color:#2e7d32;color:#155724}
+  .qz-op.correcta::before{content:'✓ '}
+  .qz-op.incorrecta{background:#f8d7da;border-color:#c62828;color:#721c24}
+  .qz-op.incorrecta::before{content:'✗ '}
+  .qz-op:disabled{cursor:default}
+  .qz-resultado{display:none;margin:16px 0;padding:16px;border-radius:10px;text-align:center;font-weight:600}
+  .qz-resultado.visible{display:block}
+  footer.pie{margin-top:40px;padding-top:18px;border-top:2px solid var(--gris-claro);text-align:center;color:#555;font-size:.9rem}
+  footer.pie p{margin:4px 0}
+  footer.pie a{color:var(--cp-oscuro)}
+  @media print{.indice,.volver-indice,.abrir-cerrar{display:none}}
+  @media (prefers-reduced-motion:reduce){summary::before{transition:none}}
+
+  .qz-repaso{margin:10px 0 0;padding:8px 12px;background:#fff3cd;border-radius:6px;color:#3d2600;font-size:.95rem}
+  .qz-repaso a{color:#004d44;font-weight:700}
+  /* ── Comunes desde el Tema 4 ── */
+  .item-ops{flex-wrap:wrap}
+  .apilado .item{flex-direction:column;align-items:stretch}
+  .apilado .item-ops{flex-direction:column}
+  .apilado .btn-op{text-align:left;font-weight:400}
+  .apilado .item-pal{font-family:'Segoe UI',Arial,sans-serif;font-size:1rem;color:#1a2332;font-weight:600}
+  .pasaje{display:block;background:#fff8ee;border-left:5px solid var(--acento);border-radius:6px;padding:10px 14px;margin:8px 0;font-family:Georgia,serif;font-weight:400;line-height:1.75}
+  .pasaje p{margin:0 0 6px}
+  .num-p{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:50%;width:1.6em;height:1.6em;text-align:center;line-height:1.6em;font-size:.8rem;font-family:'Segoe UI',Arial,sans-serif;margin-right:6px;vertical-align:middle}
+  .idea{background:#e3f2fd;color:#0d3c78;font-weight:700;box-shadow:0 -3px 0 #1565c0 inset;border-radius:3px}
+  .oculta-idea .idea{background:none;color:inherit;font-weight:inherit;box-shadow:none}
+
+  .formula{background:#fff;border:3px solid var(--cp);border-radius:12px;padding:14px 18px;margin:16px 0;text-align:center;font-size:1.15rem}
+  .formula strong{color:var(--cp-oscuro)}
+  .ej{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:12px 16px;margin:12px 0}
+  .ej h4{margin:0 0 6px;color:var(--cp-oscuro)}
+  .organizador{width:100%;border-collapse:collapse;margin:12px 0;background:#fff}
+  .organizador td,.organizador th{border:2px solid var(--cp);padding:10px;vertical-align:top}
+  .organizador th{background:var(--cp-claro);color:var(--cp-oscuro);text-align:left}
+  .trampa{display:inline-block;border-radius:999px;padding:1px 10px;font-size:.85rem;font-weight:700;background:#f8d7da;color:#721c24}
+</style>
+</head>
+<body>
+<h1>Lección 4.1 · Idea principal en varios párrafos y detalles de apoyo</h1>
+<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 4: Comprensión: idea principal y estructura del texto · Unas 2 horas y media, a tu ritmo</p>
+
+<div class="caja-objetivos">
+  <h2>🎯 Objetivos de la lección</h2>
+  <ul class="lista-bonita" style="margin:0">
+    <li>Distinguir el <strong>tema</strong>, la <strong>idea principal</strong> y los <strong>detalles</strong> de un texto.</li>
+    <li>Encontrar la idea principal cuando está escrita y <strong>construirla</strong> cuando no lo está.</li>
+    <li>Encontrar la idea principal de un texto de <strong>varios párrafos</strong> y reconocer las opciones falsas de un examen.</li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:.92rem">Estándares: 2.R.CL.1 · 2.R.CI.1</p>
+</div>
+
+<nav class="indice" id="indice" aria-labelledby="indice-titulo">
+  <h2 id="indice-titulo">Contenido de la lección</h2>
+  <ol>
+    <li><a href="#s-1-tres">Tema, idea principal y detalles</a></li>
+    <li><a href="#s-2-donde">¿Dónde está la idea principal?</a></li>
+    <li><a href="#s-3-detalles">Los detalles que la sostienen</a></li>
+    <li><a href="#s-4-varios">Textos de varios párrafos</a></li>
+    <li><a href="#s-5-trampas">Las trampas de las opciones</a></li>
+    <li><a href="#s-6-guiada">Lectura guiada: «Dormir bien»</a></li>
+    <li><a href="#s-7-resumen">Práctica: resume en dos oraciones</a></li>
+    <li><a href="#s-tarea">Tarea</a></li>
+    <li><a href="#s-quiz">Quiz de la lección</a></li>
+    <li><a href="#s-cierre">Cierre</a></li>
+  </ol>
+  <div class="abrir-cerrar">
+    <button type="button" class="btn btn-secundario" id="abrir-todo">Abrir todo</button>
+    <button type="button" class="btn btn-secundario" id="cerrar-todo">Cerrar todo</button>
+  </div>
+</nav>
+
+<h2>📚 Para empezar</h2>
+<p>Encontrar la idea principal es la destreza más importante de la lectura y, a la vez, la que más cuesta. Muchas personas leen un texto entero, entienden cada oración y, aun así, no saben decir <em>de qué se trata</em>. Le pasa a casi todo el mundo, y tiene solución: la idea principal no se adivina, <strong>se busca con un método</strong>. En esta lección vas a aprender ese método paso a paso, con muchos ejemplos. Tómate tu tiempo: lo que aprendas aquí lo usarás en todas las lecciones que siguen y en todas las materias del GED.</p>
+<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán.</p>
+
+<details open id="s-1-tres">
+<summary>1. Tema, idea principal y detalles <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>Para entender un texto hay que distinguir tres cosas:</p>
+<table class="tabla">
+  <caption class="sr-solo">Diferencia entre tema, idea principal y detalle</caption>
+  <thead><tr><th scope="col">Qué es</th><th scope="col">Pregunta que responde</th><th scope="col">Cómo se escribe</th><th scope="col">Ejemplo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Tema</strong></td><td>¿De qué trata?</td><td>Una o pocas palabras</td><td><em>El agua</em></td></tr>
+    <tr><td><strong>Idea principal</strong></td><td>¿Qué dice el autor sobre el tema?</td><td>Una oración completa</td><td><em>Beber suficiente agua es necesario para la salud.</em></td></tr>
+    <tr><td><strong>Detalles</strong></td><td>¿Cómo lo explica o lo demuestra?</td><td>Ejemplos, datos, razones</td><td><em>El agua ayuda a regular la temperatura del cuerpo.</em></td></tr>
+  </tbody>
+</table>
+<div class="formula"><strong>Tema</strong> + <strong>lo que el autor dice sobre el tema</strong> = <strong>idea principal</strong></div>
+<div class="tip"><strong>💡 Una imagen que ayuda:</strong> piensa en una mesa. La idea principal es el tablero; los detalles son las patas que lo sostienen. Si quitas una pata, la mesa sigue en pie. Si quitas el tablero, solo quedan patas sueltas que no forman nada.</div>
+<div class="ej">
+  <h4>Ejemplo</h4>
+  <p class="pasaje" style="margin:0">Caminar es uno de los ejercicios más completos que existen. Fortalece el corazón y las piernas, ayuda a controlar el peso y reduce el estrés. Además, no hace falta pagar un gimnasio ni comprar equipos especiales: basta con unos zapatos cómodos.</p>
+  <ul class="lista-bonita" style="margin:8px 0 0">
+    <li><strong>Tema:</strong> caminar.</li>
+    <li><strong>¿Qué dice el autor sobre caminar?</strong> Que es uno de los ejercicios más completos.</li>
+    <li><strong>Idea principal:</strong> <em>Caminar es uno de los ejercicios más completos que existen.</em></li>
+    <li><strong>Detalles:</strong> fortalece el corazón, controla el peso, reduce el estrés, no cuesta dinero.</li>
+  </ul>
+</div>
+</div>
+</details>
+
+<details id="s-2-donde">
+<summary>2. ¿Dónde está la idea principal? <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>La idea principal puede estar en tres lugares. Lee cada párrafo, piensa cuál es su idea principal y luego pulsa el botón para comprobar.</p>
+
+<div class="ej oculta-idea" id="ej-1">
+  <h4>1 · Al principio <span style="font-weight:400">(lo más frecuente)</span></h4>
+  <div class="pasaje"><span class="idea">Reciclar en casa es más fácil de lo que parece.</span> Basta con tener dos botes: uno para la basura y otro para el papel, el plástico y las latas. Enjuagar los envases antes de tirarlos toma solo unos segundos. Y en muchas ciudades, como Chicago, el camión del reciclaje pasa cada dos semanas por la puerta.</div>
+  <button type="button" class="btn btn-secundario mostrar-idea" data-ej="ej-1" aria-pressed="false">Mostrar la idea principal</button>
+</div>
+
+<div class="ej oculta-idea" id="ej-2">
+  <h4>2 · Al final <span style="font-weight:400">(como una conclusión)</span></h4>
+  <div class="pasaje">Una tarjeta de crédito permite comprar algo hoy y pagarlo después. Pero si no se paga el total cada mes, el banco cobra intereses que pueden ser muy altos. Una deuda pequeña puede crecer mes a mes hasta volverse difícil de pagar. <span class="idea">Por eso, la tarjeta de crédito es útil solo si se usa con mucho cuidado.</span></div>
+  <button type="button" class="btn btn-secundario mostrar-idea" data-ej="ej-2" aria-pressed="false">Mostrar la idea principal</button>
+</div>
+
+<div class="ej" id="ej-3">
+  <h4>3 · En ninguna parte: hay que construirla <span style="font-weight:400">(idea implícita)</span></h4>
+  <div class="pasaje">Don Ramón se levanta a las cuatro de la mañana para su primer trabajo en una panadería. Por la tarde limpia oficinas en el centro. Cuando llega a casa, cansado, abre su cuaderno y estudia inglés una hora con ayuda de su nieto. Los sábados no falta a su clase en la biblioteca.</div>
+  <p>Ninguna oración dice la idea principal. Pregúntate: <strong>¿qué tienen en común todos los detalles?</strong></p>
+  <div class="clasificador apilado" id="clasif-impl"></div>
+  <div class="puntaje" id="puntaje-impl" role="status" aria-live="polite"></div>
+</div>
+<div class="tip"><strong>💡 Cómo construir una idea implícita:</strong> haz una lista de lo que dice cada oración, busca lo que tienen en común y escríbelo en <strong>una sola oración</strong> que valga para todas. Si tu oración solo sirve para una de ellas, es un detalle; si sirve para cualquier texto, es demasiado general.</div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l4-1.html#idea" target="_blank" rel="noopener noreferrer">🎯 Practica más: encuentra la idea principal
+  <span>Párrafos nuevos, con la idea al principio, al final o sin escribir. Se abre en una pestaña nueva.</span></a>
+</div>
+</details>
+
+<details id="s-3-detalles">
+<summary>3. Los detalles que la sostienen <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>Los <span class="palabra-clave">detalles de apoyo</span> explican o demuestran la idea principal. Pueden ser <strong>ejemplos</strong>, <strong>datos</strong> (números, fechas), <strong>razones</strong> o <strong>explicaciones</strong>. Para saber si una oración es un detalle de apoyo, pregúntate: <em>¿esto ayuda a demostrar la idea principal?</em> Si no, es información secundaria o no tiene relación.</p>
+<div class="formula" style="font-size:1rem">Idea principal: <strong>«Usar el transporte público ayuda a ahorrar dinero.»</strong></div>
+<h3>¿Apoya la idea o no?</h3>
+<div class="clasificador" id="clasif-det"></div>
+<div class="puntaje" id="puntaje-det" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l4-1.html#detalles" target="_blank" rel="noopener noreferrer">🦵 Practica más: detalles de apoyo
+  <span>Encuentra la oración que no apoya la idea principal.</span></a>
+</div>
+</details>
+
+<details id="s-4-varios">
+<summary>4. Textos de varios párrafos <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>En un texto largo, <strong>cada párrafo tiene su propia idea</strong>, y todas juntas forman la <strong>idea principal del texto completo</strong>. El método tiene tres pasos:</p>
+<ol>
+  <li><strong>Lee un párrafo y detente.</strong> Escribe en el margen o en el cuaderno su idea en una oración corta.</li>
+  <li><strong>Repite con cada párrafo.</strong> Al final tendrás una lista: una oración por párrafo.</li>
+  <li><strong>Lee tu lista y pregúntate qué las une.</strong> Esa respuesta, en una oración, es la idea principal del texto. Muchas veces el título y el primer o el último párrafo te dan la pista.</li>
+</ol>
+<table class="organizador">
+  <caption class="sr-solo">Organizador para un texto de varios párrafos</caption>
+  <thead><tr><th scope="col">Párrafo</th><th scope="col">Su idea, en una oración</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>…</td></tr>
+    <tr><td>2</td><td>…</td></tr>
+    <tr><td>3</td><td>…</td></tr>
+    <tr><td><strong>Todo el texto</strong></td><td><strong>¿Qué une las oraciones de arriba?</strong></td></tr>
+  </tbody>
+</table>
+<p>Copia este organizador en tu cuaderno: lo usarás en la sección 6 y en muchas lecciones más.</p>
+</div>
+</details>
+
+<details id="s-5-trampas">
+<summary>5. Las trampas de las opciones <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>En los exámenes, la pregunta «¿Cuál es la idea principal?» suele tener una respuesta correcta y varias <strong>trampas</strong> que parecen buenas. Si conoces las trampas, las descartas rápido:</p>
+<table class="tabla">
+  <caption class="sr-solo">Tipos de opciones falsas en preguntas de idea principal</caption>
+  <thead><tr><th scope="col">Trampa</th><th scope="col">Cómo es</th><th scope="col">Cómo la reconoces</th></tr></thead>
+  <tbody>
+    <tr><td><span class="trampa">Muy amplia</span></td><td>Es verdad, pero sirve para muchos textos.</td><td>Podría ser la idea de un libro entero.</td></tr>
+    <tr><td><span class="trampa">Solo un detalle</span></td><td>Está en el texto, pero es una parte pequeña.</td><td>Solo sirve para una oración o un párrafo.</td></tr>
+    <tr><td><span class="trampa">No está en el texto</span></td><td>Suena lógica o es cierta en la vida real.</td><td>No la encuentras al releer.</td></tr>
+    <tr><td><span class="trampa">Contraria</span></td><td>Dice lo opuesto de lo que dice el texto.</td><td>Usa palabras del texto, pero cambia el sentido.</td></tr>
+  </tbody>
+</table>
+<div class="ej">
+  <h4>Lee el párrafo y clasifica cada opción</h4>
+  <div class="pasaje">Las abejas son esenciales para nuestra alimentación. Al pasar de flor en flor, transportan el polen que muchas plantas necesitan para producir frutos. Sin ellas, cultivos como las manzanas, las almendras y los melones darían muy poca cosecha. Por eso, la disminución de las abejas preocupa a los agricultores de todo el mundo.</div>
+  <div class="clasificador apilado" id="clasif-trampas" style="border:none;padding:0"></div>
+  <div class="puntaje" id="puntaje-trampas" role="status" aria-live="polite"></div>
+</div>
+<div class="tip"><strong>💡 La prueba final:</strong> antes de elegir, pregúntate si la opción <strong>cubre todo el texto</strong> (no solo una parte), si <strong>está en el texto</strong> y si <strong>dice lo mismo</strong> que el texto. Solo la correcta pasa las tres pruebas.</div>
+</div>
+</details>
+
+<details id="s-6-guiada">
+<summary>6. Lectura guiada: «Dormir bien» <span class="caja-tiempo">25 min</span></summary>
+<div class="contenido-detalle">
+<div class="actividad">
+  <h4><span class="badge badge-lectura">Lectura</span> Individual · párrafo por párrafo</h4>
+  <p style="margin:0">Lee el texto con el método de la sección 4. Después de cada párrafo, responde su pregunta. Al final, responde la pregunta del texto completo, que es la más importante.</p>
+</div>
+<div class="botones" style="justify-content:flex-start">
+  <button type="button" class="btn btn-primario" id="btn-leer">🔊 Escuchar el texto</button>
+  <button type="button" class="btn btn-secundario" id="btn-parar">⏹ Detener</button>
+</div>
+<div class="texto-lectura" id="texto-sueno">
+<h3 style="margin-top:0;font-family:'Segoe UI',Arial,sans-serif">Dormir bien: el medicamento más barato</h3>
+<p><span class="num-p" aria-hidden="true">1</span>Muchas personas creen que dormir es perder el tiempo. Trabajan hasta tarde, miran el teléfono en la cama y se levantan cansadas. Sin embargo, los médicos coinciden en que el sueño es tan importante para la salud como la comida o el ejercicio.</p>
+<p><span class="num-p" aria-hidden="true">2</span>Mientras dormimos, el cuerpo se repara. Los músculos se recuperan del esfuerzo del día, el corazón descansa y las defensas se fortalecen. Por eso, quienes duermen poco se enferman con más frecuencia y tardan más en sanar.</p>
+<p><span class="num-p" aria-hidden="true">3</span>El sueño también ayuda a la mente. Durante la noche, el cerebro ordena lo que aprendimos en el día y lo guarda en la memoria. Un estudiante que duerme bien antes de un examen recuerda mejor lo que estudió que uno que pasa la noche en vela.</p>
+<p><span class="num-p" aria-hidden="true">4</span>Los expertos recomiendan que un adulto duerma entre siete y nueve horas. Para lograrlo, aconsejan acostarse siempre a la misma hora, apagar las pantallas una hora antes y evitar el café por la tarde. Dormir bien no cuesta dinero, y sus beneficios se notan en todo el cuerpo.</p>
+</div>
+<div class="clasificador apilado" id="clasif-guiada"></div>
+<div class="puntaje" id="puntaje-guiada" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l4-1.html#parrafos" target="_blank" rel="noopener noreferrer">📄 Practica más: textos de varios párrafos
+  <span>Otros textos para leer párrafo por párrafo y encontrar la idea de todo el texto.</span></a>
+</div>
+</details>
+
+<details id="s-7-resumen">
+<summary>7. Práctica: resume en dos oraciones <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<div class="actividad">
+  <h4><span class="badge badge-actividad">Actividad</span> Individual · en tu cuaderno</h4>
+  <p>Un buen resumen corto tiene <strong>la idea principal</strong> y <strong>los detalles más importantes</strong>, con tus propias palabras. Escribe un resumen de «Dormir bien» en <strong>dos oraciones</strong>: la primera con la idea principal y la segunda con los dos o tres detalles más importantes.</p>
+  <p style="margin:0">Revisa tu resumen: ¿un lector que no conoce el texto entendería de qué trata? ¿Copiaste oraciones enteras del texto? Si es así, dilo con tus palabras.</p>
+</div>
+<details style="margin-top:10px"><summary>Ver un resumen modelo</summary><div class="contenido-detalle">
+<em>Dormir bien es tan importante para la salud como comer bien o hacer ejercicio. Mientras dormimos, el cuerpo se repara y el cerebro guarda lo aprendido, y para lograrlo conviene dormir de siete a nueve horas con horarios fijos y sin pantallas antes de acostarse.</em>
+</div></details>
+<div class="tip"><strong>👨‍👩‍👧 Si tienes con quién practicar:</strong> cuéntale a alguien de tu casa de qué trata el texto en menos de un minuto, sin mirarlo. Si lo entiende, encontraste la idea principal.</div>
+</div>
+</details>
+
+<details id="s-tarea">
+<summary>8. Tarea <span class="caja-tiempo">30 min</span></summary>
+<div class="contenido-detalle">
+<ul class="lista-bonita">
+  <li><strong>Una noticia.</strong> Busca una noticia corta en español (de un periódico o de un sitio de noticias). Completa el organizador de la sección 4 y escribe su idea principal en una oración.</li>
+  <li><strong>Tres trampas.</strong> Para esa misma noticia, escribe tres opciones falsas: una muy amplia, una que sea solo un detalle y una que no esté en el texto.</li>
+  <li><strong>Mi párrafo.</strong> Escribe un párrafo de 5 oraciones sobre tu barrio: la primera, con la idea principal; las otras cuatro, con detalles que la apoyen.</li>
+</ul>
+</div>
+</details>
+
+<details id="s-quiz">
+<summary>9. Quiz de la lección <span class="caja-tiempo">25 min</span></summary>
+<div class="contenido-detalle">
+<div class="qz-intro">
+  <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
+  <p style="margin:0">Algunas preguntas traen un texto corto: léelo con calma antes de responder. Al final pulsa <strong>Ver mi resultado</strong>. La meta es acertar al menos <strong>10 de 12</strong>.</p>
+</div>
+<div id="qz-cuerpo"></div>
+<div class="botones">
+  <button type="button" class="btn btn-primario" id="qz-calificar">Ver mi resultado</button>
+  <button type="button" class="btn btn-secundario" id="qz-reintentar" style="display:none">Intentar de nuevo</button>
+</div>
+<div class="qz-resultado" id="qz-resultado" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-cierre">
+<summary>10. Cierre <span class="caja-tiempo">5 min</span></summary>
+<div class="contenido-detalle">
+<h3>Lo que aprendiste en esta lección</h3>
+<ul class="lista-bonita">
+  <li>Tema (de qué trata) + lo que el autor dice sobre él = <strong>idea principal</strong>, en una oración.</li>
+  <li>La idea puede estar al principio, al final o no estar escrita: entonces se construye con lo que tienen en común los detalles.</li>
+  <li>En un texto largo: una oración por párrafo y, al final, lo que las une.</li>
+  <li>Las trampas: muy amplia, solo un detalle, no está en el texto, contraria.</li>
+</ul>
+<div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
+  <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
+  <ul class="lista-bonita">
+    <li>¿Puedes explicar la diferencia entre el tema y la idea principal?</li>
+    <li>¿Sabes qué hacer cuando ninguna oración dice la idea principal?</li>
+    <li>¿Reconoces una opción «muy amplia» y una que es «solo un detalle»?</li>
+  </ul>
+</div>
+<div class="tip"><strong>📅 En la próxima lección:</strong> <a href="https://zhemaria.github.io/clases_leng2/clase_4-2.html" style="color:var(--cp-oscuro);font-weight:700">Lección 4.2 · Estructura de la historia y propósito del autor</a>. Aprenderás cómo se organiza una historia y a descubrir para qué escribió el autor su texto.</div>
+</div>
+</details>
+
+<footer class="pie">
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 4 · Lección 4.1</strong></p>
+  <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
+  <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
+</footer>
+<a class="volver-indice" href="#indice" aria-label="Volver al contenido de la lección"><span aria-hidden="true">↑</span> Índice</a>
+
+<script>
+/* ===== Voz: todas las lecturas pasan por hablar(), para poder cambiarla después por audio grabado ===== */
+(function(){
+  var voz=null, hay=('speechSynthesis' in window);
+  function elegir(){
+    if(!hay)return;
+    var vs=speechSynthesis.getVoices().filter(function(v){return /^es/i.test(v.lang);});
+    var pref=['es-US','es-MX','es-419','es-CO','es-AR','es-CL','es-PE'];
+    voz=null;
+    for(var i=0;i<pref.length&&!voz;i++){voz=vs.find(function(v){return v.lang.replace('_','-').toLowerCase()===pref[i].toLowerCase();})||null;}
+    if(!voz)voz=vs.find(function(v){return !/es[-_]ES/i.test(v.lang);})||vs[0]||null;
+  }
+  function aviso(){var a=document.getElementById('aviso-voz');if(a)a.classList.add('visible');}
+  function frase(t,vel){var u=new SpeechSynthesisUtterance(t);u.lang=voz?voz.lang:'es-US';if(voz)u.voice=voz;u.rate=vel||0.9;return u;}
+  if(hay){elegir(); speechSynthesis.onvoiceschanged=elegir;}
+  /* hablar(texto, velocidad, alTerminar) */
+  window.hablar=function(texto,vel,fin){
+    if(!hay||!texto){aviso();return;}
+    speechSynthesis.cancel();
+    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+  };
+  /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
+  window.hablarPalabras=function(texto){
+    if(!hay){aviso();return;}
+    speechSynthesis.cancel();
+    texto.replace(/[.,;:¿?¡!—«»]/g,' ').split(/\s+/).filter(Boolean).forEach(function(p){speechSynthesis.speak(frase(p,0.7));});
+  };
+  window.callar=function(){if(hay)speechSynthesis.cancel();};
+  if(!hay)document.addEventListener('DOMContentLoaded',aviso);
+})();
+
+/* ===== Clasificador: cada elemento con sus botones; al acertar muestra una nota ===== */
+function clasificador(idCaja,idPuntaje,items,opciones,conAudio){
+  var caja=document.getElementById(idCaja), pun=document.getElementById(idPuntaje), bien=0, hechas={};
+  function marcador(){pun.textContent=bien===items.length?(items.length===1?'🎉 ¡Muy bien!':'🎉 ¡Muy bien! Acertaste las '+bien+'.'):(items.length===1?'':'Aciertos: '+bien+' / '+items.length);}
+  items.forEach(function(it,i){
+    var d=document.createElement('div'); d.className='item'; d.setAttribute('role','group'); d.setAttribute('aria-label',it.p.replace(/<[^>]+>/g,''));
+    var ops=it.ops||opciones;
+    d.innerHTML='<span class="item-pal">'+it.p+(conAudio?' <button type="button" class="oir" aria-label="Escuchar">🔊</button>':'')+'</span>'+
+      '<span class="item-ops">'+ops.map(function(o,j){return '<button type="button" class="btn-op" data-j="'+j+'">'+o+'</button>';}).join('')+'</span>'+
+      '<span class="item-fb" aria-live="polite"></span>';
+    caja.appendChild(d);
+    if(conAudio)d.querySelector('.oir').addEventListener('click',function(){hablar(it.a||it.p.replace(/<[^>]+>/g,''),0.85);});
+    var fb=d.querySelector('.item-fb');
+    d.querySelectorAll('.btn-op').forEach(function(b){
+      b.addEventListener('click',function(){
+        if(hechas[i])return;
+        if(+b.getAttribute('data-j')===it.c){
+          b.classList.add('correcta'); hechas[i]=true; bien++;
+          d.querySelectorAll('.btn-op').forEach(function(x){x.disabled=true;});
+          fb.innerHTML='✓ '+(it.n||'Correcto.'); marcador();
+        }else{
+          b.classList.add('incorrecta'); b.disabled=true;
+          fb.innerHTML='Todavía no. '+(it.pista||'Vuelve a mirar la regla e intenta otra vez.');
+        }
+      });
+    });
+  });
+  marcador();
+}
+
+/* ===== Quiz de la lección =====
+   P: [{t:enunciado, o:[opciones], c:índice correcto, x:texto grande opcional, a:audio opcional,
+        ae:audio entrecortado opcional, fijo:no barajar,
+        r:enlace de repaso que aparece si la respuesta es incorrecta}]
+   cfg: {meta, bien:mensaje si llega a la meta, repaso:mensaje si queda lejos} */
+function iniciarQuiz(P,cfg){
+  var META=cfg.meta, N=P.length, cuerpo=document.getElementById('qz-cuerpo'), elegidas={};
+  P.forEach(function(p,i){
+    var d=document.createElement('div');
+    d.className='qz-preg'; d.setAttribute('role','group'); d.setAttribute('aria-labelledby','qz-e'+i);
+    var h='<p class="qz-enun" id="qz-e'+i+'"><span class="qz-num">'+(i+1)+'</span>'+p.t+'</p>';
+    if(p.x||p.a||p.ae){
+      h+='<span class="qz-extra">'+(p.x?'<span class="qz-grande">'+p.x+'</span> ':'')+
+         ((p.a||p.ae)?'<button type="button" class="qz-oir" data-oir="'+i+'">🔊 Escuchar</button>':'')+'</span>';
+    }
+    h+='<div class="qz-ops">';
+    var orden=p.o.map(function(_,j){return j;});
+    if(!p.fijo){for(var k=orden.length-1;k>0;k--){var r=Math.floor(Math.random()*(k+1)),t=orden[k];orden[k]=orden[r];orden[r]=t;}}
+    orden.forEach(function(j){h+='<button type="button" class="qz-op" data-i="'+i+'" data-j="'+j+'" aria-pressed="false">'+p.o[j]+'</button>';});
+    d.innerHTML=h+'</div>'; cuerpo.appendChild(d);
+  });
+  cuerpo.addEventListener('click',function(ev){
+    var oir=ev.target.closest('.qz-oir');
+    if(oir){var q=P[+oir.getAttribute('data-oir')]; if(q.ae)hablarPalabras(q.ae); else hablar(q.a,q.v||0.85); return;}
+    var b=ev.target.closest('.qz-op'); if(!b||b.disabled)return;
+    var i=b.getAttribute('data-i');
+    cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){x.classList.remove('elegida');x.setAttribute('aria-pressed','false');});
+    b.classList.add('elegida'); b.setAttribute('aria-pressed','true'); elegidas[i]=+b.getAttribute('data-j');
+  });
+  var res=document.getElementById('qz-resultado');
+  document.getElementById('qz-calificar').addEventListener('click',function(){
+    var bien=0;
+    P.forEach(function(p,i){
+      cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){
+        var j=+x.getAttribute('data-j'); x.disabled=true; x.classList.remove('elegida');
+        if(j===p.c)x.classList.add('correcta'); else if(elegidas[i]===j)x.classList.add('incorrecta');
+      });
+      if(elegidas[i]===p.c)bien++;
+      else if(p.r){var nota=document.createElement('p');nota.className='qz-repaso';nota.innerHTML='📘 Para repasar: '+p.r;cuerpo.children[i].appendChild(nota);}
+    });
+    var msg,fondo,color;
+    if(bien>=META){msg='¡Excelente! '+bien+' de '+N+'. '+cfg.bien;fondo='#d4edda';color='#155724';}
+    else if(bien>=Math.ceil(N*0.6)){msg='Buen trabajo: '+bien+' de '+N+'. Repasa las preguntas en rojo y vuelve a intentarlo.';fondo='#fff3cd';color='#5c3900';}
+    else{msg='Llevas '+bien+' de '+N+'. '+cfg.repaso;fondo='#f8d7da';color='#721c24';}
+    res.textContent=msg; res.style.background=fondo; res.style.color=color; res.classList.add('visible');
+    this.style.display='none'; document.getElementById('qz-reintentar').style.display='inline-block';
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('qz-reintentar').addEventListener('click',function(){
+    cuerpo.querySelectorAll('.qz-op').forEach(function(x){x.disabled=false;x.classList.remove('correcta','incorrecta','elegida');x.setAttribute('aria-pressed','false');});
+    cuerpo.querySelectorAll('.qz-repaso').forEach(function(n){n.remove();});
+    elegidas={}; res.classList.remove('visible'); res.textContent='';
+    this.style.display='none'; document.getElementById('qz-calificar').style.display='inline-block';
+    cuerpo.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+
+/* ===== Navegación: el índice y la dirección (#ancla) abren su sección ===== */
+document.addEventListener('DOMContentLoaded',function(){
+  function abrir(id){
+    var el=id&&document.getElementById(id); if(!el)return;
+    var d=el.tagName==='DETAILS'?el:el.closest('details');
+    if(d){d.open=true; el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){abrir(a.getAttribute('href').slice(1));});});
+  var ab=document.getElementById('abrir-todo'), ce=document.getElementById('cerrar-todo');
+  if(ab)ab.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
+  if(ce)ce.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=false;});});
+  window.addEventListener('hashchange',function(){abrir(decodeURIComponent(location.hash.slice(1)));});
+  abrir(decodeURIComponent(location.hash.slice(1)));
+});
+
+document.querySelectorAll('.mostrar-idea').forEach(function(b){
+  b.addEventListener('click',function(){var e=document.getElementById(b.getAttribute('data-ej'));var oc=e.classList.toggle('oculta-idea');b.setAttribute('aria-pressed',oc?'false':'true');b.textContent=oc?'Mostrar la idea principal':'Ocultar la idea principal';});
+});
+
+clasificador('clasif-impl','puntaje-impl',[
+  {p:'¿Cuál es la idea principal del párrafo de don Ramón?',ops:['Don Ramón trabaja en una panadería desde las cuatro de la mañana.','Don Ramón se esfuerza mucho para superarse, aunque está muy ocupado.','Aprender inglés es importante para todos los que viven en Estados Unidos.'],c:1,
+   n:'Todos los detalles muestran esfuerzo: dos trabajos y estudio. La primera opción es solo un detalle; la tercera es muy amplia y no la dice el texto.',
+   pista:'Esa opción solo sirve para una oración, o habla de algo más general. Busca la que valga para todas.'}
+],null,false);
+
+clasificador('clasif-det','puntaje-det',[
+  {p:'Un pase mensual cuesta menos que la gasolina de un mes.',c:0,n:'Es un dato que demuestra el ahorro.'},
+  {p:'No hay que pagar estacionamiento en el centro.',c:0,n:'Es otra forma de ahorrar.'},
+  {p:'La Línea Azul del tren llega hasta el aeropuerto O’Hare.',c:1,n:'Es cierto, pero no habla de ahorro.'},
+  {p:'Tampoco hay gastos de seguro ni de reparaciones del carro.',c:0,n:'Otra razón del ahorro.'},
+  {p:'A muchas personas les gusta escuchar música en el tren.',c:1,n:'No tiene relación con el dinero.'},
+  {p:'Una familia puede ahorrar cientos de dólares al año.',c:0,n:'Resume el beneficio con un dato.'}
+],['Apoya la idea','No la apoya'],false);
+
+clasificador('clasif-trampas','puntaje-trampas',[
+  {p:'«Las abejas son necesarias para que muchos cultivos produzcan alimentos.»',c:0,n:'Cubre todo el párrafo, está en el texto y dice lo mismo.'},
+  {p:'«Los insectos son importantes para la naturaleza.»',c:1,n:'Es verdad, pero sirve para cualquier texto sobre insectos.'},
+  {p:'«Las almendras necesitan a las abejas.»',c:2,n:'Está en el texto, pero es solo un ejemplo.'},
+  {p:'«La miel de abeja es muy nutritiva.»',c:3,n:'Puede ser cierto, pero el párrafo no habla de la miel.'},
+  {p:'«Las abejas dañan los cultivos de manzana.»',c:4,n:'Dice lo contrario: las abejas ayudan a los cultivos.'}
+],['Correcta','Muy amplia','Solo un detalle','No está en el texto','Contraria'],false);
+
+clasificador('clasif-guiada','puntaje-guiada',[
+  {p:'Párrafo 1 · ¿Cuál es su idea?',ops:['Muchas personas miran el teléfono en la cama.','El sueño es tan importante para la salud como la comida o el ejercicio.','Los médicos trabajan hasta tarde.'],c:1,n:'La idea está al final del párrafo, después de <em>Sin embargo</em>: esa palabra anuncia lo que el autor de verdad quiere decir.'},
+  {p:'Párrafo 2 · ¿Cuál es su idea?',ops:['Mientras dormimos, el cuerpo se repara.','El corazón es un músculo.','Las personas que se enferman deben ir al médico.'],c:0,n:'Aquí la idea está en la primera oración; las demás son detalles: músculos, corazón, defensas.'},
+  {p:'Párrafo 3 · ¿Cuál es su idea?',ops:['Los exámenes son difíciles.','El sueño ayuda a la mente a guardar lo aprendido.','Un estudiante pasó la noche en vela.'],c:1,n:'El ejemplo del estudiante es un detalle que demuestra la idea.'},
+  {p:'Párrafo 4 · ¿Cuál es su idea?',ops:['El café es malo para la salud.','Para dormir bien hay que seguir algunos consejos sencillos.','Los adultos duermen demasiado.'],c:1,n:'El párrafo da la cantidad de horas y tres consejos.'},
+  {p:'Todo el texto · ¿Cuál es la idea principal?',ops:['Los estudiantes deben dormir bien antes de un examen importante.','La salud depende de muchas cosas, como la comida y el ejercicio.','Dormir bien es fundamental para el cuerpo y la mente, y se logra con hábitos sencillos.','Dormir es perder el tiempo.'],c:2,
+   n:'Une las ideas de los cuatro párrafos. Las otras son trampas: un detalle (examen), muy amplia (la salud) y contraria (perder el tiempo).',pista:'Revisa tu lista de cuatro ideas: la respuesta debe valer para las cuatro.'}
+],null,false);
+
+(function(){
+  var t=document.getElementById('texto-sueno');
+  document.getElementById('btn-leer').addEventListener('click',function(){hablar(t.textContent.replace(/\s+/g,' ').trim(),0.85);});
+  document.getElementById('btn-parar').addEventListener('click',function(){callar();});
+})();
+
+var PA='<span class="pasaje">Cada vez más familias de Chicago cultivan sus propias verduras. En patios, balcones y huertos comunitarios siembran tomates, chiles, lechugas y hierbas. Además de ahorrar dinero, comen alimentos más frescos y pasan tiempo juntos al aire libre. Algunas incluso venden lo que les sobra en los mercados del barrio.</span>';
+var PB='<span class="pasaje">Teresa se levanta a las cinco para preparar el almuerzo de sus hijos. Después trabaja ocho horas en una lavandería. Por la noche, cuando todos duermen, abre su cuaderno y estudia para el examen GED. Los domingos repasa con su hija mayor, que la ayuda con las matemáticas.</span>';
+iniciarQuiz([
+  {t:'La <strong>idea principal</strong> de un texto es…',o:['La oración que resume lo más importante que dice el autor','La primera oración del texto, sea cual sea su contenido','El ejemplo más llamativo que el autor incluye en el texto'],c:0},
+  {t:'¿En qué se diferencian el tema y la idea principal?',o:['El tema son pocas palabras; la idea es una oración completa','Son exactamente lo mismo','El tema siempre está al final'],c:0},
+  {t:PA+'¿Cuál es el <strong>tema</strong> del texto?',o:['Los huertos familiares en Chicago','Los mercados del barrio','Las lechugas'],c:0},
+  {t:PA+'¿Cuál es la <strong>idea principal</strong>?',o:['Muchas familias de Chicago cultivan verduras, y eso les trae beneficios.','Algunas familias de Chicago venden en el mercado lo que les sobra.','Las verduras frescas son sanas y conviene comerlas todos los días.'],c:0},
+  {t:PA+'¿Cuál es un <strong>detalle de apoyo</strong>?',o:['Comen alimentos más frescos.','Chicago es una ciudad grande.','Las familias deberían comer menos carne.'],c:0},
+  {t:PA+'La opción «Algunas familias siembran chiles» es…',o:['Solo un detalle','La idea principal','Una idea contraria al texto'],c:0},
+  {t:PB+'¿Cuál es la idea principal del párrafo?',o:['Teresa se esfuerza mucho para estudiar, aunque está muy ocupada.','Teresa trabaja ocho horas al día en una lavandería del barrio.','Los hijos mayores deben ayudar a sus padres con las tareas.'],c:0},
+  {t:PB+'En este párrafo, la idea principal…',o:['No está escrita: hay que construirla con los detalles','Está en la primera oración','Está en la última oración'],c:0},
+  {t:'En un texto de varios párrafos, la idea principal del texto completo…',o:['Une las ideas de todos los párrafos','Es siempre la primera oración','Es la idea del párrafo más largo'],c:0},
+  {t:'Una opción que es verdad pero que serviría para muchos textos distintos es una trampa…',o:['Muy amplia','De solo un detalle','Contraria'],c:0},
+  {t:'¿Qué conviene hacer al leer un texto largo?',o:['Escribir una oración con la idea de cada párrafo','Leerlo una sola vez lo más rápido posible','Fijarse solo en el último párrafo'],c:0},
+  {t:'Antes de elegir la idea principal en un examen, debes comprobar que la opción…',o:['Cubre todo el texto, está en él y dice lo mismo','Es la opción más larga y con más detalles del texto','Repite las mismas palabras que aparecen en el título'],c:0}
+],{meta:10,
+   bien:'Ya encuentras la idea principal y reconoces las trampas. Puedes continuar con la Lección 4.2.',
+   repaso:'Vuelve a las secciones 2, 4 y 5, y repite la lectura guiada antes de intentarlo otra vez. Esta destreza lleva tiempo: no te desanimes.'});
+</script>
+</body>
+</html>
