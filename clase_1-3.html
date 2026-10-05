@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!-- Lección 1.3 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+     José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
+     Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección 1.3 · Fluidez lectora: precisión, ritmo y expresión</title>
+<meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
+<meta name="license" content="CC BY-NC-SA 4.0">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
+<style>
+  :root{
+    --cp:#00796b;--cp-claro:#e0f2f1;--cp-oscuro:#004d44;
+    --acento:#ff8c42;--texto:#1a2332;--fondo:#fafbfc;
+    --gris:#555;--gris-claro:#eef1f4;
+    --dip:#1565c0;--dip-claro:#e3f2fd;
+    --hia:#ad1457;--hia-claro:#fce4ec;
+    --grp:#5c3900;--grp-claro:#fff3cd;
+    --exito:#2e7d32;--error:#c62828;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Poppins','Segoe UI',Arial,sans-serif;line-height:1.7;color:var(--texto);background:var(--fondo);max-width:960px;margin:0 auto;padding:24px 18px}
+  h1{color:var(--cp-oscuro);border-bottom:4px solid var(--cp);padding-bottom:14px;font-size:1.85rem;margin-bottom:8px}
+  .subtitulo{color:var(--gris);font-style:italic;margin-top:0;margin-bottom:24px;font-size:1.05rem}
+  h2{color:var(--cp-oscuro);border-left:6px solid var(--cp);padding-left:14px;margin-top:32px;font-size:1.4rem}
+  h3{color:var(--cp);margin-top:24px;font-size:1.15rem}
+  .caja-objetivos{background:var(--cp-claro);border-left:6px solid var(--cp);padding:18px 22px;border-radius:8px;margin:18px 0 28px 0}
+  .caja-objetivos h2{margin-top:0;color:var(--cp-oscuro);border-left:none;padding-left:0;font-size:1.2rem}
+  .caja-tiempo{display:inline-block;background:var(--acento);color:#1a2332;padding:4px 12px;border-radius:14px;font-size:0.85rem;font-weight:600;margin-left:10px;vertical-align:middle}
+  details{background:#fff;border:1px solid #d6dde4;border-radius:10px;margin:14px 0;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+  details[open]{border-color:var(--cp);box-shadow:0 3px 10px rgba(0,121,107,0.12)}
+  summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--cp-oscuro);background:var(--gris-claro);list-style:none;user-select:none;font-size:1.05rem}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:'▶';display:inline-block;margin-right:10px;color:var(--cp);transition:transform 0.25s;font-size:0.85rem}
+  details[open] summary::before{transform:rotate(90deg)}
+  details[open] summary{background:var(--cp-claro);border-bottom:2px solid var(--cp)}
+  .contenido-detalle{padding:18px 22px}
+  .tip{background:#fffbe6;border-left:5px solid #f4c430;padding:12px 18px;border-radius:6px;margin:14px 0}
+  .tip strong{color:#6b5400}
+  .botones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .btn{padding:10px 22px;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.95rem;transition:background 0.2s}
+  .btn-primario{background:var(--cp);color:#fff}
+  .btn-primario:hover{background:var(--cp-oscuro)}
+  .btn-secundario{background:var(--gris-claro);color:var(--texto)}
+  .btn-secundario:hover{background:#d6dde4}
+  .btn[aria-pressed="true"]{background:var(--cp-oscuro);color:#fff}
+  ul.lista-bonita{list-style:none;padding-left:0}
+  ul.lista-bonita li{padding:8px 0 8px 30px;position:relative}
+  ul.lista-bonita li::before{content:'➜';position:absolute;left:0;color:var(--cp);font-weight:700}
+  .palabra-clave{background:linear-gradient(transparent 60%,#ffeb3b 60%);padding:0 4px;font-weight:600}
+  .ejemplo{font-family:Georgia,serif;font-size:1.15rem}
+  .sil{font-family:Georgia,serif;letter-spacing:.5px;color:var(--cp-oscuro);font-weight:700}
+  table.tabla{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+  table.tabla th{background:var(--cp-oscuro);color:#fff;padding:10px 12px;text-align:left}
+  table.tabla td{padding:10px 12px;border-bottom:1px solid var(--gris-claro);vertical-align:top}
+  table.tabla tr:last-child td{border-bottom:none}
+  .actividad{background:#fff;border:2px solid var(--acento);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .actividad h4{color:#8a3d0c;margin-top:0}
+  .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+  .badge-lectura{background:#e3f2fd;color:#0d47a1}
+  .badge-actividad{background:#f3e5f5;color:#6a1b9a}
+  /* Clasificadores */
+  .clasificador{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:18px 0}
+  .item{border:2px solid var(--gris-claro);border-radius:8px;padding:10px 14px;margin:8px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .item-pal{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--cp-oscuro);display:flex;align-items:center;gap:10px}
+  .item-ops{display:flex;gap:8px;flex-wrap:wrap}
+  .item-fb{flex-basis:100%;font-size:.95rem;min-height:0}
+  .item-fb:empty{display:none}
+  .btn-op{padding:7px 14px;border:2px solid var(--cp);background:#fff;color:var(--cp-oscuro);border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit;font-size:.92rem}
+  .btn-op:hover:not(:disabled){background:var(--cp-claro)}
+  .btn-op.correcta{background:#d4edda;border-color:var(--exito);color:#155724}
+  .btn-op.incorrecta{background:#f8d7da;border-color:var(--error);color:#721c24}
+  .btn-op:disabled{cursor:default}
+  .oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:3px 10px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.9rem}
+  .puntaje{text-align:center;margin-top:12px;font-weight:600;color:var(--cp-oscuro)}
+  /* Lectura con marcas */
+  .texto-lectura{background:#fff;border:2px solid var(--gris-claro);border-radius:8px;padding:18px 22px;margin:14px 0;font-family:Georgia,serif;font-size:1.12rem;line-height:2.1}
+  .texto-lectura p{margin:0 0 10px}
+  .leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:.92rem;margin:8px 0}
+  .leyenda span{display:inline-flex;align-items:center;gap:6px}
+  .mk{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .ver-dip .dip{background:var(--dip-claro);color:var(--dip);font-weight:700;box-shadow:0 -3px 0 var(--dip) inset;border-radius:3px}
+  .ver-dip .hia{background:var(--hia-claro);color:var(--hia);font-weight:700;box-shadow:0 -3px 0 var(--hia) inset;border-radius:3px}
+  .ver-dip .muda{color:#555;text-decoration:underline dotted 2px}
+  .ver-grp .grp{background:var(--grp-claro);color:var(--grp);font-weight:700;box-shadow:0 -3px 0 var(--grp) inset;border-radius:3px}
+  /* Índice */
+  .indice{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:16px 20px;margin:22px 0}
+  .indice h2{font-size:1.1rem;margin:0 0 8px;border:none;padding:0}
+  .indice ol{margin:0;padding-left:1.4em}
+  .indice li{margin:4px 0}
+  .indice a{color:var(--cp-oscuro)}
+  .abrir-cerrar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+  .volver-indice{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--cp-oscuro);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+  .volver-indice:hover{background:var(--cp);color:#fff}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b35316;outline-offset:2px}
+  .sr-solo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .enlace-practica{display:block;background:#fff;border:2px solid var(--cp);border-radius:10px;padding:14px 18px;margin:16px 0;text-decoration:none;color:var(--cp-oscuro);font-weight:600}
+  .enlace-practica:hover{background:var(--cp-claro)}
+  .enlace-practica span{display:block;font-weight:400;color:var(--texto);font-size:.95rem}
+  .aviso-voz{font-size:.9rem;color:#5c3900;background:#fff3cd;border-radius:6px;padding:6px 10px;display:none}
+  .aviso-voz.visible{display:block}
+  /* Quiz */
+  .qz-intro{background:var(--cp-claro);border-radius:10px;padding:14px 18px;margin:0 0 14px}
+  .qz-intro h4{margin:0 0 6px;color:var(--cp-oscuro)}
+  .qz-preg{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .qz-enun{font-weight:600;margin:0 0 10px}
+  .qz-num{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:12px;padding:1px 10px;font-size:.8rem;margin-right:8px}
+  .qz-extra{display:block;text-align:center;margin:6px 0 10px;font-weight:400}
+  .qz-extra .qz-grande{font-family:Georgia,serif;font-size:1.3rem}
+  .qz-oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:6px 14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .qz-ops{display:flex;flex-direction:column;gap:8px}
+  .qz-op{text-align:left;background:#fff;border:2px solid #c9d2db;border-radius:8px;padding:10px 14px;font-family:inherit;font-size:1rem;cursor:pointer;color:var(--texto)}
+  .qz-op:hover:not(:disabled){border-color:var(--cp)}
+  .qz-op.elegida{background:var(--cp-claro);border-color:var(--cp-oscuro);color:var(--cp-oscuro);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--cp)}
+  .qz-op.correcta{background:#d4edda;border-color:#2e7d32;color:#155724}
+  .qz-op.correcta::before{content:'✓ '}
+  .qz-op.incorrecta{background:#f8d7da;border-color:#c62828;color:#721c24}
+  .qz-op.incorrecta::before{content:'✗ '}
+  .qz-op:disabled{cursor:default}
+  .qz-resultado{display:none;margin:16px 0;padding:16px;border-radius:10px;text-align:center;font-weight:600}
+  .qz-resultado.visible{display:block}
+  footer.pie{margin-top:40px;padding-top:18px;border-top:2px solid var(--gris-claro);text-align:center;color:#555;font-size:.9rem}
+  footer.pie p{margin:4px 0}
+  footer.pie a{color:var(--cp-oscuro)}
+  @media print{.indice,.volver-indice,.abrir-cerrar{display:none}}
+  @media (prefers-reduced-motion:reduce){summary::before{transition:none}}
+
+  .qz-repaso{margin:10px 0 0;padding:8px 12px;background:#fff3cd;border-radius:6px;color:#3d2600;font-size:.95rem}
+  .qz-repaso a{color:#004d44;font-weight:700}
+
+  .par{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+  @media(max-width:640px){.par{grid-template-columns:1fr}}
+  .par > div{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:12px 14px}
+  .par .frase{font-family:Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--cp-oscuro);margin:0 0 4px}
+  .crono{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:16px 0;text-align:center}
+  .crono-tiempo{font-family:Georgia,serif;font-size:2.2rem;font-weight:700;color:var(--cp-oscuro)}
+  .teatro{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:14px 0}
+  .linea{padding:8px 12px;border-radius:8px;margin:4px 0;font-family:Georgia,serif;font-size:1.08rem;border-left:5px solid transparent}
+  .linea .quien{font-family:'Segoe UI',Arial,sans-serif;font-weight:700;font-size:.85rem;display:block;color:#555}
+  .linea.tu{background:#fff8ee}
+  .linea.actual{border-left-color:var(--cp-oscuro);background:var(--cp-claro)}
+  .linea.tu.actual{background:#ffe0b2;border-left-color:#8a3d0c}
+  .texto-lectura .dlg{display:block}
+</style>
+</head>
+<body>
+<h1>Lección 1.3 · Fluidez lectora: precisión, ritmo y expresión</h1>
+<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 1: Fonética avanzada y fluidez lectora · Unas 2 horas, a tu ritmo</p>
+
+<div class="caja-objetivos">
+  <h2>🎯 Objetivos de la lección</h2>
+  <ul class="lista-bonita" style="margin:0">
+    <li>Leer en voz alta un texto de tu nivel <strong>sin saltarte ni cambiar palabras</strong>.</li>
+    <li>Leer a un <strong>ritmo adecuado</strong>, haciendo las pausas que marcan los signos de puntuación.</li>
+    <li>Usar la <strong>entonación</strong> correcta en preguntas, exclamaciones y diálogos.</li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:.92rem">Estándares: 2.R.FL.1 · 2.R.FS.2</p>
+</div>
+
+<nav class="indice" id="indice" aria-labelledby="indice-titulo">
+  <h2 id="indice-titulo">Contenido de la lección</h2>
+  <ol>
+    <li><a href="#s-1-fluidez">¿Qué es leer con fluidez?</a></li>
+    <li><a href="#s-2-pausas">Las pausas de la puntuación</a></li>
+    <li><a href="#s-3-entonacion">La entonación: preguntas y exclamaciones</a></li>
+    <li><a href="#s-4-repetida">Lectura repetida: «La llamada»</a></li>
+    <li><a href="#s-5-teatro">Teatro leído</a></li>
+    <li><a href="#s-tarea">Tarea</a></li>
+    <li><a href="#s-quiz">Quiz de la lección</a></li>
+    <li><a href="#s-cierre">Cierre</a></li>
+  </ol>
+  <div class="abrir-cerrar">
+    <button type="button" class="btn btn-secundario" id="abrir-todo">Abrir todo</button>
+    <button type="button" class="btn btn-secundario" id="cerrar-todo">Cerrar todo</button>
+  </div>
+</nav>
+
+<h2>📚 Para empezar</h2>
+<p>En las dos lecciones anteriores aprendiste a leer palabras largas: por sílabas y por partes. Ahora damos el paso que une todo: leer <strong>un texto completo</strong> en voz alta como lo haría un buen lector. Cuando la lectura fluye, la mente queda libre para entender lo que dice el texto, en lugar de gastar toda su energía en descifrar cada palabra.</p>
+<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán. Puedes hacer las actividades leyendo tú en voz alta; el cronómetro funciona igual.</p>
+
+<details open id="s-1-fluidez">
+<summary>1. ¿Qué es leer con fluidez? <span class="caja-tiempo">10 min</span></summary>
+<div class="contenido-detalle">
+<p>Leer con <span class="palabra-clave">fluidez</span> no es leer lo más rápido posible. Es leer como si hablaras: con naturalidad. La fluidez tiene tres partes:</p>
+<table class="tabla">
+  <caption class="sr-solo">Las tres partes de la fluidez</caption>
+  <thead><tr><th scope="col">Parte</th><th scope="col">Qué significa</th><th scope="col">Un error típico</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Precisión</strong></td><td>Leer cada palabra tal como está escrita.</td><td>Saltarse palabras o cambiar <em>casa</em> por <em>cosa</em>.</td></tr>
+    <tr><td><strong>Ritmo</strong></td><td>Leer a una velocidad cómoda: ni muy lenta ni atropellada.</td><td>Leer palabra por palabra, como un robot, o tan rápido que no se entiende.</td></tr>
+    <tr><td><strong>Expresión</strong></td><td>Hacer las pausas y dar a la voz el tono que pide el texto.</td><td>Leer una pregunta como si fuera una afirmación.</td></tr>
+  </tbody>
+</table>
+<h3>Escucha la diferencia</h3>
+<p>Estas dos lecturas tienen las mismas palabras. ¿Cuál se entiende mejor?</p>
+<div class="botones">
+  <button type="button" class="btn btn-secundario" id="demo-robot">🔊 Lectura palabra por palabra</button>
+  <button type="button" class="btn btn-primario" id="demo-fluida">🔊 Lectura fluida</button>
+</div>
+<p class="ejemplo" style="text-align:center">«Cada mañana, antes de ir al trabajo, preparo café y leo las noticias.»</p>
+</div>
+</details>
+
+<details id="s-2-pausas">
+<summary>2. Las pausas de la puntuación <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>Los signos de puntuación son las señales de tránsito de la lectura: te dicen dónde detenerte y cuánto.</p>
+<table class="tabla">
+  <caption class="sr-solo">Signos de puntuación y la pausa que piden</caption>
+  <thead><tr><th scope="col">Signo</th><th scope="col">Qué hace la voz</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Coma</strong> ( , )</td><td>Una pausa breve, como para tomar aire.</td></tr>
+    <tr><td><strong>Punto</strong> ( . )</td><td>Una pausa más larga. La voz baja al final de la oración.</td></tr>
+    <tr><td><strong>Punto y aparte</strong></td><td>La pausa más larga: empieza un párrafo nuevo, una idea nueva.</td></tr>
+    <tr><td><strong>Dos puntos</strong> ( : )</td><td>Una pausa que anuncia lo que viene: una lista, una explicación o lo que alguien dice.</td></tr>
+    <tr><td><strong>Puntos suspensivos</strong> ( … )</td><td>La voz queda en el aire, como si faltara algo por decir.</td></tr>
+  </tbody>
+</table>
+<h3>Una coma cambia el significado</h3>
+<div class="par">
+  <div><p class="frase">No, quiero agua.</p><p style="margin:0">Primero dice que no a otra cosa; luego pide agua. <button type="button" class="oir" data-hablar="No, quiero agua.">🔊</button></p></div>
+  <div><p class="frase">No quiero agua.</p><p style="margin:0">No quiere agua. <button type="button" class="oir" data-hablar="No quiero agua.">🔊</button></p></div>
+  <div><p class="frase">Juan, mi vecino vino.</p><p style="margin:0">Le hablo a Juan para contarle que vino mi vecino. <button type="button" class="oir" data-hablar="Juan, mi vecino vino.">🔊</button></p></div>
+  <div><p class="frase">Juan, mi vecino, vino.</p><p style="margin:0">Vino Juan, que es mi vecino. <button type="button" class="oir" data-hablar="Juan, mi vecino, vino.">🔊</button></p></div>
+</div>
+<h3>¿Qué quiere decir?</h3>
+<div class="clasificador" id="clasif-pausas"></div>
+<div class="puntaje" id="puntaje-pausas" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l1-3.html#pausas" target="_blank" rel="noopener noreferrer">⏸️ Practica más: las pausas cambian el sentido
+  <span>Más oraciones donde una coma decide lo que se dice. Se abre en una pestaña nueva.</span></a>
+</div>
+</details>
+
+<details id="s-3-entonacion">
+<summary>3. La entonación: preguntas y exclamaciones <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<p>La <span class="palabra-clave">entonación</span> es la «música» de la voz: sube, baja o se hace más fuerte. En español, los signos de pregunta y de exclamación se escriben <strong>al principio y al final</strong>, para que sepas desde dónde cambiar el tono.</p>
+<table class="tabla">
+  <caption class="sr-solo">Tipos de oración y su entonación</caption>
+  <thead><tr><th scope="col">Tipo</th><th scope="col">Qué hace la voz</th><th scope="col">Ejemplo</th></tr></thead>
+  <tbody>
+    <tr><td>Afirmación</td><td>Baja al final.</td><td><em>El autobús llegó tarde.</em> <button type="button" class="oir" data-hablar="El autobús llegó tarde.">🔊</button></td></tr>
+    <tr><td>Pregunta de sí o no</td><td>Sube al final.</td><td><em>¿El autobús llegó tarde?</em> <button type="button" class="oir" data-hablar="¿El autobús llegó tarde?">🔊</button></td></tr>
+    <tr><td>Pregunta con <em>qué, dónde, cuándo, quién, cómo</em></td><td>Empieza alta en esa palabra y baja al final.</td><td><em>¿Cuándo llegó el autobús?</em> <button type="button" class="oir" data-hablar="¿Cuándo llegó el autobús?">🔊</button></td></tr>
+    <tr><td>Exclamación</td><td>Más fuerza y emoción.</td><td><em>¡El autobús llegó tarde otra vez!</em> <button type="button" class="oir" data-hablar="¡El autobús llegó tarde otra vez!">🔊</button></td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 Mira antes de leer:</strong> cuando veas <strong>¿</strong> o <strong>¡</strong>, prepara la voz desde esa palabra. Por eso en español el signo de apertura es obligatorio.</div>
+<h3>Elige cómo se escribe</h3>
+<p>Lee cada situación y elige la oración que corresponde.</p>
+<div class="clasificador" id="clasif-ent"></div>
+<div class="puntaje" id="puntaje-ent" role="status" aria-live="polite"></div>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l1-3.html#entonacion" target="_blank" rel="noopener noreferrer">🎵 Practica más: situación y entonación
+  <span>Eliges los signos que pide cada situación y escuchas cómo suena.</span></a>
+</div>
+</details>
+
+<details id="s-4-repetida">
+<summary>4. Lectura repetida: «La llamada» <span class="caja-tiempo">25 min</span></summary>
+<div class="contenido-detalle">
+<div class="actividad">
+  <h4><span class="badge badge-lectura">Lectura</span> Individual · en voz alta · tres pasadas</h4>
+  <ol style="margin:0">
+    <li><strong>Escucha el modelo</strong> mientras sigues el texto con la vista.</li>
+    <li><strong>Primera pasada:</strong> pulsa «Empezar», lee en voz alta y pulsa «Terminar» al llegar al final.</li>
+    <li>Repite dos veces más. En cada pasada intenta mejorar <strong>una</strong> cosa: menos tropiezos, mejores pausas o más expresión.</li>
+  </ol>
+</div>
+<div class="botones" style="justify-content:flex-start">
+  <button type="button" class="btn btn-primario" id="btn-modelo">🔊 Escuchar el modelo</button>
+  <button type="button" class="btn btn-secundario" id="btn-despacio">🔊 Más despacio</button>
+  <button type="button" class="btn btn-secundario" id="btn-parar">⏹ Detener</button>
+</div>
+<div class="texto-lectura" id="texto-llamada">
+<p>El martes por la mañana sonó el teléfono en la casa de Marta. Era la secretaria de la escuela de adultos.</p>
+<p><span class="dlg">—¿Hablo con la señora Marta Ruiz? —preguntó una voz amable.</span>
+<span class="dlg">—Sí, soy yo. ¿Pasó algo?</span>
+<span class="dlg">—No se preocupe, señora. La llamo porque su examen de lectura salió muy bien. Ya puede pasar al Nivel 2.</span></p>
+<p>Marta se quedó callada un momento. Después sonrió y dijo:</p>
+<p><span class="dlg">—¡Qué alegría! Estudié todas las noches, después del trabajo, con mi cuaderno y mis libros.</span>
+<span class="dlg">—Se nota —respondió la secretaria—. Las clases empiezan el lunes a las seis de la tarde. ¿Puede venir?</span>
+<span class="dlg">—¡Claro que sí! Allí estaré.</span></p>
+<p>Cuando colgó, Marta llamó a su hija para contarle la noticia. Su hija gritó de alegría al otro lado de la línea. Esa noche, la familia cenó junta para celebrar, y Marta preparó su plato favorito: arroz con pollo. Al día siguiente compró un cuaderno nuevo para empezar el Nivel 2 con buen pie.</p>
+</div>
+<div class="tip"><strong>💡 La raya ( — ):</strong> en español, el diálogo se marca con raya. Cada raya al comienzo de línea es una persona que habla; las rayas del medio encierran las palabras del narrador (<em>—preguntó una voz amable</em>). Al leer, cambia un poco la voz cuando habla cada personaje.</div>
+
+<div class="crono" role="group" aria-labelledby="crono-titulo">
+  <h3 id="crono-titulo" style="margin-top:0">⏱️ Mi lectura</h3>
+  <div class="crono-tiempo" id="crono-tiempo" aria-live="off">0:00</div>
+  <div class="botones">
+    <button type="button" class="btn btn-primario" id="crono-empezar">Empezar</button>
+    <button type="button" class="btn btn-secundario" id="crono-terminar" disabled>Terminar</button>
+  </div>
+  <p id="crono-res" role="status" aria-live="polite" style="margin:0"></p>
+  <table class="tabla" id="crono-tabla" style="margin-top:12px">
+    <caption class="sr-solo">Resultados de mis pasadas</caption>
+    <thead><tr><th scope="col">Pasada</th><th scope="col">Tiempo</th><th scope="col">Palabras por minuto</th></tr></thead>
+    <tbody><tr><td colspan="3">Todavía no hay pasadas.</td></tr></tbody>
+  </table>
+  <p style="font-size:.9rem;color:#555;margin:0">Los resultados se borran al cerrar la página. Anótalos en tu cuaderno.</p>
+</div>
+<div class="tip"><strong>🎯 ¿Cuánto es bueno?</strong> Lo más importante es <strong>mejorar de una pasada a la siguiente</strong> sin perder precisión. Como orientación, en este nivel un buen objetivo es leer un texto como este a unas <strong>100 palabras por minuto</strong> con muy pocos tropiezos. Si lees más rápido pero te saltas palabras, baja la velocidad.</div>
+
+<h3>Evalúa tu lectura</h3>
+<p>Después de tu tercera pasada, date un puntaje de 1 a 4 en cada fila y anótalo en tu cuaderno. Si te grabaste con el celular, escúchate antes de calificarte.</p>
+<table class="tabla">
+  <caption class="sr-solo">Rúbrica de fluidez</caption>
+  <thead><tr><th scope="col">Criterio</th><th scope="col">1 · Empezando</th><th scope="col">2 · En camino</th><th scope="col">3 · Bien</th><th scope="col">4 · Muy bien</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Precisión</strong></td><td>Muchos tropiezos o cambios de palabras.</td><td>Varios tropiezos.</td><td>Uno o dos tropiezos.</td><td>Lee todas las palabras como están.</td></tr>
+    <tr><td><strong>Ritmo</strong></td><td>Palabra por palabra.</td><td>Lento, con paradas largas.</td><td>Casi siempre cómodo.</td><td>Natural, como si hablara.</td></tr>
+    <tr><td><strong>Pausas</strong></td><td>No respeta los signos.</td><td>Respeta algunos puntos.</td><td>Respeta puntos y comas.</td><td>Respeta todos los signos.</td></tr>
+    <tr><td><strong>Expresión</strong></td><td>Voz plana en todo el texto.</td><td>Algo de entonación.</td><td>Preguntas y exclamaciones bien marcadas.</td><td>Distingue también a cada personaje.</td></tr>
+  </tbody>
+</table>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l1-3.html#lectura-repetida" target="_blank" rel="noopener noreferrer">📈 Practica más: lectura repetida con otros textos
+  <span>Cuatro textos cortos con modelo de audio, cronómetro y una gráfica de tus tres pasadas.</span></a>
+</div>
+</details>
+
+<details id="s-5-teatro">
+<summary>5. Teatro leído <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>Ahora tú eres <strong>Marta</strong>. La computadora hace la voz de la secretaria. Cuando te toque, tu línea se ilumina en naranja: léela en voz alta con la entonación que piden los signos y pulsa «Ya leí mi parte».</p>
+<div class="teatro" id="teatro"></div>
+<div class="botones">
+  <button type="button" class="btn btn-primario" id="teatro-empezar">Empezar</button>
+  <button type="button" class="btn btn-primario" id="teatro-sigue" disabled>Ya leí mi parte</button>
+  <button type="button" class="btn btn-secundario" id="teatro-reiniciar">Volver al principio</button>
+</div>
+<p id="teatro-estado" role="status" aria-live="polite" style="text-align:center;font-weight:600;color:var(--cp-oscuro)"></p>
+<div class="tip"><strong>👨‍👩‍👧 Si tienes con quién practicar:</strong> lean el diálogo entre dos personas, sin la computadora, y luego cambien los papeles.</div>
+</div>
+</details>
+
+<details id="s-tarea">
+<summary>6. Tarea <span class="caja-tiempo">30 min</span></summary>
+<div class="contenido-detalle">
+<p>Esta parte la haces por tu cuenta, con el cuaderno abierto:</p>
+<ul class="lista-bonita">
+  <li><strong>Mi grabación.</strong> Elige un párrafo de un periódico, una revista o un libro. Léelo tres veces y grábate con el celular en la tercera, durante unos 45 segundos. Escúchate y califícate con la rúbrica de la sección 4.</li>
+  <li><strong>Mis velocidades.</strong> Copia en tu cuaderno las palabras por minuto de tus tres pasadas de «La llamada». ¿Cuánto mejoraste de la primera a la tercera?</li>
+  <li><strong>Escribo con entonación.</strong> Escribe un diálogo corto (seis líneas) entre tú y alguien de tu familia, con al menos una pregunta y una exclamación, y con raya en cada línea. Léelo en voz alta.</li>
+</ul>
+<div class="tip"><strong>🎯 Antes del quiz:</strong> repasa las tres partes de la fluidez, la tabla de pausas y la tabla de entonación.</div>
+</div>
+</details>
+
+<details id="s-quiz">
+<summary>7. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<div class="qz-intro">
+  <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
+  <p style="margin:0">Elige una respuesta en cada pregunta y, al final, pulsa <strong>Ver mi resultado</strong>. Dos preguntas tienen audio: pulsa 🔊 para escucharlas. La meta es acertar al menos <strong>10 de 12</strong>.</p>
+</div>
+<div id="qz-cuerpo"></div>
+<div class="botones">
+  <button type="button" class="btn btn-primario" id="qz-calificar">Ver mi resultado</button>
+  <button type="button" class="btn btn-secundario" id="qz-reintentar" style="display:none">Intentar de nuevo</button>
+</div>
+<div class="qz-resultado" id="qz-resultado" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-cierre">
+<summary>8. Cierre <span class="caja-tiempo">5 min</span></summary>
+<div class="contenido-detalle">
+<h3>Lo que aprendiste en esta lección</h3>
+<ul class="lista-bonita">
+  <li>La fluidez tiene tres partes: <strong>precisión</strong>, <strong>ritmo</strong> y <strong>expresión</strong>.</li>
+  <li>La coma pide una pausa breve; el punto, una más larga; el punto y aparte, la más larga.</li>
+  <li>En las preguntas de sí o no la voz sube al final; en las exclamaciones gana fuerza.</li>
+  <li>La <strong>lectura repetida</strong> es la mejor manera de ganar fluidez: el mismo texto, varias veces, mejorando algo en cada pasada.</li>
+</ul>
+<div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
+  <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
+  <ul class="lista-bonita">
+    <li>¿Mejoraste tus palabras por minuto entre la primera y la tercera pasada?</li>
+    <li>¿Puedes leer «¿Puede venir?» y «¡Claro que sí!» con la entonación correcta?</li>
+    <li>¿Sabes explicar la diferencia entre «No, quiero agua» y «No quiero agua»?</li>
+  </ul>
+</div>
+<div class="tip"><strong>🏁 Terminaste el Tema 1.</strong> En el próximo tema empieza la gramática de la oración: <a href="https://zhemaria.github.io/clases_leng2/clase_2-1.html" style="color:var(--cp-oscuro);font-weight:700">Lección 2.1 · Sustantivos y adverbios</a>.</div>
+</div>
+</details>
+
+<footer class="pie">
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 1 · Lección 1.3</strong></p>
+  <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
+  <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
+</footer>
+<a class="volver-indice" href="#indice" aria-label="Volver al contenido de la lección"><span aria-hidden="true">↑</span> Índice</a>
+
+<script>
+/* ===== Voz: todas las lecturas pasan por hablar(), para poder cambiarla después por audio grabado ===== */
+(function(){
+  var voz=null, hay=('speechSynthesis' in window);
+  function elegir(){
+    if(!hay)return;
+    var vs=speechSynthesis.getVoices().filter(function(v){return /^es/i.test(v.lang);});
+    var pref=['es-US','es-MX','es-419','es-CO','es-AR','es-CL','es-PE'];
+    voz=null;
+    for(var i=0;i<pref.length&&!voz;i++){voz=vs.find(function(v){return v.lang.replace('_','-').toLowerCase()===pref[i].toLowerCase();})||null;}
+    if(!voz)voz=vs.find(function(v){return !/es[-_]ES/i.test(v.lang);})||vs[0]||null;
+  }
+  function aviso(){var a=document.getElementById('aviso-voz');if(a)a.classList.add('visible');}
+  function frase(t,vel){var u=new SpeechSynthesisUtterance(t);u.lang=voz?voz.lang:'es-US';if(voz)u.voice=voz;u.rate=vel||0.9;return u;}
+  if(hay){elegir(); speechSynthesis.onvoiceschanged=elegir;}
+  /* hablar(texto, velocidad, alTerminar) */
+  window.hablar=function(texto,vel,fin){
+    if(!hay||!texto){aviso();return;}
+    speechSynthesis.cancel();
+    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+  };
+  /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
+  window.hablarPalabras=function(texto){
+    if(!hay){aviso();return;}
+    speechSynthesis.cancel();
+    texto.replace(/[.,;:¿?¡!—«»]/g,' ').split(/\s+/).filter(Boolean).forEach(function(p){speechSynthesis.speak(frase(p,0.7));});
+  };
+  window.callar=function(){if(hay)speechSynthesis.cancel();};
+  if(!hay)document.addEventListener('DOMContentLoaded',aviso);
+})();
+
+/* ===== Clasificador: cada elemento con sus botones; al acertar muestra una nota ===== */
+function clasificador(idCaja,idPuntaje,items,opciones,conAudio){
+  var caja=document.getElementById(idCaja), pun=document.getElementById(idPuntaje), bien=0, hechas={};
+  function marcador(){pun.textContent=bien===items.length?'🎉 ¡Muy bien! Acertaste las '+bien+'.':'Aciertos: '+bien+' / '+items.length;}
+  items.forEach(function(it,i){
+    var d=document.createElement('div'); d.className='item'; d.setAttribute('role','group'); d.setAttribute('aria-label',it.p.replace(/<[^>]+>/g,''));
+    var ops=it.ops||opciones;
+    d.innerHTML='<span class="item-pal">'+it.p+(conAudio?' <button type="button" class="oir" aria-label="Escuchar">🔊</button>':'')+'</span>'+
+      '<span class="item-ops">'+ops.map(function(o,j){return '<button type="button" class="btn-op" data-j="'+j+'">'+o+'</button>';}).join('')+'</span>'+
+      '<span class="item-fb" aria-live="polite"></span>';
+    caja.appendChild(d);
+    if(conAudio)d.querySelector('.oir').addEventListener('click',function(){hablar(it.a||it.p.replace(/<[^>]+>/g,''),0.85);});
+    var fb=d.querySelector('.item-fb');
+    d.querySelectorAll('.btn-op').forEach(function(b){
+      b.addEventListener('click',function(){
+        if(hechas[i])return;
+        if(+b.getAttribute('data-j')===it.c){
+          b.classList.add('correcta'); hechas[i]=true; bien++;
+          d.querySelectorAll('.btn-op').forEach(function(x){x.disabled=true;});
+          fb.innerHTML='✓ '+(it.n||'Correcto.'); marcador();
+        }else{
+          b.classList.add('incorrecta'); b.disabled=true;
+          fb.innerHTML='Todavía no. '+(it.pista||'Vuelve a mirar la regla e intenta otra vez.');
+        }
+      });
+    });
+  });
+  marcador();
+}
+
+/* ===== Quiz de la lección =====
+   P: [{t:enunciado, o:[opciones], c:índice correcto, x:texto grande opcional, a:audio opcional,
+        ae:audio entrecortado opcional, fijo:no barajar,
+        r:enlace de repaso que aparece si la respuesta es incorrecta}]
+   cfg: {meta, bien:mensaje si llega a la meta, repaso:mensaje si queda lejos} */
+function iniciarQuiz(P,cfg){
+  var META=cfg.meta, N=P.length, cuerpo=document.getElementById('qz-cuerpo'), elegidas={};
+  P.forEach(function(p,i){
+    var d=document.createElement('div');
+    d.className='qz-preg'; d.setAttribute('role','group'); d.setAttribute('aria-labelledby','qz-e'+i);
+    var h='<p class="qz-enun" id="qz-e'+i+'"><span class="qz-num">'+(i+1)+'</span>'+p.t+'</p>';
+    if(p.x||p.a||p.ae){
+      h+='<span class="qz-extra">'+(p.x?'<span class="qz-grande">'+p.x+'</span> ':'')+
+         ((p.a||p.ae)?'<button type="button" class="qz-oir" data-oir="'+i+'">🔊 Escuchar</button>':'')+'</span>';
+    }
+    h+='<div class="qz-ops">';
+    var orden=p.o.map(function(_,j){return j;});
+    if(!p.fijo){for(var k=orden.length-1;k>0;k--){var r=Math.floor(Math.random()*(k+1)),t=orden[k];orden[k]=orden[r];orden[r]=t;}}
+    orden.forEach(function(j){h+='<button type="button" class="qz-op" data-i="'+i+'" data-j="'+j+'" aria-pressed="false">'+p.o[j]+'</button>';});
+    d.innerHTML=h+'</div>'; cuerpo.appendChild(d);
+  });
+  cuerpo.addEventListener('click',function(ev){
+    var oir=ev.target.closest('.qz-oir');
+    if(oir){var q=P[+oir.getAttribute('data-oir')]; if(q.ae)hablarPalabras(q.ae); else hablar(q.a,q.v||0.85); return;}
+    var b=ev.target.closest('.qz-op'); if(!b||b.disabled)return;
+    var i=b.getAttribute('data-i');
+    cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){x.classList.remove('elegida');x.setAttribute('aria-pressed','false');});
+    b.classList.add('elegida'); b.setAttribute('aria-pressed','true'); elegidas[i]=+b.getAttribute('data-j');
+  });
+  var res=document.getElementById('qz-resultado');
+  document.getElementById('qz-calificar').addEventListener('click',function(){
+    var bien=0;
+    P.forEach(function(p,i){
+      cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){
+        var j=+x.getAttribute('data-j'); x.disabled=true; x.classList.remove('elegida');
+        if(j===p.c)x.classList.add('correcta'); else if(elegidas[i]===j)x.classList.add('incorrecta');
+      });
+      if(elegidas[i]===p.c)bien++;
+      else if(p.r){var nota=document.createElement('p');nota.className='qz-repaso';nota.innerHTML='📘 Para repasar: '+p.r;cuerpo.children[i].appendChild(nota);}
+    });
+    var msg,fondo,color;
+    if(bien>=META){msg='¡Excelente! '+bien+' de '+N+'. '+cfg.bien;fondo='#d4edda';color='#155724';}
+    else if(bien>=Math.ceil(N*0.6)){msg='Buen trabajo: '+bien+' de '+N+'. Repasa las preguntas en rojo y vuelve a intentarlo.';fondo='#fff3cd';color='#5c3900';}
+    else{msg='Llevas '+bien+' de '+N+'. '+cfg.repaso;fondo='#f8d7da';color='#721c24';}
+    res.textContent=msg; res.style.background=fondo; res.style.color=color; res.classList.add('visible');
+    this.style.display='none'; document.getElementById('qz-reintentar').style.display='inline-block';
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('qz-reintentar').addEventListener('click',function(){
+    cuerpo.querySelectorAll('.qz-op').forEach(function(x){x.disabled=false;x.classList.remove('correcta','incorrecta','elegida');x.setAttribute('aria-pressed','false');});
+    cuerpo.querySelectorAll('.qz-repaso').forEach(function(n){n.remove();});
+    elegidas={}; res.classList.remove('visible'); res.textContent='';
+    this.style.display='none'; document.getElementById('qz-calificar').style.display='inline-block';
+    cuerpo.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+
+/* ===== Navegación: el índice y la dirección (#ancla) abren su sección ===== */
+document.addEventListener('DOMContentLoaded',function(){
+  function abrir(id){
+    var el=id&&document.getElementById(id); if(!el)return;
+    var d=el.tagName==='DETAILS'?el:el.closest('details');
+    if(d){d.open=true; el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){abrir(a.getAttribute('href').slice(1));});});
+  var ab=document.getElementById('abrir-todo'), ce=document.getElementById('cerrar-todo');
+  if(ab)ab.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
+  if(ce)ce.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=false;});});
+  window.addEventListener('hashchange',function(){abrir(decodeURIComponent(location.hash.slice(1)));});
+  abrir(decodeURIComponent(location.hash.slice(1)));
+});
+
+/* Botones 🔊 sueltos con data-hablar */
+document.querySelectorAll('[data-hablar]').forEach(function(b){b.setAttribute('aria-label','Escuchar: '+b.getAttribute('data-hablar'));b.addEventListener('click',function(){hablar(b.getAttribute('data-hablar'),0.85);});});
+var FRASE_DEMO='Cada mañana, antes de ir al trabajo, preparo café y leo las noticias.';
+document.getElementById('demo-robot').addEventListener('click',function(){hablarPalabras(FRASE_DEMO);});
+document.getElementById('demo-fluida').addEventListener('click',function(){hablar(FRASE_DEMO,0.9);});
+
+clasificador('clasif-pausas','puntaje-pausas',[
+  {p:'«No, quiero café.»',a:'No, quiero café.',ops:['Pide café','No quiere café'],c:0,n:'La coma separa el «no» de lo que pide: sí quiere café.'},
+  {p:'«No quiero café.»',a:'No quiero café.',ops:['Pide café','No quiere café'],c:1,n:'Sin coma, el «no» niega: no quiere café.'},
+  {p:'«María, la doctora llamó.»',a:'María, la doctora llamó.',ops:['Le hablo a María','María es la doctora'],c:0,n:'Le cuento a María que llamó la doctora.'},
+  {p:'«María, la doctora, llamó.»',a:'María, la doctora, llamó.',ops:['Le hablo a María','María es la doctora'],c:1,n:'Las dos comas encierran una explicación: María es la doctora.'},
+  {p:'«Pedro, come.»',a:'Pedro, come.',ops:['Le pido a Pedro que coma','Cuento que Pedro come'],c:0,n:'La coma separa el nombre de la persona a quien se le habla.'},
+  {p:'«Pedro come.»',a:'Pedro come.',ops:['Le pido a Pedro que coma','Cuento que Pedro come'],c:1,n:'Sin coma, es una afirmación sobre Pedro.'}
+],null,true);
+
+clasificador('clasif-ent','puntaje-ent',[
+  {p:'Quieres saber si tu hijo ya terminó la tarea.',ops:['Terminaste la tarea.','¿Terminaste la tarea?','¡Terminaste la tarea!'],c:1,n:'Es una pregunta de sí o no: la voz sube al final.'},
+  {p:'Te alegra que tu hijo por fin haya terminado.',ops:['Terminaste la tarea.','¿Terminaste la tarea?','¡Terminaste la tarea!'],c:2,n:'Hay emoción: es una exclamación.'},
+  {p:'Le cuentas a la maestra lo que hizo tu hijo, sin emoción especial.',ops:['Terminó la tarea.','¿Terminó la tarea?','¡Terminó la tarea!'],c:0,n:'Es una afirmación: la voz baja al final.'},
+  {p:'Ves llegar el autobús y avisas a tu amiga con prisa.',ops:['Llegó el autobús.','¿Llegó el autobús?','¡Llegó el autobús!'],c:2,n:'El aviso urgente es una exclamación.'},
+  {p:'Acabas de salir de la tienda y no sabes si el autobús ya pasó.',ops:['Ya pasó el autobús.','¿Ya pasó el autobús?','¡Ya pasó el autobús!'],c:1,n:'No lo sabes: preguntas.'},
+  {p:'Quieres saber a qué hora abre la clínica.',ops:['¿A qué hora abre la clínica?','La clínica abre temprano.','¡Qué temprano abre la clínica!'],c:0,n:'Pregunta con <em>qué</em>: la voz empieza alta y baja al final.'}
+],null,false);
+
+/* ===== Lectura repetida ===== */
+(function(){
+  var t=document.getElementById('texto-llamada'), texto=t.textContent.replace(/\s+/g,' ').trim();
+  var palabras=texto.split(' ').filter(function(w){return /[a-záéíóúñü0-9]/i.test(w);}).length;
+  document.getElementById('btn-modelo').addEventListener('click',function(){hablar(texto,0.9);});
+  document.getElementById('btn-despacio').addEventListener('click',function(){hablar(texto,0.7);});
+  document.getElementById('btn-parar').addEventListener('click',function(){callar();});
+  var inicio=0, reloj=null, n=0, el=document.getElementById('crono-tiempo'), res=document.getElementById('crono-res');
+  var bE=document.getElementById('crono-empezar'), bT=document.getElementById('crono-terminar'), cuerpo=document.querySelector('#crono-tabla tbody');
+  function fmt(s){return Math.floor(s/60)+':'+('0'+Math.floor(s%60)).slice(-2);}
+  bE.addEventListener('click',function(){
+    callar(); inicio=Date.now(); el.textContent='0:00'; res.textContent='Lee en voz alta. Pulsa «Terminar» al llegar al final.';
+    bE.disabled=true; bT.disabled=false; bT.focus();
+    reloj=setInterval(function(){el.textContent=fmt((Date.now()-inicio)/1000);},250);
+  });
+  bT.addEventListener('click',function(){
+    clearInterval(reloj); var s=(Date.now()-inicio)/1000; bE.disabled=false; bT.disabled=true;
+    if(s<15){res.textContent='Fueron solo '+Math.round(s)+' segundos: parece que no leíste el texto completo. Inténtalo otra vez.';return;}
+    n++; var ppm=Math.round(palabras/s*60);
+    if(n===1)cuerpo.innerHTML='';
+    var tr=document.createElement('tr'); tr.innerHTML='<td>'+n+'</td><td>'+fmt(s)+'</td><td>'+ppm+'</td>'; cuerpo.appendChild(tr);
+    res.textContent='Pasada '+n+': '+fmt(s)+', unas '+ppm+' palabras por minuto ('+palabras+' palabras). '+(n<3?'Prepárate para la siguiente pasada.':'¡Completaste las tres pasadas! Compara tus resultados.');
+    bE.textContent=n<3?'Empezar la pasada '+(n+1):'Empezar otra pasada';
+  });
+})();
+
+/* ===== Teatro leído ===== */
+(function(){
+  var L=[
+    {q:'S',t:'¿Hablo con la señora Marta Ruiz?'},
+    {q:'M',t:'Sí, soy yo. ¿Pasó algo?'},
+    {q:'S',t:'No se preocupe, señora. La llamo porque su examen de lectura salió muy bien. Ya puede pasar al Nivel 2.'},
+    {q:'M',t:'¡Qué alegría! Estudié todas las noches, después del trabajo, con mi cuaderno y mis libros.'},
+    {q:'S',t:'Se nota. Las clases empiezan el lunes a las seis de la tarde. ¿Puede venir?'},
+    {q:'M',t:'¡Claro que sí! Allí estaré.'}
+  ];
+  var caja=document.getElementById('teatro'), est=document.getElementById('teatro-estado'), bS=document.getElementById('teatro-sigue'), bE=document.getElementById('teatro-empezar'), i=-1, gen=0;
+  L.forEach(function(l,k){var d=document.createElement('div');d.className='linea'+(l.q==='M'?' tu':'');d.id='ln'+k;d.innerHTML='<span class="quien">'+(l.q==='M'?'Marta (tú)':'Secretaria (la computadora)')+'</span>—'+l.t;caja.appendChild(d);});
+  function marcar(){caja.querySelectorAll('.linea').forEach(function(d,k){d.classList.toggle('actual',k===i);});}
+  function paso(){
+    i++; marcar(); var mio=++gen;
+    if(i>=L.length){est.textContent='🎉 ¡Terminaste el diálogo! Repítelo intentando mejorar la entonación.';bS.disabled=true;bE.disabled=false;bE.textContent='Repetir';i=-1;marcar();return;}
+    if(L[i].q==='S'){
+      bS.disabled=true; est.textContent='Escucha a la secretaria…';
+      hablar(L[i].t,0.9,function(){if(mio===gen)paso();});
+      /* Si el navegador no avisa que terminó de hablar, el alumno puede seguir igual */
+      setTimeout(function(){if(mio===gen&&L[i]&&L[i].q==='S'){bS.disabled=false;est.textContent='Cuando termine la secretaria, pulsa «Ya leí mi parte» para seguir.';}},9000);
+    }else{
+      bS.disabled=false; bS.focus(); est.textContent='Te toca: lee tu línea en voz alta.';
+    }
+  }
+  bE.addEventListener('click',function(){bE.disabled=true;i=-1;paso();});
+  bS.addEventListener('click',function(){callar();paso();});
+  document.getElementById('teatro-reiniciar').addEventListener('click',function(){gen++;callar();i=-1;marcar();bS.disabled=true;bE.disabled=false;bE.textContent='Empezar';est.textContent='';});
+})();
+
+iniciarQuiz([
+  {t:'¿Cuáles son las tres partes de la fluidez?',o:['Precisión, ritmo y expresión','Velocidad, volumen y memoria','Letras, sílabas y palabras'],c:0},
+  {t:'Leer con fluidez significa…',o:['Leer como si hablaras, con naturalidad','Leer lo más rápido que se pueda','Leer siempre en voz muy alta'],c:0},
+  {t:'La <strong>coma</strong> pide…',o:['Una pausa breve','La pausa más larga','Que la voz suba'],c:0},
+  {t:'«No, quiero agua.» Quien lo dice…',o:['Sí quiere agua','No quiere agua','No sabe qué quiere'],c:0},
+  {t:'En una pregunta de sí o no, al final la voz…',o:['Sube','Baja','Se queda igual'],c:0},
+  {t:'¿Para qué sirve el signo <strong>¿</strong> al principio de la pregunta?',o:['Avisa desde dónde empieza la pregunta','Indica que la voz debe bajar','Separa dos palabras largas'],c:0},
+  {t:'Escucha esta lectura. ¿Cómo es?',a:'Cuando llegué a casa, mi hija ya había preparado la cena.',o:['Fluida','Entrecortada, palabra por palabra'],c:0,fijo:true},
+  {t:'Escucha esta lectura. ¿Cómo es?',ae:'Cuando llegué a casa, mi hija ya había preparado la cena.',o:['Fluida','Entrecortada, palabra por palabra'],c:1,fijo:true},
+  {t:'En un diálogo escrito en español, la <strong>raya</strong> ( — ) indica…',o:['Que habla un personaje','Una pausa muy larga','Que la oración es una pregunta'],c:0},
+  {t:'¿Qué es la <strong>lectura repetida</strong>?',o:['Leer el mismo texto varias veces para mejorar','Leer muchos textos distintos muy rápido','Repetir dos veces cada palabra al leer'],c:0},
+  {t:'Ves humo en la cocina y quieres avisar con fuerza. ¿Qué escribes?',o:['¡Se quema la comida!','¿Se quema la comida?','Se quema la comida.'],c:0},
+  {t:'Si lees muy rápido y te saltas palabras, ¿qué parte de la fluidez falla?',o:['La precisión','El volumen','La memoria'],c:0}
+],{meta:10,
+   bien:'Ya lees con fluidez y expresión. Terminaste el Tema 1: puedes continuar con la Lección 2.1.',
+   repaso:'Vuelve a las secciones 1, 2 y 3 y repite el quiz: con práctica sale.'});
+</script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!-- Lección 1.2 · Artes del Lenguaje Nivel 2 · GEDparaHispanos
+     José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago
+     Licencia CC BY-NC-SA 4.0 · https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección 1.2 · Prefijos y sufijos comunes para leer palabras nuevas</title>
+<meta name="author" content="José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago">
+<meta name="license" content="CC BY-NC-SA 4.0">
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">
+<style>
+  :root{
+    --cp:#00796b;--cp-claro:#e0f2f1;--cp-oscuro:#004d44;
+    --acento:#ff8c42;--texto:#1a2332;--fondo:#fafbfc;
+    --gris:#555;--gris-claro:#eef1f4;
+    --dip:#1565c0;--dip-claro:#e3f2fd;
+    --hia:#ad1457;--hia-claro:#fce4ec;
+    --grp:#5c3900;--grp-claro:#fff3cd;
+    --exito:#2e7d32;--error:#c62828;
+  }
+  *{box-sizing:border-box}
+  body{font-family:'Poppins','Segoe UI',Arial,sans-serif;line-height:1.7;color:var(--texto);background:var(--fondo);max-width:960px;margin:0 auto;padding:24px 18px}
+  h1{color:var(--cp-oscuro);border-bottom:4px solid var(--cp);padding-bottom:14px;font-size:1.85rem;margin-bottom:8px}
+  .subtitulo{color:var(--gris);font-style:italic;margin-top:0;margin-bottom:24px;font-size:1.05rem}
+  h2{color:var(--cp-oscuro);border-left:6px solid var(--cp);padding-left:14px;margin-top:32px;font-size:1.4rem}
+  h3{color:var(--cp);margin-top:24px;font-size:1.15rem}
+  .caja-objetivos{background:var(--cp-claro);border-left:6px solid var(--cp);padding:18px 22px;border-radius:8px;margin:18px 0 28px 0}
+  .caja-objetivos h2{margin-top:0;color:var(--cp-oscuro);border-left:none;padding-left:0;font-size:1.2rem}
+  .caja-tiempo{display:inline-block;background:var(--acento);color:#1a2332;padding:4px 12px;border-radius:14px;font-size:0.85rem;font-weight:600;margin-left:10px;vertical-align:middle}
+  details{background:#fff;border:1px solid #d6dde4;border-radius:10px;margin:14px 0;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+  details[open]{border-color:var(--cp);box-shadow:0 3px 10px rgba(0,121,107,0.12)}
+  summary{cursor:pointer;padding:16px 20px;font-weight:600;color:var(--cp-oscuro);background:var(--gris-claro);list-style:none;user-select:none;font-size:1.05rem}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:'▶';display:inline-block;margin-right:10px;color:var(--cp);transition:transform 0.25s;font-size:0.85rem}
+  details[open] summary::before{transform:rotate(90deg)}
+  details[open] summary{background:var(--cp-claro);border-bottom:2px solid var(--cp)}
+  .contenido-detalle{padding:18px 22px}
+  .tip{background:#fffbe6;border-left:5px solid #f4c430;padding:12px 18px;border-radius:6px;margin:14px 0}
+  .tip strong{color:#6b5400}
+  .botones{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+  .btn{padding:10px 22px;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit;font-size:0.95rem;transition:background 0.2s}
+  .btn-primario{background:var(--cp);color:#fff}
+  .btn-primario:hover{background:var(--cp-oscuro)}
+  .btn-secundario{background:var(--gris-claro);color:var(--texto)}
+  .btn-secundario:hover{background:#d6dde4}
+  .btn[aria-pressed="true"]{background:var(--cp-oscuro);color:#fff}
+  ul.lista-bonita{list-style:none;padding-left:0}
+  ul.lista-bonita li{padding:8px 0 8px 30px;position:relative}
+  ul.lista-bonita li::before{content:'➜';position:absolute;left:0;color:var(--cp);font-weight:700}
+  .palabra-clave{background:linear-gradient(transparent 60%,#ffeb3b 60%);padding:0 4px;font-weight:600}
+  .ejemplo{font-family:Georgia,serif;font-size:1.15rem}
+  .sil{font-family:Georgia,serif;letter-spacing:.5px;color:var(--cp-oscuro);font-weight:700}
+  table.tabla{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+  table.tabla th{background:var(--cp-oscuro);color:#fff;padding:10px 12px;text-align:left}
+  table.tabla td{padding:10px 12px;border-bottom:1px solid var(--gris-claro);vertical-align:top}
+  table.tabla tr:last-child td{border-bottom:none}
+  .actividad{background:#fff;border:2px solid var(--acento);border-radius:10px;padding:16px 20px;margin:14px 0}
+  .actividad h4{color:#8a3d0c;margin-top:0}
+  .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+  .badge-lectura{background:#e3f2fd;color:#0d47a1}
+  .badge-actividad{background:#f3e5f5;color:#6a1b9a}
+  /* Clasificadores */
+  .clasificador{background:#fff;border:2px solid var(--cp);border-radius:12px;padding:14px 18px;margin:18px 0}
+  .item{border:2px solid var(--gris-claro);border-radius:8px;padding:10px 14px;margin:8px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .item-pal{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;color:var(--cp-oscuro);display:flex;align-items:center;gap:10px}
+  .item-ops{display:flex;gap:8px;flex-wrap:wrap}
+  .item-fb{flex-basis:100%;font-size:.95rem;min-height:0}
+  .item-fb:empty{display:none}
+  .btn-op{padding:7px 14px;border:2px solid var(--cp);background:#fff;color:var(--cp-oscuro);border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit;font-size:.92rem}
+  .btn-op:hover:not(:disabled){background:var(--cp-claro)}
+  .btn-op.correcta{background:#d4edda;border-color:var(--exito);color:#155724}
+  .btn-op.incorrecta{background:#f8d7da;border-color:var(--error);color:#721c24}
+  .btn-op:disabled{cursor:default}
+  .oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:3px 10px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.9rem}
+  .puntaje{text-align:center;margin-top:12px;font-weight:600;color:var(--cp-oscuro)}
+  /* Lectura con marcas */
+  .texto-lectura{background:#fff;border:2px solid var(--gris-claro);border-radius:8px;padding:18px 22px;margin:14px 0;font-family:Georgia,serif;font-size:1.12rem;line-height:2.1}
+  .texto-lectura p{margin:0 0 10px}
+  .leyenda{display:flex;gap:16px;flex-wrap:wrap;font-size:.92rem;margin:8px 0}
+  .leyenda span{display:inline-flex;align-items:center;gap:6px}
+  .mk{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .ver-dip .dip{background:var(--dip-claro);color:var(--dip);font-weight:700;box-shadow:0 -3px 0 var(--dip) inset;border-radius:3px}
+  .ver-dip .hia{background:var(--hia-claro);color:var(--hia);font-weight:700;box-shadow:0 -3px 0 var(--hia) inset;border-radius:3px}
+  .ver-dip .muda{color:#555;text-decoration:underline dotted 2px}
+  .ver-grp .grp{background:var(--grp-claro);color:var(--grp);font-weight:700;box-shadow:0 -3px 0 var(--grp) inset;border-radius:3px}
+  /* Índice */
+  .indice{background:#fff;border:1px solid #d6dde4;border-left:6px solid var(--cp);border-radius:10px;padding:16px 20px;margin:22px 0}
+  .indice h2{font-size:1.1rem;margin:0 0 8px;border:none;padding:0}
+  .indice ol{margin:0;padding-left:1.4em}
+  .indice li{margin:4px 0}
+  .indice a{color:var(--cp-oscuro)}
+  .abrir-cerrar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
+  .volver-indice{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--cp-oscuro);color:#fff;border-radius:999px;padding:10px 16px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+  .volver-indice:hover{background:var(--cp);color:#fff}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #b35316;outline-offset:2px}
+  .sr-solo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .enlace-practica{display:block;background:#fff;border:2px solid var(--cp);border-radius:10px;padding:14px 18px;margin:16px 0;text-decoration:none;color:var(--cp-oscuro);font-weight:600}
+  .enlace-practica:hover{background:var(--cp-claro)}
+  .enlace-practica span{display:block;font-weight:400;color:var(--texto);font-size:.95rem}
+  .aviso-voz{font-size:.9rem;color:#5c3900;background:#fff3cd;border-radius:6px;padding:6px 10px;display:none}
+  .aviso-voz.visible{display:block}
+  /* Quiz */
+  .qz-intro{background:var(--cp-claro);border-radius:10px;padding:14px 18px;margin:0 0 14px}
+  .qz-intro h4{margin:0 0 6px;color:var(--cp-oscuro)}
+  .qz-preg{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .qz-enun{font-weight:600;margin:0 0 10px}
+  .qz-num{display:inline-block;background:var(--cp-oscuro);color:#fff;border-radius:12px;padding:1px 10px;font-size:.8rem;margin-right:8px}
+  .qz-extra{display:block;text-align:center;margin:6px 0 10px;font-weight:400}
+  .qz-extra .qz-grande{font-family:Georgia,serif;font-size:1.3rem}
+  .qz-oir{background:var(--cp-claro);border:2px solid var(--cp);color:var(--cp-oscuro);border-radius:8px;padding:6px 14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .qz-ops{display:flex;flex-direction:column;gap:8px}
+  .qz-op{text-align:left;background:#fff;border:2px solid #c9d2db;border-radius:8px;padding:10px 14px;font-family:inherit;font-size:1rem;cursor:pointer;color:var(--texto)}
+  .qz-op:hover:not(:disabled){border-color:var(--cp)}
+  .qz-op.elegida{background:var(--cp-claro);border-color:var(--cp-oscuro);color:var(--cp-oscuro);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--cp)}
+  .qz-op.correcta{background:#d4edda;border-color:#2e7d32;color:#155724}
+  .qz-op.correcta::before{content:'✓ '}
+  .qz-op.incorrecta{background:#f8d7da;border-color:#c62828;color:#721c24}
+  .qz-op.incorrecta::before{content:'✗ '}
+  .qz-op:disabled{cursor:default}
+  .qz-resultado{display:none;margin:16px 0;padding:16px;border-radius:10px;text-align:center;font-weight:600}
+  .qz-resultado.visible{display:block}
+  footer.pie{margin-top:40px;padding-top:18px;border-top:2px solid var(--gris-claro);text-align:center;color:#555;font-size:.9rem}
+  footer.pie p{margin:4px 0}
+  footer.pie a{color:var(--cp-oscuro)}
+  @media print{.indice,.volver-indice,.abrir-cerrar{display:none}}
+  @media (prefers-reduced-motion:reduce){summary::before{transition:none}}
+
+  .qz-repaso{margin:10px 0 0;padding:8px 12px;background:#fff3cd;border-radius:6px;color:#3d2600;font-size:.95rem}
+  .qz-repaso a{color:#004d44;font-weight:700}
+
+  .pre{color:#1565c0}.raiz{color:#1a2332}.suf{color:#ad1457}
+  .partes-pal{font-family:Georgia,serif;font-size:1.25rem;font-weight:700}
+  .partes-pal .pre,.partes-pal .suf{background:#f1f5f9;border-radius:4px;padding:0 3px}
+  .ver-af .pre{background:#e3f2fd;color:#1565c0;font-weight:700;box-shadow:0 -3px 0 #1565c0 inset;border-radius:3px}
+  .ver-af .suf{background:#fce4ec;color:#ad1457;font-weight:700;box-shadow:0 -3px 0 #ad1457 inset;border-radius:3px}
+  .texto-lectura .pre,.texto-lectura .suf{color:inherit}
+  .ver-af.texto-lectura .pre{color:#1565c0}.ver-af.texto-lectura .suf{color:#ad1457}
+  .lupa{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0}
+  .lupa-item{background:#fff;border:2px solid var(--gris-claro);border-radius:10px;padding:10px 12px;text-align:center}
+  .lupa-btn{font-family:Georgia,serif;font-size:1.2rem;font-weight:700;color:var(--cp-oscuro);background:none;border:2px dashed var(--cp);border-radius:8px;padding:6px 10px;cursor:pointer;width:100%}
+  .lupa-btn[aria-expanded="true"]{border-style:solid;background:var(--cp-claro)}
+  .lupa-res{margin-top:8px;font-size:.95rem}
+  .lupa-res[hidden]{display:none}
+</style>
+</head>
+<body>
+<h1>Lección 1.2 · Prefijos y sufijos comunes para leer palabras nuevas</h1>
+<p class="subtitulo">Artes del Lenguaje · Nivel 2 · Tema 1: Fonética avanzada y fluidez lectora · Unas 2 horas, a tu ritmo</p>
+
+<div class="caja-objetivos">
+  <h2>🎯 Objetivos de la lección</h2>
+  <ul class="lista-bonita" style="margin:0">
+    <li>Reconocer en una palabra larga su <strong>raíz</strong>, su <strong>prefijo</strong> y su <strong>sufijo</strong>.</li>
+    <li>Conocer el significado de los prefijos <em>des-, in-, re-, pre-</em> y de los sufijos <em>-ción, -mente, -oso, -dor</em>.</li>
+    <li>Usar esas partes para leer por trozos una palabra desconocida y adivinar lo que significa.</li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:.92rem">Estándares: 2.R.FS.1 · 2.R.FS.2 · 2.R.VA.1</p>
+</div>
+
+<nav class="indice" id="indice" aria-labelledby="indice-titulo">
+  <h2 id="indice-titulo">Contenido de la lección</h2>
+  <ol>
+    <li><a href="#s-1-partes">Las partes de una palabra</a></li>
+    <li><a href="#s-2-prefijos">Cuatro prefijos frecuentes</a></li>
+    <li><a href="#s-3-sufijos">Cuatro sufijos frecuentes</a></li>
+    <li><a href="#s-4-lupa">La lupa de afijos: leer palabras largas</a></li>
+    <li><a href="#s-5-lectura">Lectura: «Un huerto en el barrio»</a></li>
+    <li><a href="#s-6-familias">Práctica: familias de palabras</a></li>
+    <li><a href="#s-tarea">Tarea</a></li>
+    <li><a href="#s-quiz">Quiz de la lección</a></li>
+    <li><a href="#s-cierre">Cierre</a></li>
+  </ol>
+  <div class="abrir-cerrar">
+    <button type="button" class="btn btn-secundario" id="abrir-todo">Abrir todo</button>
+    <button type="button" class="btn btn-secundario" id="cerrar-todo">Cerrar todo</button>
+  </div>
+</nav>
+
+<h2>📚 Para empezar</h2>
+<p>En la Lección 1.1 aprendiste a separar las palabras en sílabas. Hoy aprenderás otra manera de partirlas: no por sonidos, sino por <strong>significado</strong>. Muchas palabras largas están hechas con piezas que se repiten. Si conoces esas piezas, una palabra como <em>desorganización</em> deja de dar miedo: es <span class="partes-pal"><span class="pre">des</span>·organiza·<span class="suf">ción</span></span>, «lo contrario de organizar».</p>
+<p class="aviso-voz" id="aviso-voz" role="status">Tu navegador no tiene una voz en español disponible, así que los botones 🔊 no sonarán. Lee las palabras en voz alta tú mismo: el ejercicio funciona igual.</p>
+
+<details open id="s-1-partes">
+<summary>1. Las partes de una palabra <span class="caja-tiempo">10 min</span></summary>
+<div class="contenido-detalle">
+<table class="tabla">
+  <caption class="sr-solo">Raíz, prefijo y sufijo</caption>
+  <thead><tr><th scope="col">Parte</th><th scope="col">Qué es</th><th scope="col">Ejemplo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Raíz</strong></td><td>La parte principal: lleva el significado básico.</td><td class="partes-pal">hacer</td></tr>
+    <tr><td><strong class="pre">Prefijo</strong></td><td>Una pieza que va <strong>antes</strong> de la raíz y cambia su significado.</td><td class="partes-pal"><span class="pre">des</span>hacer · <span class="pre">re</span>hacer</td></tr>
+    <tr><td><strong class="suf">Sufijo</strong></td><td>Una pieza que va <strong>después</strong> de la raíz y forma una palabra nueva.</td><td class="partes-pal">feliz<span class="suf">mente</span> · lava<span class="suf">dora</span></td></tr>
+  </tbody>
+</table>
+<p>A los prefijos y los sufijos juntos se les llama <span class="palabra-clave">afijos</span>. En esta lección los prefijos aparecen en <span class="pre"><strong>azul</strong></span> y los sufijos en <span class="suf"><strong>rosa</strong></span>.</p>
+<div class="tip"><strong>💡 La prueba del prefijo:</strong> si al quitar el prefijo queda una palabra real con un significado relacionado, era un prefijo. <em>Releer</em> → <em>leer</em>: sí. Pero en <em>red</em>, <em>reloj</em>, <em>regla</em>, <em>precio</em> o <em>invierno</em> no hay prefijo: al quitar las primeras letras no queda nada con sentido.</div>
+</div>
+</details>
+
+<details id="s-2-prefijos">
+<summary>2. Cuatro prefijos frecuentes <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<table class="tabla">
+  <caption class="sr-solo">Prefijos frecuentes y su significado</caption>
+  <thead><tr><th scope="col">Prefijo</th><th scope="col">Significa</th><th scope="col">Ejemplos</th></tr></thead>
+  <tbody>
+    <tr><td class="partes-pal pre">des-</td><td>Hacer lo contrario de una acción, o quitar algo.</td><td><span class="pre">des</span>hacer · <span class="pre">des</span>conectar · <span class="pre">des</span>atar · <span class="pre">des</span>ordenar</td></tr>
+    <tr><td class="partes-pal pre">in- · im- · i-</td><td>Que no es o no tiene esa cualidad.</td><td><span class="pre">in</span>útil · <span class="pre">in</span>justo · <span class="pre">im</span>posible · <span class="pre">i</span>legal · <span class="pre">i</span>rregular</td></tr>
+    <tr><td class="partes-pal pre">re-</td><td>Otra vez, de nuevo.</td><td><span class="pre">re</span>leer · <span class="pre">re</span>hacer · <span class="pre">re</span>escribir · <span class="pre">re</span>calentar</td></tr>
+    <tr><td class="partes-pal pre">pre-</td><td>Antes.</td><td><span class="pre">pre</span>calentar · <span class="pre">pre</span>escolar · <span class="pre">pre</span>historia · <span class="pre">pre</span>decir</td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 Por qué cambia <em>in-</em>:</strong> delante de <strong>p</strong> o <strong>b</strong> se escribe <strong>im-</strong> (<em>imposible</em>, <em>imborrable</em>), y delante de <strong>l</strong> o <strong>r</strong> se escribe <strong>i-</strong> (<em>ilegal</em>, <em>irregular</em>). El significado es el mismo: «no».</div>
+<div class="tip"><strong>💡 <em>des-</em> o <em>in-</em>:</strong> <em>des-</em> suele ir con <strong>acciones</strong> (<em>conectar → desconectar</em>); <em>in-</em> suele ir con palabras que <strong>describen</strong> (<em>útil → inútil</em>).</div>
+
+<h3>¿Qué significa el prefijo?</h3>
+<div class="clasificador" id="clasif-pre"></div>
+<div class="puntaje" id="puntaje-pre" role="status" aria-live="polite"></div>
+
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l1-2.html#significado" target="_blank" rel="noopener noreferrer">🧩 Practica más: ¿qué significa la palabra?
+  <span>Rondas con palabras nuevas formadas con prefijos y sufijos. Se abre en una pestaña nueva.</span></a>
+</div>
+</details>
+
+<details id="s-3-sufijos">
+<summary>3. Cuatro sufijos frecuentes <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<table class="tabla">
+  <caption class="sr-solo">Sufijos frecuentes y su significado</caption>
+  <thead><tr><th scope="col">Sufijo</th><th scope="col">Forma una palabra que dice…</th><th scope="col">Ejemplos</th></tr></thead>
+  <tbody>
+    <tr><td class="partes-pal suf">-ción</td><td>La acción o su resultado.</td><td>celebrar → celebra<span class="suf">ción</span> · educar → educa<span class="suf">ción</span> · construir → construc<span class="suf">ción</span></td></tr>
+    <tr><td class="partes-pal suf">-mente</td><td>De qué manera se hace algo.</td><td>lenta → lenta<span class="suf">mente</span> · fácil → fácil<span class="suf">mente</span> · clara → clara<span class="suf">mente</span></td></tr>
+    <tr><td class="partes-pal suf">-oso · -osa</td><td>Que tiene mucho de algo.</td><td>peligro → peligr<span class="suf">oso</span> · cariño → cariñ<span class="suf">oso</span> · lluvia → lluvi<span class="suf">osa</span></td></tr>
+    <tr><td class="partes-pal suf">-dor · -dora</td><td>La persona o la máquina que hace la acción.</td><td>trabajar → trabaja<span class="suf">dor</span> · vender → vende<span class="suf">dor</span> · lavar → lava<span class="suf">dora</span></td></tr>
+  </tbody>
+</table>
+<div class="tip"><strong>💡 Dos detalles de <em>-mente</em>:</strong> se une a la forma femenina (<em>lento → lenta → lentamente</em>), y la palabra conserva la tilde que ya tenía: <em>rápido → rápidamente</em>, <em>fácil → fácilmente</em>.</div>
+
+<h3>¿Qué dice el sufijo?</h3>
+<div class="clasificador" id="clasif-suf"></div>
+<div class="puntaje" id="puntaje-suf" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-4-lupa">
+<summary>4. La lupa de afijos: leer palabras largas <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<p>Cuando encuentres una palabra larga que no conoces, no la leas de golpe. Usa la <strong>lupa de afijos</strong>:</p>
+<ol>
+  <li>Busca si empieza con un <strong class="pre">prefijo</strong> conocido.</li>
+  <li>Busca si termina con un <strong class="suf">sufijo</strong> conocido.</li>
+  <li>Lo que queda en medio es la <strong>raíz</strong>: ¿la conoces?</li>
+  <li>Lee cada parte y luego la palabra entera. Une los significados.</li>
+</ol>
+<p>Toca cada palabra para ver sus partes y escucharla por trozos:</p>
+<div class="lupa" id="lupa"></div>
+
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l1-2.html#partes" target="_blank" rel="noopener noreferrer">🔍 Practica más: separa las partes de la palabra
+  <span>Eliges cómo se divide cada palabra en prefijo, raíz y sufijo.</span></a>
+</div>
+</details>
+
+<details id="s-5-lectura">
+<summary>5. Lectura: «Un huerto en el barrio» <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<div class="actividad">
+  <h4><span class="badge badge-lectura">Lectura</span> Individual · en voz alta</h4>
+  <p style="margin:0">Lee el texto en voz alta. Cada vez que encuentres una palabra larga, usa la lupa: búscale el prefijo y el sufijo. En tu cuaderno, haz una lista con las palabras que tienen afijos. Después pulsa el botón para comprobar.</p>
+</div>
+<div class="botones" style="justify-content:flex-start">
+  <button type="button" class="btn btn-primario" id="btn-leer">🔊 Escuchar el texto</button>
+  <button type="button" class="btn btn-secundario" id="btn-parar">⏹ Detener</button>
+  <button type="button" class="btn btn-secundario" id="btn-ver-af" aria-pressed="false">Mostrar prefijos y sufijos</button>
+</div>
+<div class="texto-lectura" id="texto-huerto">
+<p>Durante años, el terreno de la esquina estuvo <span class="pre">des</span>ocupado. Estaba lleno de basura y parecía <span class="pre">in</span>útil. Un día, un grupo de vecinos decidió <span class="pre">re</span>organizar ese espacio. La señora Rosa, una trabaja<span class="suf">dora</span> muy dedicada, buscó en la biblioteca la informa<span class="suf">ción</span> necesaria: qué plantas crecen mejor en un clima lluvi<span class="suf">oso</span> y cómo abonar la tierra.</p>
+<p>Primero limpiaron el terreno cuidad<span class="suf">osa</span><span class="suf">mente</span>. Después <span class="pre">re</span>construyeron la cerca vieja, que estaba <span class="pre">des</span>armada. Los niños ayudaron con entusiasmo y aprendieron rápida<span class="suf">mente</span> a sembrar.</p>
+<p>Al principio, algunos vecinos <span class="pre">des</span>confiaban del proyecto: decían que era <span class="pre">im</span>posible cultivar en la ciudad. Hoy el huerto es fam<span class="suf">oso</span> en todo el barrio. Cada verano hay una celebra<span class="suf">ción</span>, y los vecinos comparten tomates sabr<span class="suf">osos</span> y chiles picantes. Como dice la señora Rosa, cuando se trabaja juntos, nada es <span class="pre">im</span>posible.</p>
+</div>
+<h3>Comprueba lo que leíste</h3>
+<ul class="lista-bonita">
+  <li>¿Cómo estaba el terreno antes del huerto?</li>
+  <li>¿Dónde buscó la señora Rosa la información?</li>
+  <li>¿Qué pensaban al principio algunos vecinos, y qué pasó al final?</li>
+  <li>La palabra <em>desarmada</em>: ¿qué significa, usando la lupa?</li>
+</ul>
+<details><summary>Ver las respuestas</summary><div class="contenido-detalle">Estaba desocupado y lleno de basura. En la biblioteca. Pensaban que era imposible cultivar en la ciudad; al final el huerto se hizo famoso en todo el barrio. <em>Des</em> + <em>armada</em>: lo contrario de armada, es decir, con las piezas separadas, rota.</div></details>
+</div>
+</details>
+
+<details id="s-6-familias">
+<summary>6. Práctica: familias de palabras <span class="caja-tiempo">15 min</span></summary>
+<div class="contenido-detalle">
+<div class="actividad">
+  <h4><span class="badge badge-actividad">Actividad</span> Individual · en tu cuaderno</h4>
+  <p>Una <strong>familia de palabras</strong> es el grupo de palabras que comparten la misma raíz. Escribe en tu cuaderno todas las palabras que puedas formar con estas tres raíces, y explica con tus palabras qué significa cada una:</p>
+  <p class="partes-pal" style="text-align:center">trabajo · limpio · orden</p>
+  <p style="margin-bottom:0">Ejemplo con <em>cuidado</em>: <em>cuidar, cuidadoso, cuidadosamente, descuidado, descuidar</em>.</p>
+</div>
+<details style="margin-top:10px"><summary>Ver algunas respuestas posibles</summary><div class="contenido-detalle">
+  <strong>trabajo:</strong> trabajar, trabajador, trabajadora, trabajoso. ·
+  <strong>limpio:</strong> limpiar, limpieza, limpiamente, limpiador, limpiadora. ·
+  <strong>orden:</strong> ordenar, ordenado, desorden, desordenar, desordenado, reordenar.
+</div></details>
+<a class="enlace-practica" href="https://zhemaria.github.io/gramatica/n2-l1-2.html#familias" target="_blank" rel="noopener noreferrer">👪 Practica más: completa con la palabra de la familia
+  <span>Eliges, entre palabras de la misma familia, la que completa cada oración.</span></a>
+<div class="tip"><strong>👨‍👩‍👧 Si tienes con quién practicar:</strong> jueguen a ver quién forma más palabras con una misma raíz en dos minutos. Cada palabra vale un punto si el otro sabe decir qué significa.</div>
+</div>
+</details>
+
+<details id="s-tarea">
+<summary>7. Tarea <span class="caja-tiempo">30 min</span></summary>
+<div class="contenido-detalle">
+<p>Esta parte la haces por tu cuenta, con el cuaderno abierto:</p>
+<ul class="lista-bonita">
+  <li><strong>Cazador de afijos.</strong> En un periódico, un folleto o una etiqueta, busca <strong>cuatro palabras con prefijo</strong> y <strong>cuatro con sufijo</strong> de los que estudiaste. Cópialas marcando cada parte con un color.</li>
+  <li><strong>Mis palabras nuevas.</strong> Forma una palabra con cada afijo de la lección (<em>des-, in-, re-, pre-, -ción, -mente, -oso, -dor</em>) y escribe una oración con cada una.</li>
+  <li><strong>La prueba del prefijo.</strong> Explica por qué <em>reloj</em> no tiene prefijo y <em>reabrir</em> sí.</li>
+</ul>
+<div class="tip"><strong>🎯 Antes del quiz:</strong> repasa las dos tablas de las secciones 2 y 3. La clave es saber qué significa cada pieza.</div>
+</div>
+</details>
+
+<details id="s-quiz">
+<summary>8. Quiz de la lección <span class="caja-tiempo">20 min</span></summary>
+<div class="contenido-detalle">
+<div class="qz-intro">
+  <h4>✅ Quiz · 12 preguntas · puedes repetirlo las veces que quieras</h4>
+  <p style="margin:0">Elige una respuesta en cada pregunta y, al final, pulsa <strong>Ver mi resultado</strong>. Verás en verde las respuestas correctas y en rojo las que debes repasar. Para dar la lección por aprendida, la meta es acertar al menos <strong>10 de 12</strong>.</p>
+</div>
+<div id="qz-cuerpo"></div>
+<div class="botones">
+  <button type="button" class="btn btn-primario" id="qz-calificar">Ver mi resultado</button>
+  <button type="button" class="btn btn-secundario" id="qz-reintentar" style="display:none">Intentar de nuevo</button>
+</div>
+<div class="qz-resultado" id="qz-resultado" role="status" aria-live="polite"></div>
+</div>
+</details>
+
+<details id="s-cierre">
+<summary>9. Cierre <span class="caja-tiempo">5 min</span></summary>
+<div class="contenido-detalle">
+<h3>Lo que aprendiste en esta lección</h3>
+<ul class="lista-bonita">
+  <li>Una palabra puede tener <strong>raíz</strong>, <strong>prefijo</strong> (antes) y <strong>sufijo</strong> (después).</li>
+  <li><em>des-</em> = lo contrario · <em>in-, im-, i-</em> = no · <em>re-</em> = otra vez · <em>pre-</em> = antes.</li>
+  <li><em>-ción</em> = la acción · <em>-mente</em> = de qué manera · <em>-oso</em> = que tiene mucho · <em>-dor</em> = quien o lo que hace la acción.</li>
+  <li>Con la <strong>lupa de afijos</strong> lees por partes las palabras largas y adivinas su significado.</li>
+</ul>
+<div class="caja-objetivos" style="background:#fff3e0;border-left-color:var(--acento)">
+  <h2 style="color:#8a3d0c;border:none;padding:0;margin-top:0;font-size:1.2rem">✅ Antes de irte, revísate</h2>
+  <ul class="lista-bonita">
+    <li>¿Puedes separar <em>desconectar</em> e <em>imposible</em> en sus partes?</li>
+    <li>¿Sabes explicar qué es un <em>vendedor</em> y qué es una <em>licuadora</em> usando el sufijo?</li>
+    <li>¿Puedes decir por qué <em>precio</em> no tiene prefijo?</li>
+  </ul>
+</div>
+<div class="tip"><strong>📅 En la próxima lección:</strong> <a href="https://zhemaria.github.io/clases_leng2/clase_1-3.html" style="color:var(--cp-oscuro);font-weight:700">Lección 1.3 · Fluidez lectora: precisión, ritmo y expresión</a>. Pondrás todo junto para leer en voz alta un texto completo con buen ritmo y respetando los signos de puntuación.</div>
+</div>
+</details>
+
+<footer class="pie">
+  <p><strong>GEDparaHispanos · Artes del Lenguaje · Nivel 2: Conectando Ideas y Textos · Tema 1 · Lección 1.2</strong></p>
+  <p>José M. Fernández, ABE/ASE Math Master Teacher, Harry S. Truman College — City Colleges of Chicago</p>
+  <p>© 2026. Esta obra está licenciada bajo <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license noopener noreferrer" target="_blank">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)</a>.</p>
+</footer>
+<a class="volver-indice" href="#indice" aria-label="Volver al contenido de la lección"><span aria-hidden="true">↑</span> Índice</a>
+
+<script>
+/* ===== Voz: todas las lecturas pasan por hablar(), para poder cambiarla después por audio grabado ===== */
+(function(){
+  var voz=null, hay=('speechSynthesis' in window);
+  function elegir(){
+    if(!hay)return;
+    var vs=speechSynthesis.getVoices().filter(function(v){return /^es/i.test(v.lang);});
+    var pref=['es-US','es-MX','es-419','es-CO','es-AR','es-CL','es-PE'];
+    voz=null;
+    for(var i=0;i<pref.length&&!voz;i++){voz=vs.find(function(v){return v.lang.replace('_','-').toLowerCase()===pref[i].toLowerCase();})||null;}
+    if(!voz)voz=vs.find(function(v){return !/es[-_]ES/i.test(v.lang);})||vs[0]||null;
+  }
+  function aviso(){var a=document.getElementById('aviso-voz');if(a)a.classList.add('visible');}
+  function frase(t,vel){var u=new SpeechSynthesisUtterance(t);u.lang=voz?voz.lang:'es-US';if(voz)u.voice=voz;u.rate=vel||0.9;return u;}
+  if(hay){elegir(); speechSynthesis.onvoiceschanged=elegir;}
+  /* hablar(texto, velocidad, alTerminar) */
+  window.hablar=function(texto,vel,fin){
+    if(!hay||!texto){aviso();return;}
+    speechSynthesis.cancel();
+    var u=frase(texto,vel); if(fin)u.onend=fin; speechSynthesis.speak(u);
+  };
+  /* Lectura entrecortada: cada palabra suena por separado, para comparar con una lectura fluida */
+  window.hablarPalabras=function(texto){
+    if(!hay){aviso();return;}
+    speechSynthesis.cancel();
+    texto.replace(/[.,;:¿?¡!—«»]/g,' ').split(/\s+/).filter(Boolean).forEach(function(p){speechSynthesis.speak(frase(p,0.7));});
+  };
+  window.callar=function(){if(hay)speechSynthesis.cancel();};
+  if(!hay)document.addEventListener('DOMContentLoaded',aviso);
+})();
+
+/* ===== Clasificador: cada elemento con sus botones; al acertar muestra una nota ===== */
+function clasificador(idCaja,idPuntaje,items,opciones,conAudio){
+  var caja=document.getElementById(idCaja), pun=document.getElementById(idPuntaje), bien=0, hechas={};
+  function marcador(){pun.textContent=bien===items.length?'🎉 ¡Muy bien! Acertaste las '+bien+'.':'Aciertos: '+bien+' / '+items.length;}
+  items.forEach(function(it,i){
+    var d=document.createElement('div'); d.className='item'; d.setAttribute('role','group'); d.setAttribute('aria-label',it.p.replace(/<[^>]+>/g,''));
+    var ops=it.ops||opciones;
+    d.innerHTML='<span class="item-pal">'+it.p+(conAudio?' <button type="button" class="oir" aria-label="Escuchar">🔊</button>':'')+'</span>'+
+      '<span class="item-ops">'+ops.map(function(o,j){return '<button type="button" class="btn-op" data-j="'+j+'">'+o+'</button>';}).join('')+'</span>'+
+      '<span class="item-fb" aria-live="polite"></span>';
+    caja.appendChild(d);
+    if(conAudio)d.querySelector('.oir').addEventListener('click',function(){hablar(it.a||it.p.replace(/<[^>]+>/g,''),0.85);});
+    var fb=d.querySelector('.item-fb');
+    d.querySelectorAll('.btn-op').forEach(function(b){
+      b.addEventListener('click',function(){
+        if(hechas[i])return;
+        if(+b.getAttribute('data-j')===it.c){
+          b.classList.add('correcta'); hechas[i]=true; bien++;
+          d.querySelectorAll('.btn-op').forEach(function(x){x.disabled=true;});
+          fb.innerHTML='✓ '+(it.n||'Correcto.'); marcador();
+        }else{
+          b.classList.add('incorrecta'); b.disabled=true;
+          fb.innerHTML='Todavía no. '+(it.pista||'Vuelve a mirar la regla e intenta otra vez.');
+        }
+      });
+    });
+  });
+  marcador();
+}
+
+/* ===== Quiz de la lección =====
+   P: [{t:enunciado, o:[opciones], c:índice correcto, x:texto grande opcional, a:audio opcional,
+        ae:audio entrecortado opcional, fijo:no barajar,
+        r:enlace de repaso que aparece si la respuesta es incorrecta}]
+   cfg: {meta, bien:mensaje si llega a la meta, repaso:mensaje si queda lejos} */
+function iniciarQuiz(P,cfg){
+  var META=cfg.meta, N=P.length, cuerpo=document.getElementById('qz-cuerpo'), elegidas={};
+  P.forEach(function(p,i){
+    var d=document.createElement('div');
+    d.className='qz-preg'; d.setAttribute('role','group'); d.setAttribute('aria-labelledby','qz-e'+i);
+    var h='<p class="qz-enun" id="qz-e'+i+'"><span class="qz-num">'+(i+1)+'</span>'+p.t+'</p>';
+    if(p.x||p.a||p.ae){
+      h+='<span class="qz-extra">'+(p.x?'<span class="qz-grande">'+p.x+'</span> ':'')+
+         ((p.a||p.ae)?'<button type="button" class="qz-oir" data-oir="'+i+'">🔊 Escuchar</button>':'')+'</span>';
+    }
+    h+='<div class="qz-ops">';
+    var orden=p.o.map(function(_,j){return j;});
+    if(!p.fijo){for(var k=orden.length-1;k>0;k--){var r=Math.floor(Math.random()*(k+1)),t=orden[k];orden[k]=orden[r];orden[r]=t;}}
+    orden.forEach(function(j){h+='<button type="button" class="qz-op" data-i="'+i+'" data-j="'+j+'" aria-pressed="false">'+p.o[j]+'</button>';});
+    d.innerHTML=h+'</div>'; cuerpo.appendChild(d);
+  });
+  cuerpo.addEventListener('click',function(ev){
+    var oir=ev.target.closest('.qz-oir');
+    if(oir){var q=P[+oir.getAttribute('data-oir')]; if(q.ae)hablarPalabras(q.ae); else hablar(q.a,q.v||0.85); return;}
+    var b=ev.target.closest('.qz-op'); if(!b||b.disabled)return;
+    var i=b.getAttribute('data-i');
+    cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){x.classList.remove('elegida');x.setAttribute('aria-pressed','false');});
+    b.classList.add('elegida'); b.setAttribute('aria-pressed','true'); elegidas[i]=+b.getAttribute('data-j');
+  });
+  var res=document.getElementById('qz-resultado');
+  document.getElementById('qz-calificar').addEventListener('click',function(){
+    var bien=0;
+    P.forEach(function(p,i){
+      cuerpo.querySelectorAll('.qz-op[data-i="'+i+'"]').forEach(function(x){
+        var j=+x.getAttribute('data-j'); x.disabled=true; x.classList.remove('elegida');
+        if(j===p.c)x.classList.add('correcta'); else if(elegidas[i]===j)x.classList.add('incorrecta');
+      });
+      if(elegidas[i]===p.c)bien++;
+      else if(p.r){var nota=document.createElement('p');nota.className='qz-repaso';nota.innerHTML='📘 Para repasar: '+p.r;cuerpo.children[i].appendChild(nota);}
+    });
+    var msg,fondo,color;
+    if(bien>=META){msg='¡Excelente! '+bien+' de '+N+'. '+cfg.bien;fondo='#d4edda';color='#155724';}
+    else if(bien>=Math.ceil(N*0.6)){msg='Buen trabajo: '+bien+' de '+N+'. Repasa las preguntas en rojo y vuelve a intentarlo.';fondo='#fff3cd';color='#5c3900';}
+    else{msg='Llevas '+bien+' de '+N+'. '+cfg.repaso;fondo='#f8d7da';color='#721c24';}
+    res.textContent=msg; res.style.background=fondo; res.style.color=color; res.classList.add('visible');
+    this.style.display='none'; document.getElementById('qz-reintentar').style.display='inline-block';
+    res.scrollIntoView({behavior:'smooth',block:'center'});
+  });
+  document.getElementById('qz-reintentar').addEventListener('click',function(){
+    cuerpo.querySelectorAll('.qz-op').forEach(function(x){x.disabled=false;x.classList.remove('correcta','incorrecta','elegida');x.setAttribute('aria-pressed','false');});
+    cuerpo.querySelectorAll('.qz-repaso').forEach(function(n){n.remove();});
+    elegidas={}; res.classList.remove('visible'); res.textContent='';
+    this.style.display='none'; document.getElementById('qz-calificar').style.display='inline-block';
+    cuerpo.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+}
+
+/* ===== Navegación: el índice y la dirección (#ancla) abren su sección ===== */
+document.addEventListener('DOMContentLoaded',function(){
+  function abrir(id){
+    var el=id&&document.getElementById(id); if(!el)return;
+    var d=el.tagName==='DETAILS'?el:el.closest('details');
+    if(d){d.open=true; el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){abrir(a.getAttribute('href').slice(1));});});
+  var ab=document.getElementById('abrir-todo'), ce=document.getElementById('cerrar-todo');
+  if(ab)ab.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
+  if(ce)ce.addEventListener('click',function(){document.querySelectorAll('details').forEach(function(d){d.open=false;});});
+  window.addEventListener('hashchange',function(){abrir(decodeURIComponent(location.hash.slice(1)));});
+  abrir(decodeURIComponent(location.hash.slice(1)));
+});
+
+clasificador('clasif-pre','puntaje-pre',[
+  {p:'deshacer',c:0,n:'<em>des</em> + <em>hacer</em>: hacer lo contrario de hacer.'},
+  {p:'inútil',c:1,n:'<em>in</em> + <em>útil</em>: que no es útil.'},
+  {p:'releer',c:2,n:'<em>re</em> + <em>leer</em>: leer otra vez.'},
+  {p:'precalentar',c:3,n:'<em>pre</em> + <em>calentar</em>: calentar antes, por ejemplo el horno.'},
+  {p:'desconectar',c:0,n:'Lo contrario de conectar.'},
+  {p:'imposible',c:1,n:'<em>im</em> + <em>posible</em>: que no es posible. Se escribe <em>im-</em> porque sigue una <em>p</em>.'},
+  {p:'reescribir',c:2,n:'Escribir de nuevo. Las dos <em>e</em> se mantienen: <em>re</em> + <em>escribir</em>.'},
+  {p:'preescolar',c:3,n:'Antes de la escuela: la etapa anterior a la primaria.'}
+],['Hacer lo contrario','Que no es','Otra vez','Antes'],false);
+
+clasificador('clasif-suf','puntaje-suf',[
+  {p:'celebración',c:0,n:'La acción de celebrar.'},
+  {p:'rápidamente',c:1,n:'De manera rápida. Conserva la tilde de <em>rápido</em>.'},
+  {p:'sabroso',c:2,n:'Que tiene mucho sabor.'},
+  {p:'vendedor',c:3,n:'La persona que vende.'},
+  {p:'información',c:0,n:'La acción de informar, o lo que se informa.'},
+  {p:'tranquilamente',c:1,n:'De manera tranquila.'},
+  {p:'lluviosa',c:2,n:'Que tiene mucha lluvia: «una tarde lluviosa».'},
+  {p:'licuadora',c:3,n:'La máquina que licúa.'}
+],['La acción o su resultado','De qué manera','Que tiene mucho de algo','Quien o lo que hace la acción'],false);
+
+/* ===== La lupa de afijos ===== */
+(function(){
+  /* p = prefijo, r = raíz, s = sufijo */
+  var PAL=[
+    {w:'deshonesto',ps:[['p','des'],['r','honesto']],sig:'que no es honesto'},
+    {w:'imposible',ps:[['p','im'],['r','posible']],sig:'que no es posible'},
+    {w:'recalentar',ps:[['p','re'],['r','calentar']],sig:'calentar otra vez'},
+    {w:'trabajadora',ps:[['r','trabaja'],['s','dora']],sig:'la mujer que trabaja'},
+    {w:'peligrosa',ps:[['r','peligr'],['s','osa']],sig:'que tiene mucho peligro'},
+    {w:'cuidadosamente',ps:[['r','cuidad'],['s','osa'],['s','mente']],sig:'de manera cuidadosa, con mucho cuidado'},
+    {w:'reconstrucción',ps:[['p','re'],['r','construc'],['s','ción']],sig:'la acción de construir otra vez'},
+    {w:'desorganización',ps:[['p','des'],['r','organiza'],['s','ción']],sig:'lo contrario de la organización: el desorden'}
+  ];
+  var caja=document.getElementById('lupa'), nom={p:'prefijo',r:'raíz',s:'sufijo'}, cls={p:'pre',r:'raiz',s:'suf'};
+  PAL.forEach(function(it,i){
+    var d=document.createElement('div'); d.className='lupa-item';
+    var partes=it.ps.map(function(x){return '<span class="'+cls[x[0]]+'">'+x[1]+'</span>';}).join(' · ');
+    var leyenda=it.ps.map(function(x){return x[1]+' = '+nom[x[0]];}).join(', ');
+    d.innerHTML='<button type="button" class="lupa-btn" aria-expanded="false" aria-controls="lupa-'+i+'">🔍 '+it.w+'</button>'+
+      '<div class="lupa-res" id="lupa-'+i+'" hidden><div class="partes-pal">'+partes+'</div><div>'+leyenda+'</div><div><strong>Significa:</strong> '+it.sig+'.</div>'+
+      '<button type="button" class="oir" style="margin-top:6px">🔊 Por partes</button></div>';
+    caja.appendChild(d);
+    var b=d.querySelector('.lupa-btn'), r=d.querySelector('.lupa-res');
+    b.addEventListener('click',function(){var ab=r.hidden; r.hidden=!ab; b.setAttribute('aria-expanded',ab?'true':'false');});
+    d.querySelector('.oir').addEventListener('click',function(){hablar(it.ps.map(function(x){return x[1];}).join('... ')+'... '+it.w,0.75);});
+  });
+})();
+
+/* ===== Lectura ===== */
+(function(){
+  var t=document.getElementById('texto-huerto'), b=document.getElementById('btn-ver-af');
+  b.addEventListener('click',function(){var on=t.classList.toggle('ver-af');b.setAttribute('aria-pressed',on?'true':'false');});
+  document.getElementById('btn-leer').addEventListener('click',function(){hablar(t.textContent.replace(/\s+/g,' ').trim(),0.85);});
+  document.getElementById('btn-parar').addEventListener('click',function(){callar();});
+})();
+
+iniciarQuiz([
+  {t:'¿Qué es un <strong>prefijo</strong>?',o:['Una pieza que va antes de la raíz','Una pieza que va al final de la raíz','La parte principal de la palabra'],c:0},
+  {t:'¿Qué significa <em>des-</em> en <em>deshacer</em>?',o:['Hacer lo contrario','Hacer otra vez','Hacer antes'],c:0},
+  {t:'¿Qué significa <em>re-</em> en <em>reescribir</em>?',o:['Otra vez','Que no es','Antes'],c:0},
+  {t:'¿Qué palabra significa «que no es justo»?',o:['injusto','justamente','justicia'],c:0},
+  {t:'¿Por qué se escribe <em>imposible</em> con <em>im-</em>?',o:['Porque la palabra posible empieza con p','Porque posible empieza con una vocal','Porque im- significa otra vez'],c:0},
+  {t:'¿Qué significa <em>-mente</em> en <em>lentamente</em>?',o:['De manera lenta','Persona que es lenta','Que tiene mucha lentitud'],c:0},
+  {t:'¿Cuál está bien escrita?',o:['rápidamente','rapidamente','rápidaménte'],c:0},
+  {t:'Una <em>lavadora</em> es…',o:['La máquina que lava','La acción de lavar','Lavar de nuevo'],c:0},
+  {t:'¿Qué sufijo forma la palabra que nombra la acción de <em>celebrar</em>?',o:['-ción','-oso','-mente'],c:0},
+  {t:'Una tarde <em>lluviosa</em> es una tarde…',o:['Con mucha lluvia','Sin nada de lluvia','Antes de la lluvia'],c:0},
+  {t:'¿En qué palabra las letras <em>re</em> NO son un prefijo?',o:['reloj','releer','rehacer'],c:0},
+  {t:'¿Cuáles son las partes de <em>cuidadosamente</em>?',o:['cuidad · osa · mente','cui · dado · samente','cuida · dosa · mente'],c:0}
+],{meta:10,
+   bien:'Ya sabes leer por partes las palabras largas. Puedes continuar con la Lección 1.3.',
+   repaso:'Vuelve a las tablas de las secciones 2 y 3 y repite el quiz: con práctica sale.'});
+</script>
+</body>
+</html>
